@@ -1,0 +1,8 @@
+{
+    "BaseModel": "HTHTTPModel",
+    "Prefix": "HT",
+    "Author": "Netease",
+    "BaseRequest": "HTBaseRequest"
+    "CategoryPrefix": "ht",
+    "ProductName": "HTTemplate"
+}

@@ -1,0 +1,28 @@
+#source 'https://git.coding.net/hging/Specs.git'
+
+# coding: utf-8
+platform :ios, '7.0'
+
+target :{{args.ProductName}} do
+  pod 'HTToast' , '~>0.0.1'
+  pod 'HTBadgeTextView' , '~>0.0.1'
+  pod 'UniversalRouter' , '~>0.0.1'
+  pod 'HTR3' , '~>0.0.1'
+  pod 'HTPageControllerView' , '~>0.0.1'
+  pod 'HTImageView' , '~>0.0.1'
+  pod 'HTSegmentsView', '~>0.0.1'
+  pod 'HTRefreshView' , '~>0.0.1'
+  pod 'HTCommonUtility', '~>0.0.2'
+  pod 'HTNetworking', '~>0.2.0'
+  pod 'UITableView+FDTemplateLayoutCell', '~> 1.4'
+  pod 'BlocksKit' ,  '~>2.2.5'
+  pod 'IQKeyboardManager' , '~>3.3.7'
+  pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'MGSwipeTableCell', '1.5.1'
+  pod 'Masonry'
+  pod 'HTAssetsPicker' , '~>0.0.1'
+  pod 'HTTableViewDataSourceDelegate', '~>0.0.1'
+  pod 'SDWebImage/WebP'
+  pod 'libwebp', '~>0.4.3'
+  pod 'pop', '1.0.7'
+end
