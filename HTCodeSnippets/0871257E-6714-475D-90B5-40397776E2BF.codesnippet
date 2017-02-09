@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>htcollectionView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init]; 
+    layout.itemSize = CGSizeMake(&lt;#CGFloat width#&gt;, &lt;#CGFloat height#&gt;);
+    layout.minimumLineSpacing = &lt;#CGFloat#&gt;;
+    layout.minimumInteritemSpacing = &lt;#CGFloat#&gt;;
+    layout.scrollDirection = &lt;#UICollectionViewScrollDirection#&gt;;
+UICollectionView *&lt;#collectionView#&gt; = [[UICollectionView alloc] initWithFrame:&lt;#frame#&gt;
+                                         collectionViewLayout:layout];
+    &lt;#collectionView#&gt;.dataSource = self;
+    &lt;#collectionView#&gt;.delegate = self;
+    [&lt;#collectionView#&gt; registerClass:&lt;#(nullable Class)#&gt; forCellWithReuseIdentifier:&lt;#(nonnull NSString *)#&gt;];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0871257E-6714-475D-90B5-40397776E2BF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>HTCollectionView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

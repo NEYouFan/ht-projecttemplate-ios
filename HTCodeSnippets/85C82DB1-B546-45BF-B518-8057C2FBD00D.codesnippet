@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>htbutton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIButton * &lt;#button#&gt; = [UIButton buttonWithType:&lt;#(UIButtonType)#&gt;];
+[&lt;#button#&gt; setTitle:&lt;#(nullable NSString *)#&gt; forState:&lt;#(UIControlState)#&gt;];
+[&lt;#button#&gt; setTitleColor:&lt;#(nullable UIColor *)#&gt; forState:&lt;#(UIControlState)#&gt;];
+&lt;#button#&gt;.titleLabel.textAlignment = &lt;#(NSTextAlignment)#&gt;;
+&lt;#button#&gt;.titleLabel.font = [UIFont systemFontOfSize:&lt;#(CGFloat)#&gt;];
+[&lt;#button#&gt; addTarget:&lt;#(nullable id)#&gt; action:&lt;#(nonnull SEL)#&gt; forControlEvents:&lt;#(UIControlEvents)#&gt;];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>85C82DB1-B546-45BF-B518-8057C2FBD00D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>HTButton</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

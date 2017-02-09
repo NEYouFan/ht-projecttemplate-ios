@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>httableview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UITableView *&lt;#tableView#&gt; = [[UITableView alloc] init];
+    &lt;#tableView#&gt;.frame = CGRectMake(&lt;#CGFloat x#&gt;, &lt;#CGFloat y#&gt;, &lt;#CGFloat width#&gt;, &lt;#CGFloat height#&gt;);
+    &lt;#tableView#&gt;.separatorStyle = &lt;#UITableViewCellSeparatorStyle#&gt;;
+    &lt;#tableView#&gt;.showsVerticalScrollIndicator = NO;
+    &lt;#tableView#&gt;.delegate = self;
+    &lt;#tableView#&gt;.dataSource = self;
+    [&lt;#tableView#&gt; registerClass:&lt;#(nullable Class)#&gt; forCellReuseIdentifier:&lt;#(nonnull NSString *)#&gt;];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8202648B-2B33-43E8-B20A-5A5167F81DCC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>HTTableView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
