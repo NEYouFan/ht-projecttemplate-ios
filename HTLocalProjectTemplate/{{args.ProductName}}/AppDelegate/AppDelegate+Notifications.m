@@ -21,11 +21,12 @@
             }
         }];
     } else if (IOS8_10){ //iOS8-iOS10
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:nil];
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(RemoteNotificationTypeBadge | RemoteNotificationTypeAlert | RemoteNotificationTypeSound) categories:nil];
         [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
         [[UIApplication sharedApplication] registerForRemoteNotifications];
     } else { //iOS8以下
-        [[UIApplication sharedApplication] registerForRemoteNotificationTypes: UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
+        // 由于 deloyment target 在 Xcode8 中不支持 7.0，此处为防止警告暂时注释掉，如需支持 iOS7 可使用注释内的方法为 iOS7 注册通知
+//        [[UIApplication sharedApplication] registerForRemoteNotificationTypes: RemoteNotificationTypeBadge | RemoteNotificationTypeAlert | RemoteNotificationTypeSound];
     }
 }
 

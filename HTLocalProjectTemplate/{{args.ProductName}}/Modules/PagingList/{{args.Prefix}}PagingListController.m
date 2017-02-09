@@ -8,14 +8,12 @@
 
 #import "{{args.Prefix}}PagingListController.h"
 #import "{{args.Prefix}}BaseViewController+{{args.Prefix}}CustomNavigationBar.h"
-#import "{{args.Prefix}}PagingListSizes.h"
-#import "{{args.Prefix}}UniversalRouter.h"
+#import "HTControllerRouter.h"
 #import "UITableView+FDTemplateLayoutCell.h"
 #import "{{args.Prefix}}UserDataManager.h"
 #import "RKMappingResult+{{args.Prefix}}NetworkResultMapping.h"
 #import "NSObject+{{args.Prefix}}BaseRequest.h"
 #import "UIView+{{args.Prefix}}Loading.h"
-#import "{{args.Prefix}}LoadingSizes.h"
 #import "UIView+Frame.h"
 #import "{{args.Prefix}}NoMoreDataFooterView.h"
 #import "{{args.Prefix}}RefreshView.h"
@@ -25,8 +23,9 @@
 #import "NSArray+DataSource.h"
 #import "UIView+{{args.Prefix}}Toast.h"
 #import "{{args.Prefix}}PagingListCell.h"
-#import "{{args.Prefix}}PagingListCellViewModel.h"
+#import "{{args.Prefix}}PagingListCellModel.h"
 #import "NSObject+{{args.Prefix}}BaseRequest.h"
+#import "{{args.Prefix}}DemoRequest.h"
 
 @interface {{args.Prefix}}PagingListController () <UITableViewDelegate>
 
@@ -63,8 +62,8 @@
     [super viewWillLayoutSubviews];
     
     _tableView.frame = self.view.bounds;
-    _refreshView.size = CGSizeMake(_tableView.width, [{{args.Prefix}}LoadingSizes refreshViewHeight]);
-    _loadmoreView.size = CGSizeMake(_tableView.width, [{{args.Prefix}}LoadingSizes loadmoreViewHeight]);
+    _refreshView.size = CGSizeMake(_tableView.width, kRefreshViewHeight);
+    _loadmoreView.size = CGSizeMake(_tableView.width, kLoadmoreViewHeight);
 }
 
 
@@ -75,11 +74,11 @@
     // HTTableViewDataSourceDelegate 的详细使用请参考模板说明文档
     _dataSource = [HTTableViewDataSourceDelegate dataSourceWithModel:nil cellTypeMap:@{NSStringFromClass([NSNumber class]): NSStringFromClass([{{args.Prefix}}PagingListCell class])} tableViewDelegate:self cellConfiguration:^({{args.Prefix}}PagingListCell *cell, id model, NSIndexPath *indexPath) {
         cell.fd_enforceFrameLayout = YES;
-        cell.viewModel = [[{{args.Prefix}}PagingListCellViewModel alloc] initWithIndexNumber:model];
+        cell.model = [[{{args.Prefix}}PagingListCellModel alloc] initWithIndexNumber:model];
     }];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-    _tableView.backgroundColor = [{{args.Prefix}}ThemeColors themeBackgroundColor];
+    _tableView.backgroundColor = [UIColor colorWithRGBValue:kDefaultBackgroundColor];
     [self.view addSubview:_tableView];
     _tableView.delegate = _dataSource;
     _tableView.dataSource = _dataSource;
@@ -87,7 +86,7 @@
     [_tableView registerCellClasses:@[[{{args.Prefix}}PagingListCell class]]];
     
     // 提示没有更多数据了
-    _footerView = [[{{args.Prefix}}NoMoreDataFooterView alloc] initWithFrame:CGRectMake(0, 0, [{{args.Prefix}}ThemeSizes screenWidth], [{{args.Prefix}}LoadingSizes loadmoreViewHeight])];
+    _footerView = [[{{args.Prefix}}NoMoreDataFooterView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, kLoadmoreViewHeight)];
     
     // 下拉刷新
     _refreshView = [[{{args.Prefix}}RefreshView alloc] initWithScrollView:_tableView direction:HTRefreshDirectionTop followScrollView:YES];
@@ -98,7 +97,7 @@
     // tableView 底部的加载更多。note：如需深入了解下拉刷新和加载更多的使用方法，请参考模板说明文档
     _loadmoreView = [[{{args.Prefix}}LoadmoreView alloc] initWithScrollView:_tableView direction:HTRefreshDirectionBottom followScrollView:YES];
     _loadmoreView.triggerLoadMoreMode = HTTriggerLoadMoreModeAutoTrigger;
-    [_tableView ht_setOriginalContentInset:UIEdgeInsetsMake([{{args.Prefix}}ThemeSizes navigationHeight], 0, [{{args.Prefix}}ThemeSizes tabHeight], 0)];
+    [_tableView ht_setOriginalContentInset:UIEdgeInsetsMake(kNavigationHeight, 0, kTabHeight, 0)];
     _loadmoreView.hiddenRefresh = YES;
     _loadmoreView.refreshEnabled = NO;
     [_loadmoreView addRefreshingHandler:^(HTRefreshView *view) {
@@ -111,32 +110,33 @@
 
 // 下面几个方法基本包含了通常页面的所有数据加载逻辑，进入页面的初始加载、下拉刷新、上滑页面加载更多数据。
 - (void)loadListDatas {
-    _pageNum = [{{args.Prefix}}ThemeSizes initialPageNumber];
-    _pageSize = [{{args.Prefix}}ThemeSizes loadmorePageSize];
+    _pageNum = kInitialPageNumber;
+    _pageSize = kLoadmorePageSize;
     [self.view {{args.CategoryPrefix}}_showLoading];
     [self clearRequests];
     
     @{{args.Prefix}}Weak(self);
     // 下面可以做网络请求获取列表的数据，这里给出一个示例。
     [self baseFlowRequestWithBlock:^HTBaseRequest *{
-        // 这里根据产品页面实际请求进行新建 request
-//        {{args.Prefix}}TestRequest *request = [[{{args.Prefix}}TestRequest alloc] init];
-//        request.ak = [{{args.Prefix}}UserDataManager sharedInstance].token;
-//        request.page = weakSelf.pageNum;
-//        request.size = weakSelf.pageSize;
-//        return request;
-        return nil;
+        // 这里根据产品页面实际请求进行新建 request, 以下是demo，仅供参考，之后请删除
+        {{args.Prefix}}DemoRequest *request = [[{{args.Prefix}}DemoRequest alloc] init];
+        request.requestParam_1 = 20;
+        request.requestParam_2 = 0;
+        return request;
     } success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        [weakSelf.pagingListDatas removeAllObjects];
-        NSMutableArray *newDatas = mappingResult.dataInfo;
-        for (int i = 0; i < newDatas.count; i++) {
-            [weakSelf.pagingListDatas addObject:newDatas[i]];
-        }
-        [weakSelf.view {{args.CategoryPrefix}}_hideLoading];
-        weakSelf.pageNum++;
-        weakSelf.dataSource.model = weakSelf.pagingListDatas;
+        NSLog(@"%@",([mappingResult.dictionary valueForKey:@"data"]));
+
+        
+//        [weakSelf.pagingListDatas removeAllObjects];
+//        NSMutableArray *newDatas = mappingResult.dataInfo;
+//        for (int i = 0; i < newDatas.count; i++) {
+//            [weakSelf.pagingListDatas addObject:newDatas[i]];
+//        }
+//        [weakSelf.view {{args.CategoryPrefix}}_hideLoading];
+//        weakSelf.pageNum++;
+//        weakSelf.dataSource.model = weakSelf.pagingListDatas;
         [weakSelf.tableView reloadData];
-        [weakSelf processRefreshWithNewDataNumber:newDatas.count];
+//        [weakSelf processRefreshWithNewDataNumber:newDatas.count];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         [weakSelf.view {{args.CategoryPrefix}}_showLoadingError:^{
             [weakSelf loadListDatas];
@@ -189,9 +189,10 @@
     [self clearRequests];
     
     NSInteger lastPageNumber = _pageNum;
-    _pageNum = [{{args.Prefix}}ThemeSizes initialPageNumber];
+    _pageNum = kInitialPageNumber;
     @{{args.Prefix}}Weak(self);
     [self baseFlowRequestWithBlock:^HTBaseRequest *{
+        
 //        // 这里根据产品页面实际请求进行新建 request
 //        {{args.Prefix}}TestRequest *request = [[{{args.Prefix}}TestRequest alloc] init];
 //        request.ak = [{{args.Prefix}}UserDataManager sharedInstance].token;
@@ -297,7 +298,7 @@
     
     // HTUniversalRouter 的使用，这里只是给出一个示例，并没有真正实现下一级页面。关于 HTUniversalRouter 的详细使用请参考模板说明文档
     HTControllerRouteParam *param = [[HTControllerRouteParam alloc] init];
-    param.url = @"{{args.CategoryPrefix}}://pagingList/detail";
+    param.url = @"{{args.Prefix}}://pagingList/detail";
     param.launchMode = HTControllerLaunchModePushNavigation;
     param.fromViewController = [APPDELEGATE() rootNavigationController];
     param.delegate = self;

@@ -10,6 +10,7 @@
 #import "RKMappingResult+{{args.Prefix}}NetworkResultMapping.h"
 #import "{{args.Prefix}}NetworkStatusModel.h"
 #import "{{args.Prefix}}UserDataManager.h"
+#import "{{args.Prefix}}NetworkConfig.h"
 //#import "{{args.Prefix}}LoginController.h"
 
 @implementation NSObject ({{args.Prefix}}BaseRequest)
@@ -21,7 +22,6 @@
         return;
     }
     
-    @{{args.Prefix}}Weak(self);
     HTBaseRequest *request = buildRequestBlock();
     [request startWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         success(operation, mappingResult);

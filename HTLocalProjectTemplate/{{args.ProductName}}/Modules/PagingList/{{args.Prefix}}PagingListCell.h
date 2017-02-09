@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class {{args.Prefix}}PagingListCellViewModel;
+@class {{args.Prefix}}PagingListCellModel;
 
 /**
  分页加载示例页面中的 cell
  */
 @interface {{args.Prefix}}PagingListCell : UITableViewCell
 
-@property (nonatomic, strong) {{args.Prefix}}PagingListCellViewModel *viewModel;
+@property (nonatomic, strong) {{args.Prefix}}PagingListCellModel *model;
 
 @end

@@ -24,8 +24,8 @@ static char const *kVerticalTailLineKey;
 
 + (instancetype){{args.CategoryPrefix}}_line {
     UIView *line = [[UIView alloc] init];
-    line.frame = CGRectMake(0, 0, [{{args.Prefix}}ThemeSizes lineWidth], [{{args.Prefix}}ThemeSizes lineWidth]);
-    line.backgroundColor = [{{args.Prefix}}ThemeColors themeLineColor];
+    line.frame = CGRectMake(0, 0, LINE_WIDTH, LINE_WIDTH);
+    line.backgroundColor = [UIColor colorWithRGBValue:kDefaultLineColor];
     return line;
 }
 
@@ -41,7 +41,7 @@ static char const *kVerticalTailLineKey;
         make.centerX.equalTo(self);
         make.top.equalTo(self).with.offset(topMargin);
         make.height.equalTo(self.mas_height).with.offset(-bottomMargin-topMargin);
-        make.width.equalTo(@([{{args.Prefix}}ThemeSizes lineWidth]));
+        make.width.equalTo(@(LINE_WIDTH));
     }];
     
     return line;
@@ -56,7 +56,7 @@ static char const *kVerticalTailLineKey;
         make.left.equalTo(self);
         make.top.equalTo(self).with.offset(topMargin);
         make.height.equalTo(self.mas_height).with.offset(-bottomMargin-topMargin);
-        make.width.equalTo(@([{{args.Prefix}}ThemeSizes lineWidth]));
+        make.width.equalTo(@(LINE_WIDTH));
     }];
     
     return line;
@@ -71,7 +71,7 @@ static char const *kVerticalTailLineKey;
         make.right.equalTo(self);
         make.top.equalTo(self).with.offset(topMargin);
         make.height.equalTo(self.mas_height).with.offset(-bottomMargin-topMargin);
-        make.width.equalTo(@([{{args.Prefix}}ThemeSizes lineWidth]));
+        make.width.equalTo(@(LINE_WIDTH));
     }];
     
     return line;
@@ -104,7 +104,7 @@ static char const *kVerticalTailLineKey;
         make.centerY.equalTo(self);
         make.left.equalTo(self).with.offset(leftMargin);
         make.right.equalTo(self).with.offset(-rightMargin);
-        make.height.equalTo(@([{{args.Prefix}}ThemeSizes lineWidth]));
+        make.height.equalTo(@(LINE_WIDTH));
     }];
     
     return line;
@@ -119,7 +119,7 @@ static char const *kVerticalTailLineKey;
         make.top.equalTo(self);
         make.left.equalTo(self).with.offset(leftMargin);
         make.width.equalTo(self.mas_width).with.offset(-leftMargin-rightMargin);
-        make.height.equalTo(@([{{args.Prefix}}ThemeSizes lineWidth]));
+        make.height.equalTo(@(LINE_WIDTH));
     }];
     
     return line;
@@ -134,7 +134,7 @@ static char const *kVerticalTailLineKey;
         make.bottom.equalTo(self);
         make.left.equalTo(self).with.offset(leftMargin);
         make.width.equalTo(self.mas_width).with.offset(-leftMargin-rightMargin);
-        make.height.equalTo(@([{{args.Prefix}}ThemeSizes lineWidth]));
+        make.height.equalTo(@(LINE_WIDTH));
     }];
     
     return line;

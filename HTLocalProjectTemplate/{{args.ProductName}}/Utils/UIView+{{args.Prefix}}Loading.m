@@ -8,7 +8,6 @@
 
 #import "UIView+{{args.Prefix}}Loading.h"
 #import "{{args.Prefix}}LoadingView.h"
-#import "{{args.Prefix}}LoadingColors.h"
 #import <objc/runtime.h>
 #import "Masonry.h"
 
@@ -22,7 +21,7 @@ static char const *kRetryBlockKey;
 #pragma mark - Loading.
 
 - (void){{args.CategoryPrefix}}_showLoading {
-    [self {{args.CategoryPrefix}}_showLoadingWithBackgroundColor:[{{args.Prefix}}LoadingColors loadingBackgroundColor]];
+    [self {{args.CategoryPrefix}}_showLoadingWithBackgroundColor:[UIColor colorWithRGBValue:kLoadingBackgroundColor]];
 }
 
 - (void){{args.CategoryPrefix}}_showLoadingWithBackgroundColor:(UIColor *)backgroundColor {
@@ -30,7 +29,7 @@ static char const *kRetryBlockKey;
 }
 
 - (void){{args.CategoryPrefix}}_showLoadingWithIndication:(NSString *)indication {
-    [self {{args.CategoryPrefix}}_showLoadingWithIndication:indication backgroundColor:[{{args.Prefix}}LoadingColors loadingBackgroundColor]];
+    [self {{args.CategoryPrefix}}_showLoadingWithIndication:indication backgroundColor:[UIColor colorWithRGBValue:kLoadingBackgroundColor]];
 }
 
 - (void){{args.CategoryPrefix}}_showLoadingWithIndication:(NSString *)indication backgroundColor:(UIColor *)backgroundColor {
@@ -84,7 +83,7 @@ static char const *kRetryBlockKey;
 #pragma mark - Loading Empty.
 
 - (void){{args.CategoryPrefix}}_showLoadingEmpty:({{args.Prefix}}RetryLoadingBlock)retry {
-    [self {{args.CategoryPrefix}}_showLoadingEmptyWithBackgroundColor:[{{args.Prefix}}LoadingColors loadingBackgroundColor] retryBlock:retry];
+    [self {{args.CategoryPrefix}}_showLoadingEmptyWithBackgroundColor:[UIColor colorWithRGBValue:kLoadingBackgroundColor] retryBlock:retry];
 }
 
 - (void){{args.CategoryPrefix}}_showLoadingEmptyWithBackgroundColor:(UIColor *)backgroundColor retryBlock:({{args.Prefix}}RetryLoadingBlock)retry {
@@ -155,7 +154,7 @@ static char const *kRetryBlockKey;
 #pragma mark - LoadingError.
 
 - (void){{args.CategoryPrefix}}_showLoadingError:({{args.Prefix}}RetryLoadingBlock)retry {
-    [self {{args.CategoryPrefix}}_showLoadingErrorWithBackgroundColor:[{{args.Prefix}}LoadingColors loadingBackgroundColor] retryBlock:retry];
+    [self {{args.CategoryPrefix}}_showLoadingErrorWithBackgroundColor:[UIColor colorWithRGBValue:kLoadingBackgroundColor] retryBlock:retry];
 }
 
 - (void){{args.CategoryPrefix}}_showLoadingErrorWithBackgroundColor:(UIColor *)backgroundColor retryBlock:({{args.Prefix}}RetryLoadingBlock)retry {

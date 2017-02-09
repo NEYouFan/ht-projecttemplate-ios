@@ -17,6 +17,8 @@
 
 /// 是否已经登录
 @property (nonatomic, assign) BOOL alreadyLogin;
+/// 是否取消登录，例如用户希望稍后登录
+@property (nonatomic, assign) BOOL cancelLogin;
 /// 用户名
 @property (nonatomic, copy) NSString *userName;
 /// 头像
@@ -25,8 +27,13 @@
 @property (nonatomic, copy) NSString *token;
 /// 用户手机号码
 @property (nonatomic, copy) NSString *phoneNumber;
+/// 是否保留原始图片
+@property (nonatomic, assign) BOOL saveOriginalPicture;
+/// 缓存大小
+@property (nonatomic, assign) CGFloat cacheSize;
 
 + (instancetype)sharedInstance;
 - (void)clearUserInfo;
+- (void)clearCache;
 
 @end

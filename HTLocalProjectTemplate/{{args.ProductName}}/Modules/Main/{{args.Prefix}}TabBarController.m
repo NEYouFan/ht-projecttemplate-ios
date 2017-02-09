@@ -9,12 +9,11 @@
 #import "{{args.Prefix}}TabBarController.h"
 #import "HTSegmentsView.h"
 #import "MCBlurView.h"
-#import "HTNavigationController.h"
 #import "{{args.Prefix}}TabBarItem.h"
 #import "UIImage+ImageWithColor.h"
-#import "HTContainerViewController.h"
 #import "{{args.Prefix}}PagingListController.h"
-#import "{{args.Prefix}}StaticListController.h"
+#import "{{args.Prefix}}MineController.h"
+#import "HTControllerRouter.h"
 
 @interface {{args.Prefix}}TabBarController () <HTSegmentsViewDelegate, HTSegmentsViewDatasource>
 
@@ -121,9 +120,9 @@
     HTContainerViewController *containerController = [[HTContainerViewController alloc] initWithRootViewController:pagingListController];
     [tabViewControllers addObject:containerController];
     
-    // Static list tab
-    {{args.Prefix}}StaticListController *staticListController = [[{{args.Prefix}}StaticListController alloc] init];
-    containerController = [[HTContainerViewController alloc] initWithRootViewController:staticListController];
+    // Mine tab
+    {{args.Prefix}}MineController *mineController = [[{{args.Prefix}}MineController alloc] init];
+    containerController = [[HTContainerViewController alloc] initWithRootViewController:mineController];
     [tabViewControllers addObject:containerController];
     
     self.viewControllers = tabViewControllers;
@@ -177,6 +176,27 @@
 - (void)hideBadge:(NSUInteger)index {
     {{args.Prefix}}TabBarItem *item = ({{args.Prefix}}TabBarItem *)_segmentsTabbar.segmentCells[index];
     [item hideBadge];
+}
+
+
+#pragma mark - Public methods.
+
++ (void)selectTabbarIndex:(NSInteger)index {
+    if (APPDELEGATE().tabBarController) {
+        [APPDELEGATE().tabBarController setSelectedIndex:index];
+    }
+}
+
++ (void)showTabBadgeAtIndex:(NSInteger)index text:(NSString *)text {
+    if (APPDELEGATE().tabBarController) {
+        [APPDELEGATE().tabBarController showBadge:{{args.Prefix}}BadgeTypeText text:text atIndex:index];
+    }
+}
+
++ (void)hideTabBadgeAtIndex:(NSInteger)index {
+    if (APPDELEGATE().tabBarController) {
+        [APPDELEGATE().tabBarController hideBadge:index];
+    }
 }
 
 @end

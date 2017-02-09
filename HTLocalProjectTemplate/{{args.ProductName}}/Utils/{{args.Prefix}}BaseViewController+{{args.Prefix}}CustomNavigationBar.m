@@ -9,8 +9,6 @@
 #import "{{args.Prefix}}BaseViewController+{{args.Prefix}}CustomNavigationBar.h"
 #import "ColorUtils.h"
 #import "UIViewController+HTRouterUtils.h"
-#import "{{args.Prefix}}NavigationTabBarSizes.h"
-#import "{{args.Prefix}}NavigationTabBarColors.h"
 
 @implementation {{args.Prefix}}BaseViewController ({{args.Prefix}}CustomNavigationBar)
 
@@ -18,11 +16,11 @@
     // 设置状态栏样式
     self.statusBarStyle = {{args.Prefix}}StatusBarStyleLightContent;
     // 设置导航栏背景色
-    [self.navigationController.navigationBar setBarTintColor:[{{args.Prefix}}NavigationTabBarColors naviBackgroundColor]];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRGBValue:kNaviBackgroundColor]];
     // 设置导航栏是否需要混色
     self.navigationController.navigationBar.translucent = NO;
     // 设置导航栏字体颜色、字体样式
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[{{args.Prefix}}NavigationTabBarColors naviForegroundColor], NSForegroundColorAttributeName, [{{args.Prefix}}NavigationTabBarSizes naviTitleFont], NSFontAttributeName, nil]];
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRGBValue:kNaviForegroundColor], NSForegroundColorAttributeName, [UIFont systemFontOfSize:kNaviTitleFontSize], NSFontAttributeName, nil]];
 }
 
 - (void){{args.CategoryPrefix}}_applyTransparentNavigationBarWhiteStatus {
@@ -41,40 +39,66 @@
     self.statusBarStyle = {{args.Prefix}}StatusBarStyleDefault;
 }
 
-- (void){{args.CategoryPrefix}}_addNavigationLeftBackItem {
+- (UIButton *){{args.CategoryPrefix}}_addNavigationLeftBackItem {
     UIButton *backButton = [self {{args.CategoryPrefix}}_addNavigationLeftItem];
     [backButton addTarget:self action:@selector(ht_back) forControlEvents:UIControlEventTouchUpInside];
-}
-
-- (UIButton *){{args.CategoryPrefix}}_addNavigationLeftItem {
+    
     // 导航栏左侧按钮背景图片(根据视觉需求自定义)
-    UIImage *leftItemImage = [UIImage imageNamed:@""];
+    UIImage *backImage = [UIImage imageNamed:@"navi_back"];
     // 导航栏左侧按钮高亮时的背景图片(根据视觉需求自定义)
-    UIImage *leftItemHighlightImage = [UIImage imageNamed:@""];
-    
-    // 新建导航栏左侧按钮，并设置背景图(可根据需要修改 button 样式)
-    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectZero];
-    [backButton setBackgroundImage:leftItemImage forState:UIControlStateNormal];
-    [backButton setBackgroundImage:leftItemHighlightImage forState:UIControlStateHighlighted];
-    
-    [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:backButton]];
+    UIImage *backHighlightImage = [UIImage imageNamed:@"navi_back_hl"];
+    [backButton setBackgroundImage:backImage forState:UIControlStateNormal];
+    [backButton setBackgroundImage:backHighlightImage forState:UIControlStateHighlighted];
+    [backButton sizeToFit];
     
     return backButton;
 }
 
-- (UIButton *){{args.CategoryPrefix}}_addNavigationRightItem {
-    // 导航栏右侧按钮背景图片(根据视觉需求自定义)
-    UIImage *closeImage = [UIImage imageNamed:@""];
-    // 导航栏右侧按钮高亮时的背景图片(根据视觉需求自定义)
-    UIImage *closeHighlightImage = [UIImage imageNamed:@""];
+- (UIButton *){{args.CategoryPrefix}}_addNavigationLeftItem {
+    // 新建导航栏左侧按钮
+    UIButton *leftButton = [[UIButton alloc] initWithFrame:CGRectZero];
+    [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:leftButton]];
+
+    return leftButton;
+}
+
+- (UIButton *){{args.CategoryPrefix}}_addNavigationRightSettingItem {
+    UIButton *settingButton = [self {{args.CategoryPrefix}}_addNavigationRightItem];
     
-    // 新建导航栏右侧按钮，并设置背景图(可根据需要修改 button 样式)
-    UIButton *closeButton = [[UIButton alloc] initWithFrame:CGRectZero];
+    // 导航栏右侧按钮背景图片(根据视觉需求自定义)
+    UIImage *settingImage = [UIImage imageNamed:@"navi_setting"];
+    // 导航栏右侧按钮高亮时的背景图片(根据视觉需求自定义)
+    UIImage *settingHighlightImage = [UIImage imageNamed:@"navi_setting_hl"];
+    
+    [settingButton setBackgroundImage:settingImage forState:UIControlStateNormal];
+    [settingButton setBackgroundImage:settingHighlightImage forState:UIControlStateHighlighted];
+    [settingButton sizeToFit];
+    
+    return settingButton;
+}
+
+- (UIButton *){{args.CategoryPrefix}}_addNavigationRightCloseItem {
+    UIButton *closeButton = [self {{args.CategoryPrefix}}_addNavigationRightItem];
+    
+    // 导航栏右侧按钮背景图片(根据视觉需求自定义)
+    UIImage *closeImage = [UIImage imageNamed:@"navi_close"];
+    // 导航栏右侧按钮高亮时的背景图片(根据视觉需求自定义)
+    UIImage *closeHighlightImage = [UIImage imageNamed:@"navi_close_hl"];
+    
     [closeButton setBackgroundImage:closeImage forState:UIControlStateNormal];
     [closeButton setBackgroundImage:closeHighlightImage forState:UIControlStateHighlighted];
-    [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:closeButton]];
-    
+    [closeButton sizeToFit];
+
     return closeButton;
 }
+
+- (UIButton *){{args.CategoryPrefix}}_addNavigationRightItem {
+    // 新建导航栏右侧按钮，并设置背景图(可根据需要修改 button 样式)
+    UIButton *rightButton = [[UIButton alloc] initWithFrame:CGRectZero];
+    [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:rightButton]];
+
+    return rightButton;
+}
+
 
 @end

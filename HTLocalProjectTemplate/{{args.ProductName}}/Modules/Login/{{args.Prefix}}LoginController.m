@@ -13,24 +13,37 @@
 #import "{{args.Prefix}}BaseViewController+{{args.Prefix}}CustomNavigationBar.h"
 #import "{{args.Prefix}}KeyboardSequence.h"
 #import "{{args.Prefix}}LoginInputView.h"
-#import "{{args.Prefix}}LoginInputViewModel.h"
-#import "{{args.Prefix}}LoginSizes.h"
-#import "{{args.Prefix}}LoginColors.h"
 #import "{{args.Prefix}}UserDataManager.h"
 #import "UIView+{{args.Prefix}}Loading.h"
 #import "NSObject+{{args.Prefix}}BaseRequest.h"
-#import "{{args.Prefix}}UniversalRouter.h"
 #import "{{args.Prefix}}CommonStyleViews.h"
-#import "{{args.Prefix}}LoginInputViewModel.h"
+#import "HTControllerRouter.h"
 
 static NSString *const kSuccessBlockKey = @"successBlock";
 static NSString *const kCancelBlockKey = @"cancelBlock";
 static NSString *const kToastMessage = @"toastMessage";
 
+/// 用户名输入框距离屏幕顶部的距离
+static const CGFloat kUserNameInputViewTopMargin = 100;
+/// 输入框左右距离屏幕边缘的距离
+static const CGFloat kInputViewSideMargin = 20;
+/// 输入框的高度
+static const CGFloat kInputViewHeight = 30;
+/// 登录按钮的高度
+static const CGFloat kLoginButtonHeight = 20;
+/// 密码输入框顶部与用户名输入框底部的距离
+static const CGFloat kPasswordUserNameGap = 20;
+/// 登录按钮顶部距离密码输入框底部的距离
+static const CGFloat kLoginPasswordGap = 20;
+/// 忘记密码按钮顶部与登录按钮底部的距离
+static const CGFloat kForgetLoginGap = 10;
+/// 注册按钮顶部与登录按钮底部的距离
+static const CGFloat kRegisterLoginGap = 10;
+
 @interface {{args.Prefix}}LoginController () <HTRouteTargetProtocol,
                                               HTContainerViewControllerProtocol,
                                               UITextFieldDelegate,
-                                              UITextFieldDelegate>
+                                              UITextViewDelegate>
 
 /// 所有 view 的容器
 @property (nonatomic, strong) UIView *containerView;
@@ -46,6 +59,8 @@ static NSString *const kToastMessage = @"toastMessage";
 @property (nonatomic, strong) UIButton *forgetPasswordButton;
 /// 注册按钮
 @property (nonatomic, strong) UIButton *registerButton;
+/// 关闭登录页面按钮
+@property (nonatomic, strong) UIButton *closeButton;
 /// 多个输入框的键盘管理
 @property (nonatomic, strong) {{args.Prefix}}KeyboardSequence *keyboardSequenceManager;
 /// 展示登录页面时的 toast 提示信息
@@ -86,8 +101,10 @@ static NSString *const kToastMessage = @"toastMessage";
     [super viewDidLoad];
     
     [self loadSubViews];
-    self.view.backgroundColor = [{{args.Prefix}}ThemeColors themeBackgroundColor];
+    self.view.backgroundColor = [UIColor colorWithRGBValue:kDefaultBackgroundColor];
     [self {{args.CategoryPrefix}}_applyTransparentNavigationBarDarkStatus];
+    _closeButton = [self {{args.CategoryPrefix}}_addNavigationRightCloseItem];
+    [_closeButton addTarget:self action:@selector(closeLogin:) forControlEvents:UIControlEventTouchUpInside];
     [self configKeyboard];
 }
 
@@ -104,28 +121,28 @@ static NSString *const kToastMessage = @"toastMessage";
     _containerView.frame = self.view.bounds;
     _backgroundView.frame = _containerView.bounds;
     
-    _userNameInputView.width = _containerView.width - [{{args.Prefix}}LoginSizes inputViewSideMargin] * 2;
-    _userNameInputView.height = [{{args.Prefix}}LoginSizes inputViewHeight];
-    _userNameInputView.x = [{{args.Prefix}}LoginSizes inputViewSideMargin];
-    _userNameInputView.y = [{{args.Prefix}}LoginSizes userNameInputViewTopMargin];
+    _userNameInputView.width = _containerView.width - kInputViewSideMargin * 2;
+    _userNameInputView.height = kInputViewHeight;
+    _userNameInputView.x = kInputViewSideMargin;
+    _userNameInputView.y = kUserNameInputViewTopMargin;
     
     _passwordInputView.width = _userNameInputView.width;
     _passwordInputView.height = _userNameInputView.height;
     _passwordInputView.x = _userNameInputView.x;
-    _passwordInputView.y = _userNameInputView.bottom + [{{args.Prefix}}LoginSizes passwordUserNameGap];
+    _passwordInputView.y = _userNameInputView.bottom + kPasswordUserNameGap;
     
     _loginButton.width = _userNameInputView.width;
-    _loginButton.height = [{{args.Prefix}}LoginSizes loginButtonHeight];
+    _loginButton.height = kLoginButtonHeight;
     _loginButton.x = _userNameInputView.x;
-    _loginButton.y = _passwordInputView.bottom + [{{args.Prefix}}LoginSizes loginPasswordGap];
+    _loginButton.y = _passwordInputView.bottom + kLoginPasswordGap;
     
     [_forgetPasswordButton sizeToFit];
     _forgetPasswordButton.x = _loginButton.x;
-    _forgetPasswordButton.y = _loginButton.bottom +[{{args.Prefix}}LoginSizes forgetLoginGap];
+    _forgetPasswordButton.y = _loginButton.bottom + kForgetLoginGap;
     
     [_registerButton sizeToFit];
     _registerButton.tail = _loginButton.tail;
-    _registerButton.y = _loginButton.bottom +[{{args.Prefix}}LoginSizes registerLoginGap];
+    _registerButton.y = _loginButton.bottom + kRegisterLoginGap;
 }
 
 
@@ -160,17 +177,13 @@ static NSString *const kToastMessage = @"toastMessage";
     [_containerView addSubview:_registerButton];
     
     // 用户名输入框
-    _userNameInputView = [[{{args.Prefix}}LoginInputView alloc] init];
-    {{args.Prefix}}LoginInputViewModel *userNameViewModel = [[{{args.Prefix}}LoginInputViewModel alloc] initWithImageName:@"login_user_name" placeholder:@"手机号码"];
-    _userNameInputView.viewModel = userNameViewModel;
+    _userNameInputView = [[{{args.Prefix}}LoginInputView alloc] initWithImageName:@"login_user_name" placeholder:@"手机号码"];
     // 可以设置 self 为 UITextField 的 delegate，用于处理回调。例如：根据用户名的输入实时进行智能补全时，需要在代理中做一些处理，本例中不提供自动补全功能(使用者请根据交互视觉需求自己实现)
     _userNameInputView.inputTextField.delegate = self;
     [_containerView addSubview:_userNameInputView];
     
     // 密码输入框
-    _passwordInputView = [[{{args.Prefix}}LoginInputView alloc] init];
-    {{args.Prefix}}LoginInputViewModel *passwordViewModel = [[{{args.Prefix}}LoginInputViewModel alloc] initWithImageName:@"login_password" placeholder:@"密码"];
-    _passwordInputView.viewModel = passwordViewModel;
+    _passwordInputView = [[{{args.Prefix}}LoginInputView alloc] initWithImageName:@"login_password" placeholder:@"密码"];
     _passwordInputView.inputTextField.secureTextEntry = YES;
     [_containerView addSubview:_passwordInputView];
 }
@@ -292,6 +305,17 @@ static NSString *const kToastMessage = @"toastMessage";
         return YES;
     }
     return NO;
+}
+
+- (void)closeLogin:(id)sender {
+    if ([_delegate respondsToSelector:@selector(loginFailed:)]) {
+        [_delegate loginCanceled:self];
+    }
+    if (_cancelBlock) {
+        _cancelBlock();
+    }
+    
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 

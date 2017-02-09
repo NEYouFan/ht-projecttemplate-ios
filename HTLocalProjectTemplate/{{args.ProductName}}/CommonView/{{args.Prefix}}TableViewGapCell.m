@@ -21,7 +21,7 @@
 }
 
 - (CGFloat)cellHeight {
-    return [{{args.Prefix}}ThemeSizes tableViewCellGap];
+    return kTableViewCellGap;
 }
 
 @end

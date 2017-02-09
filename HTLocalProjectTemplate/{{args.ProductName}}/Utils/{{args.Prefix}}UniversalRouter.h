@@ -9,13 +9,7 @@
 #ifndef {{args.Prefix}}UniversalRouter_h
 #define {{args.Prefix}}UniversalRouter_h
 
-#import "HTControllerRouteInfo.h"
 #import "HTControllerRouter.h"
-#import "HTContainerViewController.h"
-#import "UINavigationBar+HT.h"
-#import "HTNavigationPanProtocol.h"
-#import "UIViewController+HTRouter.h"
-#import "HTNavigationController.h"
-#import "UIViewController+HTRouterUtils.h"
+
 
 #endif /* {{args.Prefix}}UniversalRouter_h */

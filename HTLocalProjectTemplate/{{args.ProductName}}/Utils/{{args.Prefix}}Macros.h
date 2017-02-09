@@ -28,4 +28,16 @@ _Pragma("clang diagnostic pop") \
 #define IOS8_10 ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 8.0 && [[UIDevice currentDevice].systemVersion doubleValue] < 10.0)
 #define IOS10 ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 10.0)
 
+#ifdef __IPHONE_8_0
+    #define RemoteNotificationTypeAlert UIUserNotificationTypeAlert
+    #define RemoteNotificationTypeBadge UIUserNotificationTypeBadge
+    #define RemoteNotificationTypeSound UIUserNotificationTypeSound
+    #define RemoteNotificationTypeNone  UIUserNotificationTypeNone
+#else
+    #define RemoteNotificationTypeAlert UIRemoteNotificationTypeAlert
+    #define RemoteNotificationTypeBadge UIRemoteNotificationTypeBadge
+    #define RemoteNotificationTypeSound UIRemoteNotificationTypeSound
+    #define RemoteNotificationTypeNone  UIRemoteNotificationTypeNone
+#endif
+
 #endif /* {{args.Prefix}}Macros_h */

@@ -8,8 +8,6 @@
 
 #import "{{args.Prefix}}LoadmoreView.h"
 #import "UIView+Frame.h"
-#import "{{args.Prefix}}LoadingSizes.h"
-#import "{{args.Prefix}}LoadingColors.h"
 
 @interface {{args.Prefix}}LoadmoreView ()
 
@@ -23,10 +21,10 @@
 #pragma mark - Load views.
 
 - (void)loadSubViews {
-    self.backgroundColor = [{{args.Prefix}}LoadingColors refreshBackgroundColor];
+    self.backgroundColor = [UIColor colorWithRGBValue:kRefreshBackgroundColor];
     _indicateLabel = [[UILabel alloc] init];
-    _indicateLabel.textColor = [{{args.Prefix}}ThemeColors defaultTextColor];
-    _indicateLabel.font = [{{args.Prefix}}ThemeSizes themeFont];
+    _indicateLabel.textColor = [UIColor colorWithRGBValue:kDefaultTextColor];
+    _indicateLabel.font = [UIFont systemFontOfSize:kDefaultFontSize];
     _indicateLabel.textAlignment = NSTextAlignmentCenter;
     _indicateLabel.text = @"正在加载数据，请稍等";
     [self addSubview:_indicateLabel];
@@ -51,14 +49,14 @@
 }
 
 - (CGFloat)refreshableInset {
-    return [{{args.Prefix}}LoadingSizes loadmoreViewHeight];
+    return kLoadmoreViewHeight;
 }
 
 - (CGFloat)promptingInset {
     if (self.hiddenRefresh) {
         return 0;
     }
-    return [{{args.Prefix}}LoadingSizes loadmoreViewHeight]; // 一般与 refreshableInset 相等
+    return kLoadmoreViewHeight; // 一般与 refreshableInset 相等
 }
 
 - (void)refreshStateChanged:(HTRefreshState)state {

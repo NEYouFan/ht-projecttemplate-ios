@@ -9,10 +9,12 @@
 #import "{{args.Prefix}}UserDataManager.h"
 
 static NSString *const kAlreadyLoginKey = @"alreadyLogin";
-static NSString *const kUserName = @"userName";
-static NSString *const kHeaderIcon = @"headerIcon";
-static NSString *const kToken = @"token";
-static NSString *const kPhoneNumber = @"phoneNumber";
+static NSString *const kCancelLoginKey = @"cancelLogin";
+static NSString *const kUserNameKey = @"userName";
+static NSString *const kHeaderIconKey = @"headerIcon";
+static NSString *const kTokenKey = @"token";
+static NSString *const kPhoneNumberKey = @"phoneNumber";
+static NSString *const kSaveOriginalPicture = @"saveOrigianlPicture";
 
 @implementation {{args.Prefix}}UserDataManager
 
@@ -29,7 +31,8 @@ static NSString *const kPhoneNumber = @"phoneNumber";
 
 - (instancetype)init {
     if (self = [super init]) {
-        
+        //TODO: 根据实际缓存读取，这里返回一个模拟值。
+        _cacheSize = 20000;
     }
     return self;
 }
@@ -53,36 +56,60 @@ static NSString *const kPhoneNumber = @"phoneNumber";
     [[NSUserDefaults standardUserDefaults] setBool:alreadyLogin forKey:kAlreadyLoginKey];
 }
 
+- (BOOL)cancelLogin {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:kCancelLoginKey];
+}
+
+- (void)setCancelLogin:(BOOL)cancelLogin {
+    [[NSUserDefaults standardUserDefaults] setBool:cancelLogin forKey:kCancelLoginKey];
+}
+
 - (NSString *)headerIcon {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:kHeaderIcon];
+    return [[NSUserDefaults standardUserDefaults] objectForKey:kHeaderIconKey];
 }
 
 - (void)setHeaderIcon:(NSString *)headerIcon {
-    [[NSUserDefaults standardUserDefaults] setObject:headerIcon forKey:kHeaderIcon];
+    [[NSUserDefaults standardUserDefaults] setObject:headerIcon forKey:kHeaderIconKey];
 }
 
 - (NSString *)userName {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:kUserName];
+    return [[NSUserDefaults standardUserDefaults] objectForKey:kUserNameKey];
 }
 
 - (void)setUserName:(NSString *)userName {
-    [[NSUserDefaults standardUserDefaults] setObject:userName forKey:kUserName];
+    [[NSUserDefaults standardUserDefaults] setObject:userName forKey:kUserNameKey];
 }
 
 - (void)setToken:(NSString *)token {
-    [[NSUserDefaults standardUserDefaults] setObject:token forKey:kToken];
+    [[NSUserDefaults standardUserDefaults] setObject:token forKey:kTokenKey];
 }
 
 - (NSString *)token {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:kToken];
+    return [[NSUserDefaults standardUserDefaults] objectForKey:kTokenKey];
 }
 
 - (void)setPhoneNumber:(NSString *)phoneNumber {
-    [[NSUserDefaults standardUserDefaults] setObject:phoneNumber forKey:kPhoneNumber];
+    [[NSUserDefaults standardUserDefaults] setObject:phoneNumber forKey:kPhoneNumberKey];
 }
 
 - (NSString *)phoneNumber {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:kPhoneNumber];
+    return [[NSUserDefaults standardUserDefaults] objectForKey:kPhoneNumberKey];
+}
+
+- (BOOL)saveOriginalPicture {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:kSaveOriginalPicture];
+}
+
+- (void)setSaveOriginalPicture:(BOOL)saveOriginalPicture {
+    [[NSUserDefaults standardUserDefaults] setBool:saveOriginalPicture forKey:kSaveOriginalPicture];
+}
+
+- (CGFloat)cacheSize {
+    return _cacheSize;
+}
+
+- (void)clearCache {
+    _cacheSize = 0;
 }
 
 @end

@@ -8,8 +8,6 @@
 
 #import "{{args.Prefix}}LoadingView.h"
 #import "UIView+Frame.h"
-#import "{{args.Prefix}}LoadingSizes.h"
-#import "{{args.Prefix}}LoadingColors.h"
 
 @interface {{args.Prefix}}LoadingView ()
 
@@ -24,7 +22,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = [{{args.Prefix}}LoadingColors loadingBackgroundColor];
+        self.backgroundColor = [UIColor colorWithRGBValue:kLoadingBackgroundColor];
         [self loadSubviews];
     }
     
@@ -36,8 +34,8 @@
 
 - (void)loadSubviews {
     _indicateLabel = [[UILabel alloc] init];
-    _indicateLabel.textColor = [{{args.Prefix}}ThemeColors defaultTextColor];
-    _indicateLabel.font = [{{args.Prefix}}ThemeSizes themeFont];
+    _indicateLabel.textColor = [UIColor colorWithRGBValue:kDefaultTextColor];
+    _indicateLabel.font = [UIFont systemFontOfSize:kDefaultFontSize];
     _indicateLabel.textAlignment = NSTextAlignmentCenter;
     _indicateLabel.text = @"正在加载";
     [self addSubview:_indicateLabel];
@@ -56,7 +54,7 @@
     [_indicateLabel sizeToFit];
     [_indicateImageView sizeToFit];
     
-    CGFloat width = _indicateLabel.width + _indicateImageView.width + [{{args.Prefix}}LoadingSizes loadingIconIndicationGap];
+    CGFloat width = _indicateLabel.width + _indicateImageView.width + kLoadingIconIndicationGap;
     _indicateImageView.x = (self.width - width) / 2;
     _indicateImageView.middleY = self.height / 2;
     

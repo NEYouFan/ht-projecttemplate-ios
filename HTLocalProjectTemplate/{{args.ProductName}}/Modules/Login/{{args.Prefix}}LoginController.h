@@ -21,6 +21,7 @@
 
 @optional
 - (void)loginFailed:({{args.Prefix}}LoginController *)controller;
+- (void)loginCanceled:({{args.Prefix}}LoginController *)controller;
 
 @end
 

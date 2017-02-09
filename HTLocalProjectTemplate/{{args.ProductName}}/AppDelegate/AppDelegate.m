@@ -19,7 +19,6 @@
 
 @interface AppDelegate () <{{args.Prefix}}SplashScreenDelegate, {{args.Prefix}}LoginDelegate>
 
-@property (nonatomic, strong) {{args.Prefix}}TabBarController *tabBarController;
 @property (nonatomic, strong) {{args.Prefix}}SplashScreenController *splashScreenController;
 @property (nonatomic, strong) {{args.Prefix}}LoginController *loginController;
 
@@ -98,7 +97,7 @@
 
 - (UIViewController *)getRootController {
     // 闪屏页消失后，可根据产品具体需求获取应该显示的页面，例如：如果不允许未登录用户查看信息，则可以判断是否有用户登录，若没有，则展示登录页面；当第一次安装应用时的教学页面也可以在这时显示。
-    if ([{{args.Prefix}}UserDataManager sharedInstance].alreadyLogin) {
+    if ([{{args.Prefix}}UserDataManager sharedInstance].alreadyLogin || [{{args.Prefix}}UserDataManager sharedInstance].cancelLogin) {
         
         _tabBarController = [[{{args.Prefix}}TabBarController alloc] init];
         
@@ -109,7 +108,7 @@
     } else {
         _loginController = [[{{args.Prefix}}LoginController alloc] init];
         _loginController.delegate = self;
-        return _loginController;
+        return [[HTNavigationController alloc] initWithRootViewController:_loginController];
     }
 }
 
@@ -137,18 +136,24 @@
     
 }
 
-#pragma mark - Public methods.
-
-- (void)selectTabbarIndex:(NSInteger)index {
-    [_tabBarController setSelectedIndex:index];
-}
-
-- (void)showTabBadgeAtIndex:(NSInteger)index text:(NSString *)text {
-    [_tabBarController showBadge:{{args.Prefix}}BadgeTypeText text:text atIndex:index];
-}
-
-- (void)hideTabBadgeAtIndex:(NSInteger)index {
-    [_tabBarController hideBadge:index];
+- (void)loginCanceled:({{args.Prefix}}LoginController *)controller {
+    if (_loginController != controller) {
+        return;
+    }
+    
+    [{{args.Prefix}}UserDataManager sharedInstance].cancelLogin = YES;
+    
+    UIViewController *rootController = [self getRootController];
+    self.window.rootViewController = rootController;
+    
+    // 页面转场过渡
+    [rootController.view addSubview:_loginController.view];
+    [UIView animateWithDuration:.25
+                     animations:^{
+                         _loginController.view.alpha = 0;
+                     } completion:^(BOOL finished) {
+                         [_loginController.view removeFromSuperview];
+                     }];
 }
 
 @end

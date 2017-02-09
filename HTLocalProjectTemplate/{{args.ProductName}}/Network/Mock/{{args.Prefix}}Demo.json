@@ -1,0 +1,9 @@
+{
+    "data": {
+        "boolParam": false,
+        "intParam": 30,
+        "stringParam": "这是测试的字符串",
+    },
+    "code": 200,
+    "message": "请求成功"
+}

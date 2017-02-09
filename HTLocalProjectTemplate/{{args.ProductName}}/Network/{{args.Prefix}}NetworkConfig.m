@@ -12,6 +12,9 @@
 #import "{{args.Prefix}}AppConfigurations.h"
 #import "RKMappingResult+{{args.Prefix}}NetworkResultMapping.h"
 
+//该开关决定了是否要开启网络请求接口数据的mock功能
+#define kEnableMock 1
+
 static NSString *const k{{args.Prefix}}DevBaseURL = @"https://{{args.ProductName}}.dev.com";
 static NSString *const k{{args.Prefix}}OnlineBaseURL = @"https://{{args.ProductName}}.online.com";
 static NSString *const k{{args.Prefix}}PreBaseURL = @"https://{{args.ProductName}}.pre.com";
@@ -19,9 +22,14 @@ static NSString *const kUserHostEnvironmentOnline = @"online";
 static NSString *const kUserHostEnvironmentDev = @"dev";
 static NSString *const kUserHostEnvironmentPre = @"pre";
 
+
+
 @implementation {{args.Prefix}}NetworkConfig
 
 #pragma mark - Public methods.
++ (BOOL)enableMock{
+    return kEnableMock;
+}
 
 + ({{args.Prefix}}NetworkHostEnv)hostEnv {
     NSString *env = [{{args.Prefix}}AppConfigurations sharedAppConfigurations].environment;
@@ -59,7 +67,9 @@ static NSString *const kUserHostEnvironmentPre = @"pre";
         }
     };
 #ifdef DEBUG
-    [HTBaseRequest enableMockTest];
+    if ([{{args.Prefix}}NetworkConfig enableMock]) {
+        [HTBaseRequest enableMockTest];
+    }
 #endif
 }
 

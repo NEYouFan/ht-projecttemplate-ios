@@ -38,9 +38,11 @@
 /**
  添加左侧返回键
  
+ @return 添加的 button，可以在此返回的 button 上定制样式和添加事件
+ 
  @note 需要根据视觉要求，自定义本方法实现中的样式定制
  */
-- (void){{args.CategoryPrefix}}_addNavigationLeftBackItem;
+- (UIButton *){{args.CategoryPrefix}}_addNavigationLeftBackItem;
 
 /**
  添加导航栏左侧按钮，不为该 button 添加任何点击行为与视觉
@@ -50,6 +52,24 @@
  @note 需要根据视觉要求，自定义本方法实现中的样式定制
  */
 - (UIButton *){{args.CategoryPrefix}}_addNavigationLeftItem;
+
+/**
+ 添加导航栏右侧关闭按钮，只定制了样式，没有添加行为
+ 
+ @return 添加的 button，可以在此返回的 button 上定制样式和添加事件
+ 
+ @note 需要根据视觉要求，自定义本方法实现中的样式定制
+ */
+- (UIButton *){{args.CategoryPrefix}}_addNavigationRightCloseItem;
+
+/**
+ 添加导航栏右侧设置按钮，只定制了样式，没有添加行为
+ 
+ @return 添加的 button，可以在此返回的 button 上定制样式和添加事件
+ 
+ @note 需要根据视觉要求，自定义本方法实现中的样式定制
+ */
+- (UIButton *){{args.CategoryPrefix}}_addNavigationRightSettingItem;
 
 /**
  添加导航栏右侧按钮， 不为该 button 添加任何点击行为与视觉

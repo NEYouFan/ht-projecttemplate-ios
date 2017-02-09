@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [{{args.Prefix}}ThemeColors themeBackgroundColor];
+    self.view.backgroundColor = [UIColor colorWithRGBValue:kDefaultBackgroundColor];
     
     // 可根据产品需求，加载广告等。这里只是简单的显示一下启动页面
     [self loadSubviews];
@@ -45,7 +45,7 @@
     _backgroundImageView = [[UIImageView alloc] init];
     
     NSString *launchImageName;
-    CGFloat screenHeight = [{{args.Prefix}}ThemeSizes screenHeight];
+    CGFloat screenHeight = SCREEN_HEIGHT;
     
     if (screenHeight == 480) {
         launchImageName = @"LaunchImage-700@2x.png";

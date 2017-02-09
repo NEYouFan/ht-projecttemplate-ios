@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [{{args.Prefix}}ThemeColors themeBackgroundColor];
+    self.view.backgroundColor = [UIColor colorWithRGBValue:kDefaultBackgroundColor];
 }
 
 - (void)didReceiveMemoryWarning {

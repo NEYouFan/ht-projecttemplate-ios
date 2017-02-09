@@ -8,8 +8,6 @@
 
 #import "{{args.Prefix}}LoadingErrorView.h"
 #import "{{args.Prefix}}CommonStyleViews.h"
-#import "{{args.Prefix}}LoadingSizes.h"
-#import "{{args.Prefix}}LoadingColors.h"
 #import "UIView+Frame.h"
 
 @interface {{args.Prefix}}LoadingErrorView ()
@@ -27,7 +25,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = [{{args.Prefix}}LoadingColors loadingBackgroundColor];
+        self.backgroundColor = [UIColor colorWithRGBValue:kLoadingBackgroundColor];
         [self loadSubviews];
     }
     
@@ -39,8 +37,8 @@
 
 - (void)loadSubviews {
     _indicateLabel = [[UILabel alloc] init];
-    _indicateLabel.textColor = [{{args.Prefix}}ThemeColors defaultTextColor];
-    _indicateLabel.font = [{{args.Prefix}}ThemeSizes themeFont];
+    _indicateLabel.textColor = [UIColor colorWithRGBValue:kDefaultTextColor];
+    _indicateLabel.font = [UIFont systemFontOfSize:kDefaultFontSize];
     _indicateLabel.textAlignment = NSTextAlignmentCenter;
     _indicateLabel.text = @"获取数据失败";
     [self addSubview:_indicateLabel];
@@ -60,9 +58,9 @@
     _indicateLabel.bottom = self.height / 2;
     _indicateLabel.middleX = self.width / 2;
     
-    _reloadButton.size = [{{args.Prefix}}LoadingSizes loadingReloadButtonSize];
+    _reloadButton.size = CGSizeMake(kLoadingReloadButtonWidth, kLoadingReloadButtonHeight);
     _reloadButton.middleX = self.width / 2;
-    _reloadButton.y = _indicateLabel.bottom + [{{args.Prefix}}LoadingSizes loadingIndicationReloadGap];
+    _reloadButton.y = _indicateLabel.bottom + kLoadingIndicationReloadGap;
 }
 
 

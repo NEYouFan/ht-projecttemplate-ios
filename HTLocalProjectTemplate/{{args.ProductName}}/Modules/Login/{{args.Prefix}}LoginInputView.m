@@ -9,8 +9,9 @@
 #import "{{args.Prefix}}LoginInputView.h"
 #import "UIView+{{args.Prefix}}Line.h"
 #import "UIView+Frame.h"
-#import "{{args.Prefix}}LoginSizes.h"
-#import "{{args.Prefix}}LoginInputViewModel.h"
+
+/// 用户名、密码输入框的起始图标与文本输入框之间的间隔，参考登录页面即可理解。
+static const CGFloat kIconTextFieldGap = 8;
 
 @interface {{args.Prefix}}LoginInputView ()
 
@@ -24,7 +25,17 @@
 #pragma mark - Life cycle.
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
+    if (self = [self initWithImageName:nil placeholder:nil]) {
+        
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithImageName:(NSString *)imageName placeholder:(NSString *)placeholder {
+    if (self = [super initWithFrame:CGRectZero]) {
+        _placeholder = placeholder;
+        _iconImageName = imageName;
         [self loadSubviews];
     }
     
@@ -45,6 +56,18 @@
     // 创建起始处图标
     _iconImageView = [[UIImageView alloc] init];
     [self addSubview:_iconImageView];
+    
+    // 设置 placeholder 的显示样式
+    NSMutableAttributedString *attributedPlaceholder = [[NSMutableAttributedString alloc] initWithString:_placeholder];
+    [attributedPlaceholder addAttribute:NSForegroundColorAttributeName
+                                  value:[UIColor colorWithRGBValue:kPlaceholderTextColor]
+                                  range:NSMakeRange(0, _placeholder.length)];
+    [attributedPlaceholder addAttribute:NSFontAttributeName
+                                  value:[UIFont systemFontOfSize:kPlaceholderFontSize]
+                                  range:NSMakeRange(0, _placeholder.length)];
+    _inputTextField.attributedPlaceholder = attributedPlaceholder;
+    
+    _iconImageView.image = [UIImage imageNamed:_iconImageName];
 }
 
 
@@ -58,34 +81,30 @@
     _iconImageView.middleY = self.height / 2;
     _iconImageView.x = 0;
     
-    _inputTextField.width = self.width - _iconImageView.width - [{{args.Prefix}}LoginSizes iconTextFieldGap];
+    _inputTextField.width = self.width - _iconImageView.width - kIconTextFieldGap;
     _inputTextField.height = self.height;
-    _inputTextField.x = _iconImageView.tail + [{{args.Prefix}}LoginSizes iconTextFieldGap];
+    _inputTextField.x = _iconImageView.tail + kIconTextFieldGap;
     _inputTextField.middleY = self.height / 2;
 }
 
 
 #pragma mark - Setter & Getter.
 
-- (void)setViewModel:({{args.Prefix}}LoginInputViewModel *)viewModel {
-    if (_viewModel == viewModel) {
+- (void)setPlaceholder:(NSString *)placeholder {
+    if ([_placeholder isEqualToString:placeholder]) {
         return;
     }
     
-    _viewModel = viewModel;
+    _placeholder = placeholder;
+    [self setNeedsLayout];
+}
+
+- (void)setIconImageName:(NSString *)imageName {
+    if ([_iconImageName isEqualToString:imageName]) {
+        return;
+    }
     
-    // 设置 placeholder 的显示样式
-    NSMutableAttributedString *attributedPlaceholder = [[NSMutableAttributedString alloc] initWithString:_viewModel.placeholder];
-    [attributedPlaceholder addAttribute:NSForegroundColorAttributeName
-                                  value:[{{args.Prefix}}ThemeColors placeholderTextColor]
-                                  range:NSMakeRange(0, _viewModel.placeholder.length)];
-    [attributedPlaceholder addAttribute:NSFontAttributeName
-                                  value:[{{args.Prefix}}ThemeSizes placeholderFont]
-                                  range:NSMakeRange(0, _viewModel.placeholder.length)];
-    _inputTextField.attributedPlaceholder = attributedPlaceholder;
-    
-    _iconImageView.image = _viewModel.iconImage;
-    
+    _iconImageName = imageName;
     [self setNeedsLayout];
 }
 

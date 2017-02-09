@@ -8,7 +8,6 @@
 
 #import "{{args.Prefix}}NoMoreDataFooterView.h"
 #import "Masonry.h"
-#import "{{args.Prefix}}LoadingSizes.h"
 
 @interface {{args.Prefix}}NoMoreDataFooterView()
 
@@ -33,8 +32,8 @@
 - (void)loadSubviews {
     _footerLabel = [[UILabel alloc] init];
     _footerLabel.text = @"没有更多了";
-    _footerLabel.font = [{{args.Prefix}}ThemeSizes themeFont];
-    _footerLabel.textColor = [{{args.Prefix}}ThemeColors defaultTextColor];
+    _footerLabel.font = [UIFont systemFontOfSize:kDefaultFontSize];
+    _footerLabel.textColor = [UIColor colorWithRGBValue:kDefaultTextColor];
     [_footerLabel sizeToFit];
     CGSize size = _footerLabel.bounds.size;
     [self addSubview:_footerLabel];

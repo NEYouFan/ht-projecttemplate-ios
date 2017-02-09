@@ -8,8 +8,6 @@
 
 #import "{{args.Prefix}}RefreshView.h"
 #import "UIView+Frame.h"
-#import "{{args.Prefix}}LoadingSizes.h"
-#import "{{args.Prefix}}LoadingColors.h"
 
 @interface {{args.Prefix}}RefreshView ()
 
@@ -22,10 +20,10 @@
 #pragma mark - Load Views.
 
 - (void)loadSubViews {
-    self.backgroundColor = [{{args.Prefix}}LoadingColors refreshBackgroundColor];
+    self.backgroundColor = [UIColor colorWithRGBValue:kRefreshBackgroundColor];
     _indicateLabel = [[UILabel alloc] init];
-    _indicateLabel.textColor = [{{args.Prefix}}ThemeColors defaultTextColor];
-    _indicateLabel.font = [{{args.Prefix}}ThemeSizes themeFont];
+    _indicateLabel.textColor = [UIColor colorWithRGBValue:kDefaultTextColor];
+    _indicateLabel.font = [UIFont systemFontOfSize:kDefaultFontSize];
     _indicateLabel.textAlignment = NSTextAlignmentCenter;
     _indicateLabel.text = @"继续下拉";
     [self addSubview:_indicateLabel];
@@ -43,11 +41,11 @@
 #pragma mark - HTRefreshViewDelegate
 
 - (CGFloat)refreshingInset {
-    return [{{args.Prefix}}LoadingSizes refreshViewHeight];
+    return kRefreshViewHeight;
 }
 
 - (CGFloat)refreshableInset {
-    return [{{args.Prefix}}LoadingSizes refreshViewHeight];
+    return kRefreshViewHeight;
 }
 
 - (void)refreshStateChanged:(HTRefreshState)state {

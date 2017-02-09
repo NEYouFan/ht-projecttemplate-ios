@@ -11,6 +11,8 @@
 
 /**
  当请求成功或者失败时，如果所有请求有共同需要处理的逻辑，可以在这个方法中实现，例如：token失败后进行 token 的刷新，或者弹出登录页面。
+ 
+ @note 如果请求没有需要处理的通用逻辑，可删除该方法，使用 HTNetworking 默认提供的方案处理网络请求。
  */
 @interface NSObject ({{args.Prefix}}BaseRequest)
 

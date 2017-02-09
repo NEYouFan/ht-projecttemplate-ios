@@ -9,10 +9,11 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import "{{args.Prefix}}ThemeColors.h"
-#import "{{args.Prefix}}ThemeSizes.h"
+#import "{{args.Prefix}}CommonColors.h"
+#import "{{args.Prefix}}CommonSizes.h"
 #import "{{args.Prefix}}GlobalEnums.h"
 #import "{{args.Prefix}}Macros.h"
+#import "ColorUtils.h"
 #import "AppDelegate.h"
 
 #endif /* PrefixHeader_pch */
