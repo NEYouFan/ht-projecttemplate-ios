@@ -3,7 +3,7 @@
 # Determine the install directory.
 installDirectory=~/Library/Developer/Xcode/UserData/CodeSnippets
 
-echo "Templates will be installed to $installDirectory"
+echo "Snippets will be installed to $installDirectory"
 
 # Create the install directory if it does not exist.
 if [ ! -d "$installDirectory" ]
