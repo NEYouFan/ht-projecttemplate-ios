@@ -4,6 +4,8 @@
 platform :ios, '7.0'
 
 target :{{args.ProductName}} do
+  pod 'HTSplashADView'
+  pod 'HTWebView'
   pod 'HTToast'
   pod 'HTBadgeTextView'
   pod 'UniversalRouter'

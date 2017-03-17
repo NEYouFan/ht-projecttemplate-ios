@@ -25,4 +25,6 @@
 
 @property (nonatomic, weak) id<{{args.Prefix}}SplashScreenDelegate> delegate;
 
+- (void)loadSplashView;
+
 @end

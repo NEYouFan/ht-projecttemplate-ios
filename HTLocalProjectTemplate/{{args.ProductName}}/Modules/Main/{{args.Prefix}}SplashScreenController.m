@@ -7,6 +7,8 @@
 //
 
 #import "{{args.Prefix}}SplashScreenController.h"
+#import <HTSplashADView/HTSplashADView.h>
+#import "HTControllerRouter.h"
 
 @interface {{args.Prefix}}SplashScreenController ()
 
@@ -23,9 +25,7 @@
     
     self.view.backgroundColor = [UIColor colorWithRGBValue:kDefaultBackgroundColor];
     
-    // 可根据产品需求，加载广告等。这里只是简单的显示一下启动页面
     [self loadSubviews];
-    [self scheduleDismiss];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -62,13 +62,35 @@
 }
 
 
-#pragma mark - Actions.
-
-- (void)scheduleDismiss {
+- (void)loadSplashView{
     @{{args.Prefix}}Weak(self);
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_delegate splashScreenDidDisappear:weakSelf];
-    });
+    HTSplashADView * adView = [[HTSplashADView alloc] initWithFrame:[UIScreen mainScreen].bounds finished:^(HTSplashData *splashData, BOOL gotoAd) {
+        // 判断是否有广告页来显示，如果没有的话，显示app启动页. 如果有广告页，则走广告页面流程，根据router来跳转到webview来展示对应广告页面
+        if ([HTSplashADManager sharedInstance].getSplashData == nil) {
+            NSUInteger showTime = 3;  //设置启动页显示时长
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(showTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                if ([_delegate respondsToSelector:@selector(splashScreenDidDisappear:)]) {
+                    [_delegate splashScreenDidDisappear:weakSelf];
+                }
+            });
+        }else{
+            if ([_delegate respondsToSelector:@selector(splashScreenDidDisappear:)]) {
+                [_delegate splashScreenDidDisappear:weakSelf];
+            }
+            //这里针对闪屏之后的广告页跳转，可以通过gotoAd来判断是否需要跳转到对应的广告页面，页面信息在splashData内可以拿到
+            if (gotoAd) {
+                if (splashData.linkUrl) {
+                    HTControllerRouteParam *param = [[HTControllerRouteParam alloc] init];
+                    param.url = @"{{args.ProductName}}://webview";
+                    param.launchMode = HTControllerLaunchModePushNavigation;
+                    param.fromViewController = [APPDELEGATE() rootNavigationController];
+                    param.delegate = self;
+                    param.params = @{@"url":splashData.linkUrl};
+                    [[HTControllerRouter sharedRouter] route:param];
+                }
+            }
+        }
+    }];
+    [adView show];
 }
-
 @end

@@ -85,7 +85,7 @@ static const CGFloat kRegisterLoginGap = 10;
 }
 
 + (NSString*)urlPath {
-    return @"{{args.Prefix}}://login";
+    return @"{{args.ProductName}}://login";
 }
 
 - (void)receiveRoute:(HTControllerRouteParam*)param {

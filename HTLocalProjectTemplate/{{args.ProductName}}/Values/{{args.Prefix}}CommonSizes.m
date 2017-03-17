@@ -12,6 +12,8 @@
 
 const CGFloat kNavigationHeight = 64;
 const CGFloat kTabHeight = 49;
+const CGFloat kNavigationBarHeight = 44;
+const CGFloat kStatusBarHeight = 20;
 
 /* *************** 主题字体大小(通常由视觉统一规范规定)相关, 可根据所需自由添加 *********/
 

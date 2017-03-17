@@ -54,6 +54,9 @@
 		BFE9ECD21E00E39E00DD6CED /* {{args.Prefix}}PagingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9ECCC1E00E39E00DD6CED /* {{args.Prefix}}PagingListCell.m */; };
 		BFE9ECD31E00E39E00DD6CED /* {{args.Prefix}}PagingListController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9ECCE1E00E39E00DD6CED /* {{args.Prefix}}PagingListController.m */; };
 		BFE9ECE61E011CC300DD6CED /* NSObject+{{args.Prefix}}BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9ECE51E011CC300DD6CED /* NSObject+{{args.Prefix}}BaseRequest.m */; };
+		D22812131E7BC5D800C42E2E /* {{args.Prefix}}WebLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D22812101E7BC5D800C42E2E /* {{args.Prefix}}WebLoadingView.m */; };
+		D22812141E7BC5D800C42E2E /* {{args.Prefix}}WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22812121E7BC5D800C42E2E /* {{args.Prefix}}WebViewController.m */; };
+		D22812171E7BD5A900C42E2E /* {{args.Prefix}}ActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = D22812161E7BD5A900C42E2E /* {{args.Prefix}}ActivityIndicator.m */; };
 		D2B6D14C1E4AF1FF00D5583A /* CopyMockFiles.sh in Resources */ = {isa = PBXBuildFile; fileRef = D2B6D14B1E4AF1FF00D5583A /* CopyMockFiles.sh */; };
 		D2B6D1561E4B052500D5583A /* {{args.Prefix}}Demo.json in Resources */ = {isa = PBXBuildFile; fileRef = D2B6D1551E4B052500D5583A /* {{args.Prefix}}Demo.json */; };
 		D2B6D15C1E4B069B00D5583A /* {{args.Prefix}}DemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B6D1591E4B069B00D5583A /* {{args.Prefix}}DemoModel.m */; };
@@ -158,6 +161,12 @@
 		BFE9ECCE1E00E39E00DD6CED /* {{args.Prefix}}PagingListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}PagingListController.m"; sourceTree = "<group>"; };
 		BFE9ECE41E011CC300DD6CED /* NSObject+{{args.Prefix}}BaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+{{args.Prefix}}BaseRequest.h"; sourceTree = "<group>"; };
 		BFE9ECE51E011CC300DD6CED /* NSObject+{{args.Prefix}}BaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+{{args.Prefix}}BaseRequest.m"; sourceTree = "<group>"; };
+		D228120F1E7BC5D800C42E2E /* {{args.Prefix}}WebLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "{{args.Prefix}}WebLoadingView.h"; path = "WebView/{{args.Prefix}}WebLoadingView.h"; sourceTree = "<group>"; };
+		D22812101E7BC5D800C42E2E /* {{args.Prefix}}WebLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "{{args.Prefix}}WebLoadingView.m"; path = "WebView/{{args.Prefix}}WebLoadingView.m"; sourceTree = "<group>"; };
+		D22812111E7BC5D800C42E2E /* {{args.Prefix}}WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "{{args.Prefix}}WebViewController.h"; path = "WebView/{{args.Prefix}}WebViewController.h"; sourceTree = "<group>"; };
+		D22812121E7BC5D800C42E2E /* {{args.Prefix}}WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "{{args.Prefix}}WebViewController.m"; path = "WebView/{{args.Prefix}}WebViewController.m"; sourceTree = "<group>"; };
+		D22812151E7BD5A900C42E2E /* {{args.Prefix}}ActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ActivityIndicator.h"; sourceTree = "<group>"; };
+		D22812161E7BD5A900C42E2E /* {{args.Prefix}}ActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ActivityIndicator.m"; sourceTree = "<group>"; };
 		D2B6D14B1E4AF1FF00D5583A /* CopyMockFiles.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = CopyMockFiles.sh; sourceTree = "<group>"; };
 		D2B6D1551E4B052500D5583A /* {{args.Prefix}}Demo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "{{args.Prefix}}Demo.json"; sourceTree = "<group>"; };
 		D2B6D1581E4B069B00D5583A /* {{args.Prefix}}DemoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}DemoModel.h"; sourceTree = "<group>"; };
@@ -248,6 +257,8 @@
 		BF401EC91DF5493400CE31E0 /* CommonView */ = {
 			isa = PBXGroup;
 			children = (
+				D22812151E7BD5A900C42E2E /* {{args.Prefix}}ActivityIndicator.h */,
+				D22812161E7BD5A900C42E2E /* {{args.Prefix}}ActivityIndicator.m */,
 				BF82CA661DF909BE0016C818 /* {{args.Prefix}}CommonStyleViews.h */,
 				BF82CA671DF909BE0016C818 /* {{args.Prefix}}CommonStyleViews.m */,
 				BF82CA631DF901CA0016C818 /* {{args.Prefix}}LoadingEmptyView.h */,
@@ -271,6 +282,7 @@
 		BF401ECA1DF5493400CE31E0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D228120E1E7BC57D00C42E2E /* WebView */,
 				BFE9ECCA1E00E39E00DD6CED /* PagingList */,
 				BF55B09E1E4965C4008C7490 /* Mine */,
 				BF401ED31DF54A2500CE31E0 /* Login */,
@@ -410,19 +422,15 @@
 			path = PagingList;
 			sourceTree = "<group>";
 		};
-		BFE9ECCF1E00E39E00DD6CED /* StaticList */ = {
+		D228120E1E7BC57D00C42E2E /* WebView */ = {
 			isa = PBXGroup;
 			children = (
-				BF7B46531E0784A600C054F7 /* {{args.Prefix}}StaticListDescribeData.h */,
-				BF7B46541E0784A600C054F7 /* {{args.Prefix}}StaticListDescribeData.m */,
-				BF7B46471E07844900C054F7 /* {{args.Prefix}}StaticListDemoCell1.h */,
-				BF7B46481E07844900C054F7 /* {{args.Prefix}}StaticListDemoCell1.m */,
-				BF7B46491E07844900C054F7 /* {{args.Prefix}}StaticListDemoCell2.h */,
-				BF7B464A1E07844900C054F7 /* {{args.Prefix}}StaticListDemoCell2.m */,
-				BFE9ECD01E00E39E00DD6CED /* {{args.Prefix}}StaticListController.h */,
-				BFE9ECD11E00E39E00DD6CED /* {{args.Prefix}}StaticListController.m */,
+				D228120F1E7BC5D800C42E2E /* {{args.Prefix}}WebLoadingView.h */,
+				D22812101E7BC5D800C42E2E /* {{args.Prefix}}WebLoadingView.m */,
+				D22812111E7BC5D800C42E2E /* {{args.Prefix}}WebViewController.h */,
+				D22812121E7BC5D800C42E2E /* {{args.Prefix}}WebViewController.m */,
 			);
-			path = StaticList;
+			name = WebView;
 			sourceTree = "<group>";
 		};
 		D2B6D14A1E4AF1FF00D5583A /* Mock */ = {
@@ -445,7 +453,6 @@
 			path = demo;
 			sourceTree = "<group>";
 		};
-
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -537,6 +544,7 @@
 			files = (
 				BF401EEA1DF6B6A000CE31E0 /* UIView+{{args.Prefix}}Toast.m in Sources */,
 				D2B6D15C1E4B069B00D5583A /* {{args.Prefix}}DemoModel.m in Sources */,
+				D22812171E7BD5A900C42E2E /* {{args.Prefix}}ActivityIndicator.m in Sources */,
 				BF82CA961DFE7E820016C818 /* {{args.Prefix}}TabBarItem.m in Sources */,
 				BF55B0BA1E4965C4008C7490 /* {{args.Prefix}}MineCellDescribeData.m in Sources */,
 				BF7B46401E02D8F000C054F7 /* {{args.Prefix}}LoginController.m in Sources */,
@@ -555,6 +563,7 @@
 				BF3A15B11DFEAA1F00CDFD73 /* {{args.Prefix}}TabBarController.m in Sources */,
 				BF82CA651DF901CA0016C818 /* {{args.Prefix}}LoadingEmptyView.m in Sources */,
 				BF401ED91DF54E1A00CE31E0 /* {{args.Prefix}}BaseViewController+{{args.Prefix}}CustomNavigationBar.m in Sources */,
+				D22812131E7BC5D800C42E2E /* {{args.Prefix}}WebLoadingView.m in Sources */,
 				BF82CA6E1DF95F980016C818 /* {{args.Prefix}}LoadingView.m in Sources */,
 				BF82CA871DFA65EA0016C818 /* {{args.Prefix}}NetworkStatusModel.m in Sources */,
 				D2B6D15D1E4B069B00D5583A /* {{args.Prefix}}DemoRequest.m in Sources */,
@@ -579,6 +588,7 @@
 				BF82CA901DFAB7F30016C818 /* UIView+{{args.Prefix}}Loading.m in Sources */,
 				BF82CA681DF909BE0016C818 /* {{args.Prefix}}CommonStyleViews.m in Sources */,
 				BF82CA711DF9692E0016C818 /* {{args.Prefix}}NoMoreDataFooterView.m in Sources */,
+				D22812141E7BC5D800C42E2E /* {{args.Prefix}}WebViewController.m in Sources */,
 				BF82CA6B1DF93DE70016C818 /* {{args.Prefix}}LoadingErrorView.m in Sources */,
 				BF401ED11DF5494A00CE31E0 /* AppDelegate.m in Sources */,
 				BF55B0B51E4965C4008C7490 /* {{args.Prefix}}MineSettingCommonCell.m in Sources */,

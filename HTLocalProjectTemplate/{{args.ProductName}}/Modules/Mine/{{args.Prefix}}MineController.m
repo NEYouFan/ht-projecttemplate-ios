@@ -203,7 +203,7 @@
 }
 
 - (void)setting:(id)sender {
-    [self pushNextControllerWithUrl:@"{{args.CategoryPrefix}}://mine/setting"];
+    [self pushNextControllerWithUrl:@"{{args.ProductName}}://mine/setting"];
 }
 
 @end

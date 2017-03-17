@@ -298,7 +298,7 @@
     
     // HTUniversalRouter 的使用，这里只是给出一个示例，并没有真正实现下一级页面。关于 HTUniversalRouter 的详细使用请参考模板说明文档
     HTControllerRouteParam *param = [[HTControllerRouteParam alloc] init];
-    param.url = @"{{args.Prefix}}://pagingList/detail";
+    param.url = @"{{args.ProductName}}://pagingList/detail";
     param.launchMode = HTControllerLaunchModePushNavigation;
     param.fromViewController = [APPDELEGATE() rootNavigationController];
     param.delegate = self;

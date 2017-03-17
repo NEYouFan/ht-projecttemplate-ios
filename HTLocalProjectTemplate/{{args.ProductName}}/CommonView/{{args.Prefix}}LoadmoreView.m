@@ -8,10 +8,13 @@
 
 #import "{{args.Prefix}}LoadmoreView.h"
 #import "UIView+Frame.h"
+#import "{{args.Prefix}}ActivityIndicator.h"
 
 @interface {{args.Prefix}}LoadmoreView ()
 
+@property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, strong) UILabel *indicateLabel;
+@property (nonatomic, strong) {{args.Prefix}}ActivityIndicator *loadingIndicator;
 
 @end
 
@@ -21,13 +24,22 @@
 #pragma mark - Load views.
 
 - (void)loadSubViews {
-    self.backgroundColor = [UIColor colorWithRGBValue:kRefreshBackgroundColor];
+    self.backgroundColor = [UIColor clearColor];
+    _containerView = [[UIView alloc] init];
+    [self addSubview:_containerView];
+    
+    _loadingIndicator = [[{{args.Prefix}}ActivityIndicator alloc] init];
+    CGSize size = [_loadingIndicator sizeThatFits:CGSizeZero];
+    _loadingIndicator.frame = CGRectMake(0, 0, size.width, size.height);
+    [_containerView addSubview:_loadingIndicator];
+    
     _indicateLabel = [[UILabel alloc] init];
-    _indicateLabel.textColor = [UIColor colorWithRGBValue:kDefaultTextColor];
+    _indicateLabel.textColor = [UIColor colorWithRGBValue:kLightTextColor];
     _indicateLabel.font = [UIFont systemFontOfSize:kDefaultFontSize];
     _indicateLabel.textAlignment = NSTextAlignmentCenter;
     _indicateLabel.text = @"正在加载数据，请稍等";
-    [self addSubview:_indicateLabel];
+    [_containerView addSubview:_indicateLabel];
+
 }
 
 
@@ -37,8 +49,16 @@
     [super layoutSubviews];
     
     [_indicateLabel sizeToFit];
-    _indicateLabel.middleX = self.width / 2;
-    _indicateLabel.middleY = self.height / 2;
+    _containerView.width = _indicateLabel.width + _loadingIndicator.width + kLeftMargin;
+    _containerView.height = self.height;
+    _containerView.middleY = self.height / 2;
+    _containerView.middleX = self.width / 2;
+    
+    _loadingIndicator.x = 0;
+    _loadingIndicator.middleY = _containerView.height / 2;
+    
+    _indicateLabel.tail = _containerView.width;
+    _indicateLabel.middleY = _containerView.height / 2;
 }
 
 
@@ -67,6 +87,8 @@
             break;
         case HTRefreshStateDidEngageRefresh: {
             // 正在刷新，用户可自定义 view 变化
+            [_loadingIndicator startAnimating];
+
         }
             break;
         case HTRefreshStateDidDisengageRefresh: {
@@ -79,6 +101,8 @@
             break;
         case HTRefreshStateDidEndRefresh: {
             // 刷新完成，用户可自定义 view 变化
+            [_loadingIndicator stopAnimating];
+
         }
             break;
     }

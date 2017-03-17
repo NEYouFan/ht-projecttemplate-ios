@@ -30,6 +30,10 @@
 extern const CGFloat kNavigationHeight;
 /// Tabbar 的高度
 extern const CGFloat kTabHeight;
+/// 导航栏高度（不包括状态栏）
+extern const CGFloat kNavigationBarHeight;
+/// 状态栏高度
+extern const CGFloat kStatusBarHeight;
 
 /* ************* 主题字体大小(通常由视觉统一规范规定)相关, 可根据所需自由添加 ***************/
 

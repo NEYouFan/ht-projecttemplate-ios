@@ -46,7 +46,7 @@
 }
 
 + (NSString*)urlPath {
-    return @"{{args.CategoryPrefix}}://mine/setting";
+    return @"{{args.ProductName}}://mine/setting";
 }
 
 - (void)receiveRoute:(HTControllerRouteParam*)param {
@@ -64,6 +64,7 @@
     [self {{args.CategoryPrefix}}_applyDefaultNavigationBarStyle];
     [self {{args.CategoryPrefix}}_addNavigationLeftBackItem];
     self.title = @"设置";
+    
 }
 
 - (void)viewWillLayoutSubviews {

@@ -16,6 +16,7 @@
 #import "{{args.Prefix}}SplashScreenController.h"
 #import "AppDelegate+Notifications.h"
 #import "{{args.Prefix}}LoginController.h"
+#import <HTSplashADView/HTSplashADView.h>
 
 @interface AppDelegate () <{{args.Prefix}}SplashScreenDelegate, {{args.Prefix}}LoginDelegate>
 
@@ -47,7 +48,8 @@
     _splashScreenController.delegate = self;
     self.window.rootViewController = _splashScreenController;
     [self.window makeKeyAndVisible];
-    
+    [_splashScreenController loadSplashView];
+
     [self registerRemoteNotifications];
     
     return YES;
@@ -79,6 +81,17 @@
 #pragma mark - {{args.Prefix}}SplashScreenDelegate.
 
 - (void)splashScreenDidDisappear:({{args.Prefix}}SplashScreenController *)splashScreenController {
+    // 延时获取新闪屏的内容并更新对应的闪屏信息，具体的内容请自行填充
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        HTSplashData *data = [[HTSplashData alloc] init];
+        data.imageUrl = @"https://a-ssl.duitang.com/uploads/item/201504/25/20150425H0930_cXNKH.png";
+        data.linkUrl = @"http://www.163.com";
+        data.showCountdown = YES;
+        data.countdownTime = 3.0;
+        data.expireTime = [[NSDate dateWithTimeIntervalSinceNow:100000] timeIntervalSince1970] * 1000;
+        [[HTSplashADManager sharedInstance] updateSplashData:data];
+    });
+
     if (_splashScreenController != splashScreenController) {
         return;
     }
