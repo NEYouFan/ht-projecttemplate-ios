@@ -9,6 +9,7 @@
 #import "{{args.Prefix}}RefreshView.h"
 #import "UIView+Frame.h"
 #import "{{args.Prefix}}LoadingView.h"
+#import "{{args.Prefix}}ActivityIndicator.h"
 
 @interface {{args.Prefix}}RefreshView ()
 

@@ -11,6 +11,7 @@
 #import "MCBlurView.h"
 #import "{{args.Prefix}}TabBarItem.h"
 #import "UIImage+ImageWithColor.h"
+#import "{{args.Prefix}}DemoViewController.h"
 #import "{{args.Prefix}}PagingListController.h"
 #import "{{args.Prefix}}MineController.h"
 #import "HTControllerRouter.h"
@@ -70,11 +71,17 @@
 
 - (void)loadTabBar {
     // 用户在此自定义产品对应的 tab。
-    _titles = [NSMutableArray arrayWithArray:@[@"列表",
+    _titles = [NSMutableArray arrayWithArray:@[@"列表1",
+                                               @"列表2",
+                                               @"列表3",
                                                @"我的"]];
     _icons = [NSMutableArray arrayWithArray:@[@"tab_list",
+                                              @"tab_list",
+                                              @"tab_list",
                                               @"tab_mine"]];
     _selectedIcons = [NSMutableArray arrayWithArray:@[@"tab_list_hl",
+                                                      @"tab_list_hl",
+                                                      @"tab_list_hl",
                                                       @"tab_mine_hl"]];
     
     // Load tabbar item.
@@ -116,8 +123,18 @@
     NSMutableArray *tabViewControllers = [[NSMutableArray alloc] init];
     
     // Paging list tab
-    {{args.Prefix}}PagingListController *pagingListController = [[{{args.Prefix}}PagingListController alloc] init];
+    {{args.Prefix}}DemoViewController *pagingListController = [[{{args.Prefix}}DemoViewController alloc] init];
     HTContainerViewController *containerController = [[HTContainerViewController alloc] initWithRootViewController:pagingListController];
+    [tabViewControllers addObject:containerController];
+    
+    // Paging list 2 tab
+    {{args.Prefix}}PagingListController *pagingListController2 = [[{{args.Prefix}}PagingListController alloc] init];
+    containerController = [[HTContainerViewController alloc] initWithRootViewController:pagingListController2];
+    [tabViewControllers addObject:containerController];
+
+    // Paging list 3 tab
+    {{args.Prefix}}PagingListController *pagingListController3 = [[{{args.Prefix}}PagingListController alloc] init];
+    containerController = [[HTContainerViewController alloc] initWithRootViewController:pagingListController3];
     [tabViewControllers addObject:containerController];
     
     // Mine tab

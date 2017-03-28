@@ -84,7 +84,7 @@
     // 延时获取新闪屏的内容并更新对应的闪屏信息，具体的内容请自行填充
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         HTSplashData *data = [[HTSplashData alloc] init];
-        data.imageUrl = @"https://a-ssl.duitang.com/uploads/item/201504/25/20150425H0930_cXNKH.png";
+        data.imageUrl = @"http://images.liqucn.com/h027/h93/images201510271606423_info288X512.jpg";
         data.linkUrl = @"http://www.163.com";
         data.showCountdown = YES;
         data.countdownTime = 3.0;

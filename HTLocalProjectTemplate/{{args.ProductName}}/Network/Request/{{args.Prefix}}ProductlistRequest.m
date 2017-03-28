@@ -1,26 +1,26 @@
 //
-//  {{args.Prefix}}DemoRequest.m
-//  {{args.ProductName}}
+//  {{args.Prefix}}ProductlistRequest.m
 //
-//  Created by {{args.Author}} on 09/12/2016.
-//  Copyright © 2016 Netease. All rights reserved.
+//  Created by Netease
 //
+//  Auto build by NEI Builder
 
-#import "{{args.Prefix}}DemoRequest.h"
-#import "{{args.Prefix}}DemoModel.h"
+#import "{{args.Prefix}}ProductlistRequest.h"
+#import "HTNetworking.h"
+#import "{{args.Prefix}}productlist.h"
 
-@implementation {{args.Prefix}}DemoRequest
+@implementation {{args.Prefix}}ProductlistRequest
 
 + (RKRequestMethod)requestMethod {
     return RKRequestMethodGET;
 }
 
 + (NSString *)requestUrl {
-    return @"/demoRequestUrl";
+    return @"/productlist";
 }
 
 + (RKMapping *)responseMapping {
-    return [{{args.Prefix}}DemoModel ht_modelMapping];
+    return [{{args.Prefix}}Productlist ht_modelMapping];
 }
 
 + (NSString *)keyPath {
@@ -35,5 +35,4 @@
     
     return nil;
 }
-
 @end

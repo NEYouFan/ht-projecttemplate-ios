@@ -25,7 +25,7 @@
 #import "{{args.Prefix}}PagingListCell.h"
 #import "{{args.Prefix}}PagingListCellModel.h"
 #import "NSObject+{{args.Prefix}}BaseRequest.h"
-#import "{{args.Prefix}}DemoRequest.h"
+#import "{{args.Prefix}}ProductlistRequest.h"
 
 @interface {{args.Prefix}}PagingListController () <UITableViewDelegate>
 
@@ -119,9 +119,7 @@
     // 下面可以做网络请求获取列表的数据，这里给出一个示例。
     [self baseFlowRequestWithBlock:^HTBaseRequest *{
         // 这里根据产品页面实际请求进行新建 request, 以下是demo，仅供参考，之后请删除
-        {{args.Prefix}}DemoRequest *request = [[{{args.Prefix}}DemoRequest alloc] init];
-        request.requestParam_1 = 20;
-        request.requestParam_2 = 0;
+        {{args.Prefix}}ProductlistRequest *request = [[{{args.Prefix}}ProductlistRequest alloc] init];
         return request;
     } success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         NSLog(@"%@",([mappingResult.dictionary valueForKey:@"data"]));
@@ -134,6 +132,7 @@
 //        }
 //        [weakSelf.view {{args.CategoryPrefix}}_hideLoading];
 //        weakSelf.pageNum++;
+        
 //        weakSelf.dataSource.model = weakSelf.pagingListDatas;
         [weakSelf.tableView reloadData];
 //        [weakSelf processRefreshWithNewDataNumber:newDatas.count];
