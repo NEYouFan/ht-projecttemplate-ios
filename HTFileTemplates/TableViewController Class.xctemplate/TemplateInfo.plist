@@ -8,7 +8,7 @@
 		<string>public.objective-c-plus-plus-source</string>
 	</array>
 	<key>Description</key>
-	<string>An Objective-C class, with implementation and header files.</string>
+	<string>An Objective-C class that is a subclass of UIViewController, with implementation and header files.</string>
 	<key>Kind</key>
 	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
 	<key>MainTemplateFile</key>
@@ -17,19 +17,7 @@
 	<array>
 		<dict>
 			<key>Identifier</key>
-			<string>classPrefix</string>
-			<key>Type</key>
-			<string>text</string>
-			<key>Required</key>
-			<string>YES</string>
-			<key>Name</key>
-			<string>Class Prefix</string>
-			<key>Description</key>
-			<string>The prefix of the class.</string>
-		</dict>
-		<dict>
-			<key>Identifier</key>
-			<string>className</string>
+			<string>ControllerName</string>
 			<key>Type</key>
 			<string>text</string>
 			<key>Required</key>
@@ -37,30 +25,9 @@
 			<key>NotPersisted</key>
 			<string>YES</string>
 			<key>Name</key>
-			<string>Class Name</string>
+			<string>Controller Name</string>
 			<key>Description</key>
-			<string>The name of the class.</string>
-		</dict>
-		<dict>
-			<key>Identifier</key>
-			<string>subclass</string>
-			<key>Type</key>
-			<string>popup</string>
-			<key>Required</key>
-			<string>YES</string>
-			<key>NotPersisted</key>
-			<string>YES</string>
-			<key>Values</key>
-			<array>
-				<string>UITableViewCell</string>
-				<string>UICollectionViewCell</string>
-			</array>
-			<key>Default</key>
-			<string>UITableViewCell</string>
-			<key>Name</key>
-			<string>Subclass of</string>
-			<key>Description</key>
-			<string>The class being subclassed.</string>
+			<string>The name of the controller.</string>
 		</dict>
 		<dict>
 			<key>Identifier</key>
@@ -68,11 +35,11 @@
 			<key>Type</key>
 			<string>static</string>
 			<key>Default</key>
-			<string>___VARIABLE_classPrefix:identifier______VARIABLE_className:identifier___</string>
+			<string>___VARIABLE_ControllerName:identifier___</string>
 		</dict>
 		<dict>
 			<key>Identifier</key>
-			<string>CellModel</string>
+			<string>CellModelClass</string>
 			<key>Type</key>
 			<string>text</string>
 			<key>Required</key>
@@ -80,7 +47,35 @@
 			<key>Name</key>
 			<string>Cell Model Class</string>
 			<key>Description</key>
-			<string>defines the Model of Cell</string>
+			<string>defines the Model of TabelView&apos;s Cell</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>CellType</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Name</key>
+			<string>Cell Type</string>
+			<key>Default</key>
+			<string>UITableViewCell</string>
+			<key>Description</key>
+			<string>defines the Cell Type of TableView</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>BaseTableViewController</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Description</key>
+			<string>the base class of generate class</string>
+			<key>Name</key>
+			<string>BaseTableViewController</string>
+			<key>Default</key>
+			<string>BaseTableViewController</string>
 		</dict>
 	</array>
 	<key>Platforms</key>
@@ -88,8 +83,8 @@
 		<string>com.apple.platform.iphoneos</string>
 	</array>
 	<key>SortOrder</key>
-	<string>5</string>
+	<string>4</string>
 	<key>Summary</key>
-	<string>An Objective-C class, with implementation and header files.</string>
+	<string>An Objective-C class that is a subclass of UIViewController, with implementation and header files.</string>
 </dict>
 </plist>
