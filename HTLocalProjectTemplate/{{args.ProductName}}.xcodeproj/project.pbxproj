@@ -31,15 +31,15 @@
 		BF82CA8D1DFAA7700016C818 /* RKMappingResult+{{args.Prefix}}NetworkResultMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = BF82CA8C1DFAA7700016C818 /* RKMappingResult+{{args.Prefix}}NetworkResultMapping.m */; };
 		BF82CA901DFAB7F30016C818 /* UIView+{{args.Prefix}}Loading.m in Sources */ = {isa = PBXBuildFile; fileRef = BF82CA8F1DFAB7F30016C818 /* UIView+{{args.Prefix}}Loading.m */; };
 		BF9087C01DF7F2F0000F0D26 /* {{args.Prefix}}KeyboardSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9087BF1DF7F2F0000F0D26 /* {{args.Prefix}}KeyboardSequence.m */; };
-		BFD79F331E1B790B00084544 /* {{args.Prefix}}PagingListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD79F321E1B790B00084544 /* {{args.Prefix}}PagingListCellModel.m */; };
 		BFE9ECE61E011CC300DD6CED /* NSObject+{{args.Prefix}}BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9ECE51E011CC300DD6CED /* NSObject+{{args.Prefix}}BaseRequest.m */; };
+		D203FC811E974A8D00D23431 /* {{args.Prefix}}PagingListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D203FC791E974A8D00D23431 /* {{args.Prefix}}PagingListCellModel.m */; };
+		D203FC821E974A8D00D23431 /* {{args.Prefix}}Product.m in Sources */ = {isa = PBXBuildFile; fileRef = D203FC7B1E974A8D00D23431 /* {{args.Prefix}}Product.m */; };
+		D203FC831E974A8D00D23431 /* {{args.Prefix}}Productlist.json in Resources */ = {isa = PBXBuildFile; fileRef = D203FC7D1E974A8D00D23431 /* {{args.Prefix}}Productlist.json */; };
+		D203FC841E974A8D00D23431 /* {{args.Prefix}}Productlist.m in Sources */ = {isa = PBXBuildFile; fileRef = D203FC7E1E974A8D00D23431 /* {{args.Prefix}}Productlist.m */; };
+		D203FC851E974A8D00D23431 /* {{args.Prefix}}ProductlistRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D203FC801E974A8D00D23431 /* {{args.Prefix}}ProductlistRequest.m */; };
 		D22812131E7BC5D800C42E2E /* {{args.Prefix}}WebLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D22812101E7BC5D800C42E2E /* {{args.Prefix}}WebLoadingView.m */; };
 		D22812141E7BC5D800C42E2E /* {{args.Prefix}}WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22812121E7BC5D800C42E2E /* {{args.Prefix}}WebViewController.m */; };
 		D22812171E7BD5A900C42E2E /* {{args.Prefix}}ActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = D22812161E7BD5A900C42E2E /* {{args.Prefix}}ActivityIndicator.m */; };
-		D24176D31E8A3FD300D51836 /* {{args.Prefix}}product.m in Sources */ = {isa = PBXBuildFile; fileRef = D24176D01E8A3FD300D51836 /* {{args.Prefix}}product.m */; };
-		D24176D41E8A3FD300D51836 /* {{args.Prefix}}productlist.m in Sources */ = {isa = PBXBuildFile; fileRef = D24176D21E8A3FD300D51836 /* {{args.Prefix}}productlist.m */; };
-		D24176D61E8A405000D51836 /* {{args.Prefix}}Productlist.json in Resources */ = {isa = PBXBuildFile; fileRef = D24176D51E8A405000D51836 /* {{args.Prefix}}Productlist.json */; };
-		D24176D91E8A421000D51836 /* {{args.Prefix}}ProductlistRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D24176D81E8A421000D51836 /* {{args.Prefix}}ProductlistRequest.m */; };
 		D24176DC1E8A446000D51836 /* {{args.Prefix}}BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24176DB1E8A446000D51836 /* {{args.Prefix}}BaseViewController.m */; };
 		D24176DF1E8A44A000D51836 /* {{args.Prefix}}SplashScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24176DE1E8A44A000D51836 /* {{args.Prefix}}SplashScreenController.m */; };
 		D24176FD1E8A46E600D51836 /* {{args.Prefix}}MineSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24176FA1E8A46E600D51836 /* {{args.Prefix}}MineSettingController.m */; };
@@ -119,23 +119,23 @@
 		BF82CA8F1DFAB7F30016C818 /* UIView+{{args.Prefix}}Loading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+{{args.Prefix}}Loading.m"; sourceTree = "<group>"; };
 		BF9087BE1DF7F2F0000F0D26 /* {{args.Prefix}}KeyboardSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}KeyboardSequence.h"; sourceTree = "<group>"; };
 		BF9087BF1DF7F2F0000F0D26 /* {{args.Prefix}}KeyboardSequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}KeyboardSequence.m"; sourceTree = "<group>"; };
-		BFD79F311E1B790B00084544 /* {{args.Prefix}}PagingListCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}PagingListCellModel.h"; sourceTree = "<group>"; };
-		BFD79F321E1B790B00084544 /* {{args.Prefix}}PagingListCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}PagingListCellModel.m"; sourceTree = "<group>"; };
 		BFE9ECE41E011CC300DD6CED /* NSObject+{{args.Prefix}}BaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+{{args.Prefix}}BaseRequest.h"; sourceTree = "<group>"; };
 		BFE9ECE51E011CC300DD6CED /* NSObject+{{args.Prefix}}BaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+{{args.Prefix}}BaseRequest.m"; sourceTree = "<group>"; };
+		D203FC781E974A8D00D23431 /* {{args.Prefix}}PagingListCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "{{args.Prefix}}PagingListCellModel.h"; path = "demo/{{args.Prefix}}PagingListCellModel.h"; sourceTree = "<group>"; };
+		D203FC791E974A8D00D23431 /* {{args.Prefix}}PagingListCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "{{args.Prefix}}PagingListCellModel.m"; path = "demo/{{args.Prefix}}PagingListCellModel.m"; sourceTree = "<group>"; };
+		D203FC7A1E974A8D00D23431 /* {{args.Prefix}}Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "{{args.Prefix}}Product.h"; path = "demo/{{args.Prefix}}Product.h"; sourceTree = "<group>"; };
+		D203FC7B1E974A8D00D23431 /* {{args.Prefix}}Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "{{args.Prefix}}Product.m"; path = "demo/{{args.Prefix}}Product.m"; sourceTree = "<group>"; };
+		D203FC7C1E974A8D00D23431 /* {{args.Prefix}}Productlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "{{args.Prefix}}Productlist.h"; path = "demo/{{args.Prefix}}Productlist.h"; sourceTree = "<group>"; };
+		D203FC7D1E974A8D00D23431 /* {{args.Prefix}}Productlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "{{args.Prefix}}Productlist.json"; path = "demo/{{args.Prefix}}Productlist.json"; sourceTree = "<group>"; };
+		D203FC7E1E974A8D00D23431 /* {{args.Prefix}}Productlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "{{args.Prefix}}Productlist.m"; path = "demo/{{args.Prefix}}Productlist.m"; sourceTree = "<group>"; };
+		D203FC7F1E974A8D00D23431 /* {{args.Prefix}}ProductlistRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "{{args.Prefix}}ProductlistRequest.h"; path = "demo/{{args.Prefix}}ProductlistRequest.h"; sourceTree = "<group>"; };
+		D203FC801E974A8D00D23431 /* {{args.Prefix}}ProductlistRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "{{args.Prefix}}ProductlistRequest.m"; path = "demo/{{args.Prefix}}ProductlistRequest.m"; sourceTree = "<group>"; };
 		D228120F1E7BC5D800C42E2E /* {{args.Prefix}}WebLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "{{args.Prefix}}WebLoadingView.h"; path = "WebView/{{args.Prefix}}WebLoadingView.h"; sourceTree = "<group>"; };
 		D22812101E7BC5D800C42E2E /* {{args.Prefix}}WebLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "{{args.Prefix}}WebLoadingView.m"; path = "WebView/{{args.Prefix}}WebLoadingView.m"; sourceTree = "<group>"; };
 		D22812111E7BC5D800C42E2E /* {{args.Prefix}}WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "{{args.Prefix}}WebViewController.h"; path = "WebView/{{args.Prefix}}WebViewController.h"; sourceTree = "<group>"; };
 		D22812121E7BC5D800C42E2E /* {{args.Prefix}}WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "{{args.Prefix}}WebViewController.m"; path = "WebView/{{args.Prefix}}WebViewController.m"; sourceTree = "<group>"; };
 		D22812151E7BD5A900C42E2E /* {{args.Prefix}}ActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ActivityIndicator.h"; sourceTree = "<group>"; };
 		D22812161E7BD5A900C42E2E /* {{args.Prefix}}ActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ActivityIndicator.m"; sourceTree = "<group>"; };
-		D24176CF1E8A3FD300D51836 /* {{args.Prefix}}product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}product.h"; sourceTree = "<group>"; };
-		D24176D01E8A3FD300D51836 /* {{args.Prefix}}product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}product.m"; sourceTree = "<group>"; };
-		D24176D11E8A3FD300D51836 /* {{args.Prefix}}productlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}productlist.h"; sourceTree = "<group>"; };
-		D24176D21E8A3FD300D51836 /* {{args.Prefix}}productlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}productlist.m"; sourceTree = "<group>"; };
-		D24176D51E8A405000D51836 /* {{args.Prefix}}Productlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "{{args.Prefix}}Productlist.json"; sourceTree = "<group>"; };
-		D24176D71E8A421000D51836 /* {{args.Prefix}}ProductlistRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "{{args.Prefix}}ProductlistRequest.h"; path = "{{args.ProductName}}/Network/Request/{{args.Prefix}}ProductlistRequest.h"; sourceTree = SOURCE_ROOT; };
-		D24176D81E8A421000D51836 /* {{args.Prefix}}ProductlistRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "{{args.Prefix}}ProductlistRequest.m"; path = "{{args.ProductName}}/Network/Request/{{args.Prefix}}ProductlistRequest.m"; sourceTree = SOURCE_ROOT; };
 		D24176DA1E8A446000D51836 /* {{args.Prefix}}BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "{{args.Prefix}}BaseViewController.h"; path = "Base/Controllers/{{args.Prefix}}BaseViewController.h"; sourceTree = "<group>"; };
 		D24176DB1E8A446000D51836 /* {{args.Prefix}}BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "{{args.Prefix}}BaseViewController.m"; path = "Base/Controllers/{{args.Prefix}}BaseViewController.m"; sourceTree = "<group>"; };
 		D24176DD1E8A44A000D51836 /* {{args.Prefix}}SplashScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "{{args.Prefix}}SplashScreenController.h"; path = "Splash/Controllers/{{args.Prefix}}SplashScreenController.h"; sourceTree = "<group>"; };
@@ -201,12 +201,6 @@
 		BF3A15BC1DFF8A9200CDFD73 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D24176CF1E8A3FD300D51836 /* {{args.Prefix}}product.h */,
-				D24176D01E8A3FD300D51836 /* {{args.Prefix}}product.m */,
-				D24176D11E8A3FD300D51836 /* {{args.Prefix}}productlist.h */,
-				D24176D21E8A3FD300D51836 /* {{args.Prefix}}productlist.m */,
-				BFD79F311E1B790B00084544 /* {{args.Prefix}}PagingListCellModel.h */,
-				BFD79F321E1B790B00084544 /* {{args.Prefix}}PagingListCellModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,8 +208,6 @@
 		BF3A15BD1DFF8A9200CDFD73 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				D24176D71E8A421000D51836 /* {{args.Prefix}}ProductlistRequest.h */,
-				D24176D81E8A421000D51836 /* {{args.Prefix}}ProductlistRequest.m */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -315,6 +307,7 @@
 		BF401ECB1DF5493400CE31E0 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D203FC771E9749E100D23431 /* Demo */,
 				D2B6D14A1E4AF1FF00D5583A /* Mock */,
 				BF3A15BC1DFF8A9200CDFD73 /* Models */,
 				BF3A15BD1DFF8A9200CDFD73 /* Requests */,
@@ -393,6 +386,22 @@
 			path = PagingList;
 			sourceTree = "<group>";
 		};
+		D203FC771E9749E100D23431 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				D203FC781E974A8D00D23431 /* {{args.Prefix}}PagingListCellModel.h */,
+				D203FC791E974A8D00D23431 /* {{args.Prefix}}PagingListCellModel.m */,
+				D203FC7A1E974A8D00D23431 /* {{args.Prefix}}Product.h */,
+				D203FC7B1E974A8D00D23431 /* {{args.Prefix}}Product.m */,
+				D203FC7C1E974A8D00D23431 /* {{args.Prefix}}Productlist.h */,
+				D203FC7D1E974A8D00D23431 /* {{args.Prefix}}Productlist.json */,
+				D203FC7E1E974A8D00D23431 /* {{args.Prefix}}Productlist.m */,
+				D203FC7F1E974A8D00D23431 /* {{args.Prefix}}ProductlistRequest.h */,
+				D203FC801E974A8D00D23431 /* {{args.Prefix}}ProductlistRequest.m */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
 		D228120E1E7BC57D00C42E2E /* WebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,7 +471,6 @@
 			isa = PBXGroup;
 			children = (
 				D2B6D14B1E4AF1FF00D5583A /* CopyMockFiles.sh */,
-				D24176D51E8A405000D51836 /* {{args.Prefix}}Productlist.json */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -649,7 +657,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D24176D61E8A405000D51836 /* {{args.Prefix}}Productlist.json in Resources */,
+				D203FC831E974A8D00D23431 /* {{args.Prefix}}Productlist.json in Resources */,
 				BF401EBE1DF5462C00CE31E0 /* Assets.xcassets in Resources */,
 				D2B6D14C1E4AF1FF00D5583A /* CopyMockFiles.sh in Resources */,
 			);
@@ -680,14 +688,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF401EEA1DF6B6A000CE31E0 /* UIView+{{args.Prefix}}Toast.m in Sources */,
-				D24176D91E8A421000D51836 /* {{args.Prefix}}ProductlistRequest.m in Sources */,
 				D22812171E7BD5A900C42E2E /* {{args.Prefix}}ActivityIndicator.m in Sources */,
 				D241770A1E8A46F900D51836 /* {{args.Prefix}}MineSettingCellDescribeData.m in Sources */,
 				D24176DC1E8A446000D51836 /* {{args.Prefix}}BaseViewController.m in Sources */,
 				BF82CA8A1DFA8F0B0016C818 /* {{args.Prefix}}NetworkConfig.m in Sources */,
 				D24177411E8A4CFE00D51836 /* {{args.Prefix}}DemoTableViewCell.m in Sources */,
 				BF401EB31DF5462C00CE31E0 /* main.m in Sources */,
-				D24176D31E8A3FD300D51836 /* {{args.Prefix}}product.m in Sources */,
 				BF3A15C31DFF9DDC00CDFD73 /* AppDelegate+Notifications.m in Sources */,
 				D24177221E8A47BF00D51836 /* {{args.Prefix}}MineCellDescribeData.m in Sources */,
 				D24177381E8A48E500D51836 /* {{args.Prefix}}TabBarItem.m in Sources */,
@@ -718,10 +724,11 @@
 				D241773B1E8A4A4400D51836 /* {{args.Prefix}}BaseTableViewController.m in Sources */,
 				D241772E1E8A481400D51836 /* {{args.Prefix}}LoginInputView.m in Sources */,
 				BF82CA7E1DFA4A520016C818 /* {{args.Prefix}}LoadmoreView.m in Sources */,
-				BFD79F331E1B790B00084544 /* {{args.Prefix}}PagingListCellModel.m in Sources */,
-				D24176D41E8A3FD300D51836 /* {{args.Prefix}}productlist.m in Sources */,
+				D203FC821E974A8D00D23431 /* {{args.Prefix}}Product.m in Sources */,
 				BF401EDC1DF5534100CE31E0 /* {{args.Prefix}}CommonColors.m in Sources */,
 				D24177071E8A46F000D51836 /* {{args.Prefix}}MineSettingSwitchCell.m in Sources */,
+				D203FC851E974A8D00D23431 /* {{args.Prefix}}ProductlistRequest.m in Sources */,
+				D203FC811E974A8D00D23431 /* {{args.Prefix}}PagingListCellModel.m in Sources */,
 				BF401EED1DF6B8B300CE31E0 /* {{args.Prefix}}AppConfigurations.m in Sources */,
 				BF82CA901DFAB7F30016C818 /* UIView+{{args.Prefix}}Loading.m in Sources */,
 				D24177291E8A480C00D51836 /* {{args.Prefix}}ForgetPasswordController.m in Sources */,
@@ -730,6 +737,7 @@
 				D24176FD1E8A46E600D51836 /* {{args.Prefix}}MineSettingController.m in Sources */,
 				BF82CA711DF9692E0016C818 /* {{args.Prefix}}NoMoreDataFooterView.m in Sources */,
 				D22812141E7BC5D800C42E2E /* {{args.Prefix}}WebViewController.m in Sources */,
+				D203FC841E974A8D00D23431 /* {{args.Prefix}}Productlist.m in Sources */,
 				D24176FE1E8A46E600D51836 /* {{args.Prefix}}MineSettingFeedbackController.m in Sources */,
 				BF82CA6B1DF93DE70016C818 /* {{args.Prefix}}LoadingErrorView.m in Sources */,
 				BF401ED11DF5494A00CE31E0 /* AppDelegate.m in Sources */,
