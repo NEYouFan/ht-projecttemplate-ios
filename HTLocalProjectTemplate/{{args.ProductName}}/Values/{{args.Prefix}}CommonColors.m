@@ -20,7 +20,7 @@ const int kDefaultBackgroundColor = 0xffffff;
 
 const int kDefaultTextColor = 0x000000;
 const int kLightTextColor = 0x999999;
-const int kPlaceholderTextColor = 0x00ff00;
+const int kPlaceholderTextColor = 0x999999;
 
 /* ********************* 导航栏样式，可根据所需自由添加 ***********************/
 
