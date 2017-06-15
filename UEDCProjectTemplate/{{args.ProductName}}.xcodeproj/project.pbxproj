@@ -1,0 +1,2249 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A3B4B501EE1653C009D789D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3B4B4F1EE1653C009D789D /* Security.framework */; };
+		1A3B4B521EE1654A009D789D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3B4B511EE1654A009D789D /* libz.tbd */; };
+		1A3B4B541EE16559009D789D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3B4B531EE16559009D789D /* libc++.tbd */; };
+		D248D3141EF11941001A4E2D /* AppDelegate+Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D17E1EF11941001A4E2D /* AppDelegate+Notifications.m */; };
+		D248D3151EF11941001A4E2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1801EF11941001A4E2D /* AppDelegate.m */; };
+		D248D3161EF11941001A4E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D248D1811EF11941001A4E2D /* Assets.xcassets */; };
+		D248D3171EF11941001A4E2D /* {{args.Prefix}}ActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1841EF11941001A4E2D /* {{args.Prefix}}ActivityIndicator.m */; };
+		D248D3181EF11941001A4E2D /* {{args.Prefix}}CommonStyleViews.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1861EF11941001A4E2D /* {{args.Prefix}}CommonStyleViews.m */; };
+		D248D3191EF11941001A4E2D /* {{args.Prefix}}ImageTextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1881EF11941001A4E2D /* {{args.Prefix}}ImageTextButton.m */; };
+		D248D31A1EF11941001A4E2D /* {{args.Prefix}}LoadingEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D18A1EF11941001A4E2D /* {{args.Prefix}}LoadingEmptyView.m */; };
+		D248D31B1EF11941001A4E2D /* {{args.Prefix}}LoadingErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D18C1EF11941001A4E2D /* {{args.Prefix}}LoadingErrorView.m */; };
+		D248D31C1EF11941001A4E2D /* {{args.Prefix}}LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D18E1EF11941001A4E2D /* {{args.Prefix}}LoadingView.m */; };
+		D248D31D1EF11941001A4E2D /* {{args.Prefix}}LoadmoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1901EF11941001A4E2D /* {{args.Prefix}}LoadmoreView.m */; };
+		D248D31E1EF11941001A4E2D /* {{args.Prefix}}NoMoreDataFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1921EF11941001A4E2D /* {{args.Prefix}}NoMoreDataFooterView.m */; };
+		D248D31F1EF11941001A4E2D /* {{args.Prefix}}RefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1941EF11941001A4E2D /* {{args.Prefix}}RefreshView.m */; };
+		D248D3201EF11941001A4E2D /* {{args.Prefix}}TableViewGapCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1961EF11941001A4E2D /* {{args.Prefix}}TableViewGapCell.m */; };
+		D248D3211EF11941001A4E2D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D248D1971EF11941001A4E2D /* Info.plist */; };
+		D248D3231EF11941001A4E2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1991EF11941001A4E2D /* main.m */; };
+		D248D3241EF11941001A4E2D /* {{args.Prefix}}BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D19E1EF11941001A4E2D /* {{args.Prefix}}BaseTableViewController.m */; };
+		D248D3251EF11941001A4E2D /* {{args.Prefix}}BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1A01EF11941001A4E2D /* {{args.Prefix}}BaseViewController.m */; };
+		D248D3261EF11941001A4E2D /* {{args.Prefix}}MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1A51EF11941001A4E2D /* {{args.Prefix}}MainPageViewController.m */; };
+		D248D3271EF11941001A4E2D /* {{args.Prefix}}MainPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1A81EF11941001A4E2D /* {{args.Prefix}}MainPageModel.m */; };
+		D248D3281EF11941001A4E2D /* {{args.Prefix}}MainPageBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1AB1EF11941001A4E2D /* {{args.Prefix}}MainPageBottomView.m */; };
+		D248D3291EF11941001A4E2D /* {{args.Prefix}}MainPageCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1AD1EF11941001A4E2D /* {{args.Prefix}}MainPageCellButton.m */; };
+		D248D32A1EF11941001A4E2D /* {{args.Prefix}}MainPageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1AF1EF11941001A4E2D /* {{args.Prefix}}MainPageHeaderView.m */; };
+		D248D32B1EF11941001A4E2D /* {{args.Prefix}}MainPageSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1B11EF11941001A4E2D /* {{args.Prefix}}MainPageSectionView.m */; };
+		D248D32C1EF11941001A4E2D /* {{args.Prefix}}TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1B41EF11941001A4E2D /* {{args.Prefix}}TabBarController.m */; };
+		D248D32D1EF11941001A4E2D /* {{args.Prefix}}TabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1B61EF11941001A4E2D /* {{args.Prefix}}TabBarItem.m */; };
+		D248D32E1EF11941001A4E2D /* {{args.Prefix}}CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1BB1EF11941001A4E2D /* {{args.Prefix}}CameraViewController.m */; };
+		D248D32F1EF11941001A4E2D /* {{args.Prefix}}EmptyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1BF1EF11941001A4E2D /* {{args.Prefix}}EmptyPageViewController.m */; };
+		D248D3301EF11941001A4E2D /* {{args.Prefix}}GesturePasswordDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1C31EF11941001A4E2D /* {{args.Prefix}}GesturePasswordDemoViewController.m */; };
+		D248D3311EF11941001A4E2D /* {{args.Prefix}}SetGesturePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1C51EF11941001A4E2D /* {{args.Prefix}}SetGesturePasswordViewController.m */; };
+		D248D3321EF11941001A4E2D /* {{args.Prefix}}VerifyGusturePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1C71EF11941001A4E2D /* {{args.Prefix}}VerifyGusturePasswordViewController.m */; };
+		D248D3331EF11941001A4E2D /* {{args.Prefix}}Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1CA1EF11941001A4E2D /* {{args.Prefix}}Circle.m */; };
+		D248D3341EF11941001A4E2D /* {{args.Prefix}}CircleInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1CC1EF11941001A4E2D /* {{args.Prefix}}CircleInfoView.m */; };
+		D248D3351EF11941001A4E2D /* {{args.Prefix}}CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1CE1EF11941001A4E2D /* {{args.Prefix}}CircleView.m */; };
+		D248D3361EF11941001A4E2D /* {{args.Prefix}}LockLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1D01EF11941001A4E2D /* {{args.Prefix}}LockLabel.m */; };
+		D248D3371EF11941001A4E2D /* {{args.Prefix}}CircleViewConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1D21EF11941001A4E2D /* {{args.Prefix}}CircleViewConst.m */; };
+		D248D3381EF11941001A4E2D /* {{args.Prefix}}GuidePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1D61EF11941001A4E2D /* {{args.Prefix}}GuidePageViewController.m */; };
+		D248D3391EF11941001A4E2D /* {{args.Prefix}}GuidePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1D91EF11941001A4E2D /* {{args.Prefix}}GuidePageModel.m */; };
+		D248D33A1EF11941001A4E2D /* {{args.Prefix}}GuidePageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1DC1EF11941001A4E2D /* {{args.Prefix}}GuidePageItem.m */; };
+		D248D33B1EF11941001A4E2D /* {{args.Prefix}}GuidePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1DE1EF11941001A4E2D /* {{args.Prefix}}GuidePageView.m */; };
+		D248D33C1EF11941001A4E2D /* {{args.Prefix}}ListLayoutCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1E21EF11941001A4E2D /* {{args.Prefix}}ListLayoutCommonCell.m */; };
+		D248D33D1EF11941001A4E2D /* {{args.Prefix}}ListLayoutHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1E41EF11941001A4E2D /* {{args.Prefix}}ListLayoutHeaderCell.m */; };
+		D248D33E1EF11941001A4E2D /* {{args.Prefix}}ListLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1E71EF11941001A4E2D /* {{args.Prefix}}ListLayoutController.m */; };
+		D248D33F1EF11941001A4E2D /* {{args.Prefix}}ListLayoutCellDescribeData.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1EA1EF11941001A4E2D /* {{args.Prefix}}ListLayoutCellDescribeData.m */; };
+		D248D3401EF11941001A4E2D /* {{args.Prefix}}LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1EE1EF11941001A4E2D /* {{args.Prefix}}LoginController.m */; };
+		D248D3411EF11941001A4E2D /* {{args.Prefix}}UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1F11EF11941001A4E2D /* {{args.Prefix}}UserDataManager.m */; };
+		D248D3421EF11941001A4E2D /* {{args.Prefix}}LoginInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1F41EF11941001A4E2D /* {{args.Prefix}}LoginInputView.m */; };
+		D248D3431EF11941001A4E2D /* {{args.Prefix}}MineHeaderInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1F81EF11941001A4E2D /* {{args.Prefix}}MineHeaderInfoCell.m */; };
+		D248D3441EF11941001A4E2D /* {{args.Prefix}}MineOperationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1FA1EF11941001A4E2D /* {{args.Prefix}}MineOperationCell.m */; };
+		D248D3451EF11941001A4E2D /* {{args.Prefix}}MineSegmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1FC1EF11941001A4E2D /* {{args.Prefix}}MineSegmentCell.m */; };
+		D248D3461EF11941001A4E2D /* {{args.Prefix}}MineSegmentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D1FE1EF11941001A4E2D /* {{args.Prefix}}MineSegmentItem.m */; };
+		D248D3471EF11941001A4E2D /* {{args.Prefix}}MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2011EF11941001A4E2D /* {{args.Prefix}}MineController.m */; };
+		D248D3481EF11941001A4E2D /* {{args.Prefix}}MineCellDescribeData.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2041EF11941001A4E2D /* {{args.Prefix}}MineCellDescribeData.m */; };
+		D248D3491EF11941001A4E2D /* {{args.Prefix}}AlbumChooseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2081EF11941001A4E2D /* {{args.Prefix}}AlbumChooseTableViewController.m */; };
+		D248D34A1EF11941001A4E2D /* {{args.Prefix}}CustomAlbumChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D20A1EF11941001A4E2D /* {{args.Prefix}}CustomAlbumChooseViewController.m */; };
+		D248D34B1EF11941001A4E2D /* {{args.Prefix}}ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D20C1EF11941001A4E2D /* {{args.Prefix}}ImagePickerViewController.m */; };
+		D248D34C1EF11941001A4E2D /* {{args.Prefix}}PhotoChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D20E1EF11941001A4E2D /* {{args.Prefix}}PhotoChooseViewController.m */; };
+		D248D34D1EF11941001A4E2D /* {{args.Prefix}}ImagePickerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2111EF11941001A4E2D /* {{args.Prefix}}ImagePickerViewManager.m */; };
+		D248D34E1EF11941001A4E2D /* {{args.Prefix}}AssetPickerUnorderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2141EF11941001A4E2D /* {{args.Prefix}}AssetPickerUnorderCell.m */; };
+		D248D34F1EF11941001A4E2D /* {{args.Prefix}}QRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2181EF11941001A4E2D /* {{args.Prefix}}QRCodeScanViewController.m */; };
+		D248D3501EF11941001A4E2D /* {{args.Prefix}}RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D21C1EF11941001A4E2D /* {{args.Prefix}}RegisterController.m */; };
+		D248D3511EF11941001A4E2D /* {{args.Prefix}}RegisterResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D21E1EF11941001A4E2D /* {{args.Prefix}}RegisterResultController.m */; };
+		D248D3521EF11941001A4E2D /* {{args.Prefix}}SettingCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2221EF11941001A4E2D /* {{args.Prefix}}SettingCommonCell.m */; };
+		D248D3531EF11941001A4E2D /* {{args.Prefix}}SettingSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2241EF11941001A4E2D /* {{args.Prefix}}SettingSwitchCell.m */; };
+		D248D3541EF11941001A4E2D /* {{args.Prefix}}SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2271EF11941001A4E2D /* {{args.Prefix}}SettingController.m */; };
+		D248D3551EF11941001A4E2D /* {{args.Prefix}}SettingCellDescribeData.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D22A1EF11941001A4E2D /* {{args.Prefix}}SettingCellDescribeData.m */; };
+		D248D3561EF11941001A4E2D /* {{args.Prefix}}ShareKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D22E1EF11941001A4E2D /* {{args.Prefix}}ShareKitViewController.m */; };
+		D248D3571EF11941001A4E2D /* {{args.Prefix}}ShareContentData.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2311EF11941001A4E2D /* {{args.Prefix}}ShareContentData.m */; };
+		D248D3581EF11941001A4E2D /* {{args.Prefix}}PopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2341EF11941001A4E2D /* {{args.Prefix}}PopView.m */; };
+		D248D3591EF11941001A4E2D /* {{args.Prefix}}ShareCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2361EF11941001A4E2D /* {{args.Prefix}}ShareCollectionViewCell.m */; };
+		D248D35A1EF11941001A4E2D /* {{args.Prefix}}SharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2381EF11941001A4E2D /* {{args.Prefix}}SharePopView.m */; };
+		D248D35B1EF11941001A4E2D /* {{args.Prefix}}DemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D23C1EF11941001A4E2D /* {{args.Prefix}}DemoTableViewCell.m */; };
+		D248D35C1EF11941001A4E2D /* {{args.Prefix}}PagingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D23E1EF11941001A4E2D /* {{args.Prefix}}PagingListCell.m */; };
+		D248D35D1EF11941001A4E2D /* {{args.Prefix}}DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2411EF11941001A4E2D /* {{args.Prefix}}DemoViewController.m */; };
+		D248D35E1EF11941001A4E2D /* {{args.Prefix}}PagingListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2431EF11941001A4E2D /* {{args.Prefix}}PagingListController.m */; };
+		D248D35F1EF11941001A4E2D /* {{args.Prefix}}SplashScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2471EF11941001A4E2D /* {{args.Prefix}}SplashScreenController.m */; };
+		D248D3601EF11941001A4E2D /* {{args.Prefix}}WebLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D24A1EF11941001A4E2D /* {{args.Prefix}}WebLoadingView.m */; };
+		D248D3611EF11941001A4E2D /* {{args.Prefix}}WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D24C1EF11941001A4E2D /* {{args.Prefix}}WebViewController.m */; };
+		D248D3621EF11941001A4E2D /* {{args.Prefix}}ContentAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2511EF11941001A4E2D /* {{args.Prefix}}ContentAlertViewController.m */; };
+		D248D3631EF11941001A4E2D /* {{args.Prefix}}CustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2531EF11941001A4E2D /* {{args.Prefix}}CustomAlertViewController.m */; };
+		D248D3641EF11941001A4E2D /* {{args.Prefix}}WarningAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2551EF11941001A4E2D /* {{args.Prefix}}WarningAlertViewController.m */; };
+		D248D3651EF11941001A4E2D /* {{args.Prefix}}AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2581EF11941001A4E2D /* {{args.Prefix}}AlertView.m */; };
+		D248D3661EF11941001A4E2D /* {{args.Prefix}}InputAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D25A1EF11941001A4E2D /* {{args.Prefix}}InputAlertViewController.m */; };
+		D248D3671EF11941001A4E2D /* {{args.Prefix}}ButtonCornerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D25E1EF11941001A4E2D /* {{args.Prefix}}ButtonCornerViewController.m */; };
+		D248D3681EF11941001A4E2D /* {{args.Prefix}}IconButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2601EF11941001A4E2D /* {{args.Prefix}}IconButtonViewController.m */; };
+		D248D3691EF11941001A4E2D /* {{args.Prefix}}LeftPanButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2621EF11941001A4E2D /* {{args.Prefix}}LeftPanButtonViewController.m */; };
+		D248D36A1EF11941001A4E2D /* {{args.Prefix}}ButtonCornerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2651EF11941001A4E2D /* {{args.Prefix}}ButtonCornerModel.m */; };
+		D248D36B1EF11941001A4E2D /* {{args.Prefix}}ButtonCornerSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2681EF11941001A4E2D /* {{args.Prefix}}ButtonCornerSectionView.m */; };
+		D248D36C1EF11941001A4E2D /* {{args.Prefix}}IconTextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D26A1EF11941001A4E2D /* {{args.Prefix}}IconTextButton.m */; };
+		D248D36D1EF11941001A4E2D /* {{args.Prefix}}LeftPanButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D26C1EF11941001A4E2D /* {{args.Prefix}}LeftPanButtonCell.m */; };
+		D248D36E1EF11941001A4E2D /* {{args.Prefix}}ActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2701EF11941001A4E2D /* {{args.Prefix}}ActionSheetViewController.m */; };
+		D248D36F1EF11941001A4E2D /* {{args.Prefix}}DrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2721EF11941001A4E2D /* {{args.Prefix}}DrawerViewController.m */; };
+		D248D3701EF11941001A4E2D /* {{args.Prefix}}RefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2741EF11941001A4E2D /* {{args.Prefix}}RefreshViewController.m */; };
+		D248D3711EF11941001A4E2D /* {{args.Prefix}}StepperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2761EF11941001A4E2D /* {{args.Prefix}}StepperViewController.m */; };
+		D248D3721EF11941001A4E2D /* {{args.Prefix}}SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2781EF11941001A4E2D /* {{args.Prefix}}SwitchViewController.m */; };
+		D248D3731EF11941001A4E2D /* {{args.Prefix}}SwitchCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D27B1EF11941001A4E2D /* {{args.Prefix}}SwitchCellModel.m */; };
+		D248D3741EF11941001A4E2D /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D27E1EF11941001A4E2D /* DLRadioButton.m */; };
+		D248D3751EF11941001A4E2D /* {{args.Prefix}}ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2801EF11941001A4E2D /* {{args.Prefix}}ActionSheet.m */; };
+		D248D3761EF11941001A4E2D /* {{args.Prefix}}DrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2821EF11941001A4E2D /* {{args.Prefix}}DrawerView.m */; };
+		D248D3771EF11941001A4E2D /* {{args.Prefix}}Slider.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2841EF11941001A4E2D /* {{args.Prefix}}Slider.m */; };
+		D248D3781EF11941001A4E2D /* {{args.Prefix}}Stepper.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2861EF11941001A4E2D /* {{args.Prefix}}Stepper.m */; };
+		D248D3791EF11941001A4E2D /* {{args.Prefix}}SwithCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2881EF11941001A4E2D /* {{args.Prefix}}SwithCell.m */; };
+		D248D37A1EF11941001A4E2D /* {{args.Prefix}}CheckboxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D28C1EF11941001A4E2D /* {{args.Prefix}}CheckboxTableViewController.m */; };
+		D248D37B1EF11941001A4E2D /* {{args.Prefix}}TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D28E1EF11941001A4E2D /* {{args.Prefix}}TextFieldViewController.m */; };
+		D248D37C1EF11941001A4E2D /* {{args.Prefix}}TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2911EF11941001A4E2D /* {{args.Prefix}}TextField.m */; };
+		D248D37D1EF11941001A4E2D /* {{args.Prefix}}IconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2951EF11941001A4E2D /* {{args.Prefix}}IconViewController.m */; };
+		D248D37E1EF11941001A4E2D /* {{args.Prefix}}IconCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2981EF11941001A4E2D /* {{args.Prefix}}IconCellModel.m */; };
+		D248D37F1EF11941001A4E2D /* {{args.Prefix}}IconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D29B1EF11941001A4E2D /* {{args.Prefix}}IconCell.m */; };
+		D248D3801EF11941001A4E2D /* {{args.Prefix}}ScrollNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D29F1EF11941001A4E2D /* {{args.Prefix}}ScrollNotificationViewController.m */; };
+		D248D3811EF11941001A4E2D /* {{args.Prefix}}ToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2A11EF11941001A4E2D /* {{args.Prefix}}ToastViewController.m */; };
+		D248D3821EF11941001A4E2D /* {{args.Prefix}}DemoPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2A51EF11941001A4E2D /* {{args.Prefix}}DemoPageViewController.m */; };
+		D248D3831EF11941001A4E2D /* {{args.Prefix}}NaviSegmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2A71EF11941001A4E2D /* {{args.Prefix}}NaviSegmentsViewController.m */; };
+		D248D3841EF11941001A4E2D /* {{args.Prefix}}PageControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2A91EF11941001A4E2D /* {{args.Prefix}}PageControllerViewController.m */; };
+		D248D3851EF11941001A4E2D /* {{args.Prefix}}PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2AD1EF11941001A4E2D /* {{args.Prefix}}PickerViewController.m */; };
+		D248D3861EF11941001A4E2D /* location.json in Resources */ = {isa = PBXBuildFile; fileRef = D248D2AF1EF11941001A4E2D /* location.json */; };
+		D248D3871EF11941001A4E2D /* {{args.Prefix}}PickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2B11EF11941001A4E2D /* {{args.Prefix}}PickerModel.m */; };
+		D248D3881EF11941001A4E2D /* {{args.Prefix}}PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2B41EF11941001A4E2D /* {{args.Prefix}}PickerView.m */; };
+		D248D3891EF11941001A4E2D /* {{args.Prefix}}ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2B81EF11941001A4E2D /* {{args.Prefix}}ProgressViewController.m */; };
+		D248D38A1EF11941001A4E2D /* {{args.Prefix}}WebProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2BA1EF11941001A4E2D /* {{args.Prefix}}WebProgressViewController.m */; };
+		D248D38B1EF11941001A4E2D /* {{args.Prefix}}ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2BD1EF11941001A4E2D /* {{args.Prefix}}ProgressView.m */; };
+		D248D38C1EF11941001A4E2D /* {{args.Prefix}}SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2C11EF11941001A4E2D /* {{args.Prefix}}SearchViewController.m */; };
+		D248D38D1EF11941001A4E2D /* {{args.Prefix}}BadgeTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2C51EF11941001A4E2D /* {{args.Prefix}}BadgeTabbarViewController.m */; };
+		D248D38E1EF11941001A4E2D /* {{args.Prefix}}DemoTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2C71EF11941001A4E2D /* {{args.Prefix}}DemoTabbarViewController.m */; };
+		D248D38F1EF11941001A4E2D /* {{args.Prefix}}ToolBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2C91EF11941001A4E2D /* {{args.Prefix}}ToolBarViewController.m */; };
+		D248D3901EF11941001A4E2D /* {{args.Prefix}}ToolBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2CC1EF11941001A4E2D /* {{args.Prefix}}ToolBarItem.m */; };
+		D248D3911EF11941001A4E2D /* {{args.Prefix}}iOSTextStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2D01EF11941001A4E2D /* {{args.Prefix}}iOSTextStyleViewController.m */; };
+		D248D3921EF11941001A4E2D /* {{args.Prefix}}TextColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2D21EF11941001A4E2D /* {{args.Prefix}}TextColorViewController.m */; };
+		D248D3931EF11941001A4E2D /* {{args.Prefix}}TextSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2D41EF11941001A4E2D /* {{args.Prefix}}TextSizeViewController.m */; };
+		D248D3941EF11941001A4E2D /* {{args.Prefix}}TextColorViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2D71EF11941001A4E2D /* {{args.Prefix}}TextColorViewModel.m */; };
+		D248D3951EF11941001A4E2D /* {{args.Prefix}}TextSizeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2D91EF11941001A4E2D /* {{args.Prefix}}TextSizeViewModel.m */; };
+		D248D3961EF11941001A4E2D /* {{args.Prefix}}TextColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2DC1EF11941001A4E2D /* {{args.Prefix}}TextColorView.m */; };
+		D248D3971EF11941001A4E2D /* {{args.Prefix}}TextSizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2DE1EF11941001A4E2D /* {{args.Prefix}}TextSizeView.m */; };
+		D248D3981EF11941001A4E2D /* {{args.Prefix}}PagingListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2E21EF11941001A4E2D /* {{args.Prefix}}PagingListCellModel.m */; };
+		D248D3991EF11941001A4E2D /* {{args.Prefix}}Product.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2E41EF11941001A4E2D /* {{args.Prefix}}Product.m */; };
+		D248D39A1EF11942001A4E2D /* {{args.Prefix}}Productlist.json in Resources */ = {isa = PBXBuildFile; fileRef = D248D2E61EF11941001A4E2D /* {{args.Prefix}}Productlist.json */; };
+		D248D39B1EF11942001A4E2D /* {{args.Prefix}}Productlist.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2E71EF11941001A4E2D /* {{args.Prefix}}Productlist.m */; };
+		D248D39C1EF11942001A4E2D /* {{args.Prefix}}ProductlistRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2E91EF11941001A4E2D /* {{args.Prefix}}ProductlistRequest.m */; };
+		D248D39D1EF11942001A4E2D /* CopyMockFiles.sh in Resources */ = {isa = PBXBuildFile; fileRef = D248D2EB1EF11941001A4E2D /* CopyMockFiles.sh */; };
+		D248D39E1EF11942001A4E2D /* NSObject+{{args.Prefix}}BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2ED1EF11941001A4E2D /* NSObject+{{args.Prefix}}BaseRequest.m */; };
+		D248D39F1EF11942001A4E2D /* RKMappingResult+{{args.Prefix}}NetworkResultMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2EF1EF11941001A4E2D /* RKMappingResult+{{args.Prefix}}NetworkResultMapping.m */; };
+		D248D3A01EF11942001A4E2D /* {{args.Prefix}}NetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2F11EF11941001A4E2D /* {{args.Prefix}}NetworkConfig.m */; };
+		D248D3A11EF11942001A4E2D /* {{args.Prefix}}NetworkStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2F31EF11941001A4E2D /* {{args.Prefix}}NetworkStatusModel.m */; };
+		D248D3A21EF11942001A4E2D /* NELoginSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D248D2F61EF11941001A4E2D /* NELoginSDK.bundle */; };
+		D248D3A31EF11942001A4E2D /* NELoginSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D248D2F71EF11941001A4E2D /* NELoginSDK.framework */; };
+		D248D3A41EF11942001A4E2D /* CALayer+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2FB1EF11941001A4E2D /* CALayer+Animation.m */; };
+		D248D3A51EF11942001A4E2D /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D2FE1EF11941001A4E2D /* UIImage+Alpha.m */; };
+		D248D3A61EF11942001A4E2D /* UIView+{{args.Prefix}}Line.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D3001EF11941001A4E2D /* UIView+{{args.Prefix}}Line.m */; };
+		D248D3A71EF11942001A4E2D /* UIView+{{args.Prefix}}Loading.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D3021EF11941001A4E2D /* UIView+{{args.Prefix}}Loading.m */; };
+		D248D3A81EF11942001A4E2D /* UIView+{{args.Prefix}}Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D3041EF11941001A4E2D /* UIView+{{args.Prefix}}Toast.m */; };
+		D248D3A91EF11942001A4E2D /* {{args.Prefix}}AppConfigurations.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D3061EF11941001A4E2D /* {{args.Prefix}}AppConfigurations.m */; };
+		D248D3AA1EF11942001A4E2D /* {{args.Prefix}}BaseViewController+{{args.Prefix}}CustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D3081EF11941001A4E2D /* {{args.Prefix}}BaseViewController+{{args.Prefix}}CustomNavigationBar.m */; };
+		D248D3AB1EF11942001A4E2D /* {{args.Prefix}}KeyboardSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D30B1EF11941001A4E2D /* {{args.Prefix}}KeyboardSequence.m */; };
+		D248D3AC1EF11942001A4E2D /* {{args.Prefix}}NotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D30E1EF11941001A4E2D /* {{args.Prefix}}NotificationCenter.m */; };
+		D248D3AD1EF11942001A4E2D /* {{args.Prefix}}CommonColors.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D3111EF11941001A4E2D /* {{args.Prefix}}CommonColors.m */; };
+		D248D3AE1EF11942001A4E2D /* {{args.Prefix}}CommonSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = D248D3131EF11941001A4E2D /* {{args.Prefix}}CommonSizes.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A3B4B4F1EE1653C009D789D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1A3B4B511EE1654A009D789D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		1A3B4B531EE16559009D789D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		BF401EAE1DF5462C00CE31E0 /* {{args.ProductName}}.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "{{args.ProductName}}.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D248D17D1EF11941001A4E2D /* AppDelegate+Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Notifications.h"; sourceTree = "<group>"; };
+		D248D17E1EF11941001A4E2D /* AppDelegate+Notifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Notifications.m"; sourceTree = "<group>"; };
+		D248D17F1EF11941001A4E2D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D248D1801EF11941001A4E2D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D248D1811EF11941001A4E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D248D1831EF11941001A4E2D /* {{args.Prefix}}ActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ActivityIndicator.h"; sourceTree = "<group>"; };
+		D248D1841EF11941001A4E2D /* {{args.Prefix}}ActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ActivityIndicator.m"; sourceTree = "<group>"; };
+		D248D1851EF11941001A4E2D /* {{args.Prefix}}CommonStyleViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}CommonStyleViews.h"; sourceTree = "<group>"; };
+		D248D1861EF11941001A4E2D /* {{args.Prefix}}CommonStyleViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}CommonStyleViews.m"; sourceTree = "<group>"; };
+		D248D1871EF11941001A4E2D /* {{args.Prefix}}ImageTextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ImageTextButton.h"; sourceTree = "<group>"; };
+		D248D1881EF11941001A4E2D /* {{args.Prefix}}ImageTextButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ImageTextButton.m"; sourceTree = "<group>"; };
+		D248D1891EF11941001A4E2D /* {{args.Prefix}}LoadingEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}LoadingEmptyView.h"; sourceTree = "<group>"; };
+		D248D18A1EF11941001A4E2D /* {{args.Prefix}}LoadingEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}LoadingEmptyView.m"; sourceTree = "<group>"; };
+		D248D18B1EF11941001A4E2D /* {{args.Prefix}}LoadingErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}LoadingErrorView.h"; sourceTree = "<group>"; };
+		D248D18C1EF11941001A4E2D /* {{args.Prefix}}LoadingErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}LoadingErrorView.m"; sourceTree = "<group>"; };
+		D248D18D1EF11941001A4E2D /* {{args.Prefix}}LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}LoadingView.h"; sourceTree = "<group>"; };
+		D248D18E1EF11941001A4E2D /* {{args.Prefix}}LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}LoadingView.m"; sourceTree = "<group>"; };
+		D248D18F1EF11941001A4E2D /* {{args.Prefix}}LoadmoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}LoadmoreView.h"; sourceTree = "<group>"; };
+		D248D1901EF11941001A4E2D /* {{args.Prefix}}LoadmoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}LoadmoreView.m"; sourceTree = "<group>"; };
+		D248D1911EF11941001A4E2D /* {{args.Prefix}}NoMoreDataFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}NoMoreDataFooterView.h"; sourceTree = "<group>"; };
+		D248D1921EF11941001A4E2D /* {{args.Prefix}}NoMoreDataFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}NoMoreDataFooterView.m"; sourceTree = "<group>"; };
+		D248D1931EF11941001A4E2D /* {{args.Prefix}}RefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}RefreshView.h"; sourceTree = "<group>"; };
+		D248D1941EF11941001A4E2D /* {{args.Prefix}}RefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}RefreshView.m"; sourceTree = "<group>"; };
+		D248D1951EF11941001A4E2D /* {{args.Prefix}}TableViewGapCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}TableViewGapCell.h"; sourceTree = "<group>"; };
+		D248D1961EF11941001A4E2D /* {{args.Prefix}}TableViewGapCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}TableViewGapCell.m"; sourceTree = "<group>"; };
+		D248D1971EF11941001A4E2D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D248D1991EF11941001A4E2D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D248D19D1EF11941001A4E2D /* {{args.Prefix}}BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}BaseTableViewController.h"; sourceTree = "<group>"; };
+		D248D19E1EF11941001A4E2D /* {{args.Prefix}}BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}BaseTableViewController.m"; sourceTree = "<group>"; };
+		D248D19F1EF11941001A4E2D /* {{args.Prefix}}BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}BaseViewController.h"; sourceTree = "<group>"; };
+		D248D1A01EF11941001A4E2D /* {{args.Prefix}}BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}BaseViewController.m"; sourceTree = "<group>"; };
+		D248D1A41EF11941001A4E2D /* {{args.Prefix}}MainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}MainPageViewController.h"; sourceTree = "<group>"; };
+		D248D1A51EF11941001A4E2D /* {{args.Prefix}}MainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}MainPageViewController.m"; sourceTree = "<group>"; };
+		D248D1A71EF11941001A4E2D /* {{args.Prefix}}MainPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}MainPageModel.h"; sourceTree = "<group>"; };
+		D248D1A81EF11941001A4E2D /* {{args.Prefix}}MainPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}MainPageModel.m"; sourceTree = "<group>"; };
+		D248D1AA1EF11941001A4E2D /* {{args.Prefix}}MainPageBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}MainPageBottomView.h"; sourceTree = "<group>"; };
+		D248D1AB1EF11941001A4E2D /* {{args.Prefix}}MainPageBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}MainPageBottomView.m"; sourceTree = "<group>"; };
+		D248D1AC1EF11941001A4E2D /* {{args.Prefix}}MainPageCellButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}MainPageCellButton.h"; sourceTree = "<group>"; };
+		D248D1AD1EF11941001A4E2D /* {{args.Prefix}}MainPageCellButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}MainPageCellButton.m"; sourceTree = "<group>"; };
+		D248D1AE1EF11941001A4E2D /* {{args.Prefix}}MainPageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}MainPageHeaderView.h"; sourceTree = "<group>"; };
+		D248D1AF1EF11941001A4E2D /* {{args.Prefix}}MainPageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}MainPageHeaderView.m"; sourceTree = "<group>"; };
+		D248D1B01EF11941001A4E2D /* {{args.Prefix}}MainPageSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}MainPageSectionView.h"; sourceTree = "<group>"; };
+		D248D1B11EF11941001A4E2D /* {{args.Prefix}}MainPageSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}MainPageSectionView.m"; sourceTree = "<group>"; };
+		D248D1B31EF11941001A4E2D /* {{args.Prefix}}TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}TabBarController.h"; sourceTree = "<group>"; };
+		D248D1B41EF11941001A4E2D /* {{args.Prefix}}TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}TabBarController.m"; sourceTree = "<group>"; };
+		D248D1B51EF11941001A4E2D /* {{args.Prefix}}TabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}TabBarItem.h"; sourceTree = "<group>"; };
+		D248D1B61EF11941001A4E2D /* {{args.Prefix}}TabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}TabBarItem.m"; sourceTree = "<group>"; };
+		D248D1BA1EF11941001A4E2D /* {{args.Prefix}}CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}CameraViewController.h"; sourceTree = "<group>"; };
+		D248D1BB1EF11941001A4E2D /* {{args.Prefix}}CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}CameraViewController.m"; sourceTree = "<group>"; };
+		D248D1BE1EF11941001A4E2D /* {{args.Prefix}}EmptyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}EmptyPageViewController.h"; sourceTree = "<group>"; };
+		D248D1BF1EF11941001A4E2D /* {{args.Prefix}}EmptyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}EmptyPageViewController.m"; sourceTree = "<group>"; };
+		D248D1C21EF11941001A4E2D /* {{args.Prefix}}GesturePasswordDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}GesturePasswordDemoViewController.h"; sourceTree = "<group>"; };
+		D248D1C31EF11941001A4E2D /* {{args.Prefix}}GesturePasswordDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}GesturePasswordDemoViewController.m"; sourceTree = "<group>"; };
+		D248D1C41EF11941001A4E2D /* {{args.Prefix}}SetGesturePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}SetGesturePasswordViewController.h"; sourceTree = "<group>"; };
+		D248D1C51EF11941001A4E2D /* {{args.Prefix}}SetGesturePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}SetGesturePasswordViewController.m"; sourceTree = "<group>"; };
+		D248D1C61EF11941001A4E2D /* {{args.Prefix}}VerifyGusturePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}VerifyGusturePasswordViewController.h"; sourceTree = "<group>"; };
+		D248D1C71EF11941001A4E2D /* {{args.Prefix}}VerifyGusturePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}VerifyGusturePasswordViewController.m"; sourceTree = "<group>"; };
+		D248D1C91EF11941001A4E2D /* {{args.Prefix}}Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}Circle.h"; sourceTree = "<group>"; };
+		D248D1CA1EF11941001A4E2D /* {{args.Prefix}}Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}Circle.m"; sourceTree = "<group>"; };
+		D248D1CB1EF11941001A4E2D /* {{args.Prefix}}CircleInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}CircleInfoView.h"; sourceTree = "<group>"; };
+		D248D1CC1EF11941001A4E2D /* {{args.Prefix}}CircleInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}CircleInfoView.m"; sourceTree = "<group>"; };
+		D248D1CD1EF11941001A4E2D /* {{args.Prefix}}CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}CircleView.h"; sourceTree = "<group>"; };
+		D248D1CE1EF11941001A4E2D /* {{args.Prefix}}CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}CircleView.m"; sourceTree = "<group>"; };
+		D248D1CF1EF11941001A4E2D /* {{args.Prefix}}LockLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}LockLabel.h"; sourceTree = "<group>"; };
+		D248D1D01EF11941001A4E2D /* {{args.Prefix}}LockLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}LockLabel.m"; sourceTree = "<group>"; };
+		D248D1D11EF11941001A4E2D /* {{args.Prefix}}CircleViewConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}CircleViewConst.h"; sourceTree = "<group>"; };
+		D248D1D21EF11941001A4E2D /* {{args.Prefix}}CircleViewConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}CircleViewConst.m"; sourceTree = "<group>"; };
+		D248D1D51EF11941001A4E2D /* {{args.Prefix}}GuidePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}GuidePageViewController.h"; sourceTree = "<group>"; };
+		D248D1D61EF11941001A4E2D /* {{args.Prefix}}GuidePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}GuidePageViewController.m"; sourceTree = "<group>"; };
+		D248D1D81EF11941001A4E2D /* {{args.Prefix}}GuidePageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}GuidePageModel.h"; sourceTree = "<group>"; };
+		D248D1D91EF11941001A4E2D /* {{args.Prefix}}GuidePageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}GuidePageModel.m"; sourceTree = "<group>"; };
+		D248D1DB1EF11941001A4E2D /* {{args.Prefix}}GuidePageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}GuidePageItem.h"; sourceTree = "<group>"; };
+		D248D1DC1EF11941001A4E2D /* {{args.Prefix}}GuidePageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}GuidePageItem.m"; sourceTree = "<group>"; };
+		D248D1DD1EF11941001A4E2D /* {{args.Prefix}}GuidePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}GuidePageView.h"; sourceTree = "<group>"; };
+		D248D1DE1EF11941001A4E2D /* {{args.Prefix}}GuidePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}GuidePageView.m"; sourceTree = "<group>"; };
+		D248D1E11EF11941001A4E2D /* {{args.Prefix}}ListLayoutCommonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ListLayoutCommonCell.h"; sourceTree = "<group>"; };
+		D248D1E21EF11941001A4E2D /* {{args.Prefix}}ListLayoutCommonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ListLayoutCommonCell.m"; sourceTree = "<group>"; };
+		D248D1E31EF11941001A4E2D /* {{args.Prefix}}ListLayoutHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ListLayoutHeaderCell.h"; sourceTree = "<group>"; };
+		D248D1E41EF11941001A4E2D /* {{args.Prefix}}ListLayoutHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ListLayoutHeaderCell.m"; sourceTree = "<group>"; };
+		D248D1E61EF11941001A4E2D /* {{args.Prefix}}ListLayoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ListLayoutController.h"; sourceTree = "<group>"; };
+		D248D1E71EF11941001A4E2D /* {{args.Prefix}}ListLayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ListLayoutController.m"; sourceTree = "<group>"; };
+		D248D1E91EF11941001A4E2D /* {{args.Prefix}}ListLayoutCellDescribeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ListLayoutCellDescribeData.h"; sourceTree = "<group>"; };
+		D248D1EA1EF11941001A4E2D /* {{args.Prefix}}ListLayoutCellDescribeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ListLayoutCellDescribeData.m"; sourceTree = "<group>"; };
+		D248D1ED1EF11941001A4E2D /* {{args.Prefix}}LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}LoginController.h"; sourceTree = "<group>"; };
+		D248D1EE1EF11941001A4E2D /* {{args.Prefix}}LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}LoginController.m"; sourceTree = "<group>"; };
+		D248D1F01EF11941001A4E2D /* {{args.Prefix}}UserDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}UserDataManager.h"; sourceTree = "<group>"; };
+		D248D1F11EF11941001A4E2D /* {{args.Prefix}}UserDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}UserDataManager.m"; sourceTree = "<group>"; };
+		D248D1F31EF11941001A4E2D /* {{args.Prefix}}LoginInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}LoginInputView.h"; sourceTree = "<group>"; };
+		D248D1F41EF11941001A4E2D /* {{args.Prefix}}LoginInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}LoginInputView.m"; sourceTree = "<group>"; };
+		D248D1F71EF11941001A4E2D /* {{args.Prefix}}MineHeaderInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}MineHeaderInfoCell.h"; sourceTree = "<group>"; };
+		D248D1F81EF11941001A4E2D /* {{args.Prefix}}MineHeaderInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}MineHeaderInfoCell.m"; sourceTree = "<group>"; };
+		D248D1F91EF11941001A4E2D /* {{args.Prefix}}MineOperationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}MineOperationCell.h"; sourceTree = "<group>"; };
+		D248D1FA1EF11941001A4E2D /* {{args.Prefix}}MineOperationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}MineOperationCell.m"; sourceTree = "<group>"; };
+		D248D1FB1EF11941001A4E2D /* {{args.Prefix}}MineSegmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}MineSegmentCell.h"; sourceTree = "<group>"; };
+		D248D1FC1EF11941001A4E2D /* {{args.Prefix}}MineSegmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}MineSegmentCell.m"; sourceTree = "<group>"; };
+		D248D1FD1EF11941001A4E2D /* {{args.Prefix}}MineSegmentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}MineSegmentItem.h"; sourceTree = "<group>"; };
+		D248D1FE1EF11941001A4E2D /* {{args.Prefix}}MineSegmentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}MineSegmentItem.m"; sourceTree = "<group>"; };
+		D248D2001EF11941001A4E2D /* {{args.Prefix}}MineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}MineController.h"; sourceTree = "<group>"; };
+		D248D2011EF11941001A4E2D /* {{args.Prefix}}MineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}MineController.m"; sourceTree = "<group>"; };
+		D248D2031EF11941001A4E2D /* {{args.Prefix}}MineCellDescribeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}MineCellDescribeData.h"; sourceTree = "<group>"; };
+		D248D2041EF11941001A4E2D /* {{args.Prefix}}MineCellDescribeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}MineCellDescribeData.m"; sourceTree = "<group>"; };
+		D248D2071EF11941001A4E2D /* {{args.Prefix}}AlbumChooseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}AlbumChooseTableViewController.h"; sourceTree = "<group>"; };
+		D248D2081EF11941001A4E2D /* {{args.Prefix}}AlbumChooseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}AlbumChooseTableViewController.m"; sourceTree = "<group>"; };
+		D248D2091EF11941001A4E2D /* {{args.Prefix}}CustomAlbumChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}CustomAlbumChooseViewController.h"; sourceTree = "<group>"; };
+		D248D20A1EF11941001A4E2D /* {{args.Prefix}}CustomAlbumChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}CustomAlbumChooseViewController.m"; sourceTree = "<group>"; };
+		D248D20B1EF11941001A4E2D /* {{args.Prefix}}ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ImagePickerViewController.h"; sourceTree = "<group>"; };
+		D248D20C1EF11941001A4E2D /* {{args.Prefix}}ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ImagePickerViewController.m"; sourceTree = "<group>"; };
+		D248D20D1EF11941001A4E2D /* {{args.Prefix}}PhotoChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}PhotoChooseViewController.h"; sourceTree = "<group>"; };
+		D248D20E1EF11941001A4E2D /* {{args.Prefix}}PhotoChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}PhotoChooseViewController.m"; sourceTree = "<group>"; };
+		D248D2101EF11941001A4E2D /* {{args.Prefix}}ImagePickerViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ImagePickerViewManager.h"; sourceTree = "<group>"; };
+		D248D2111EF11941001A4E2D /* {{args.Prefix}}ImagePickerViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ImagePickerViewManager.m"; sourceTree = "<group>"; };
+		D248D2131EF11941001A4E2D /* {{args.Prefix}}AssetPickerUnorderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}AssetPickerUnorderCell.h"; sourceTree = "<group>"; };
+		D248D2141EF11941001A4E2D /* {{args.Prefix}}AssetPickerUnorderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}AssetPickerUnorderCell.m"; sourceTree = "<group>"; };
+		D248D2171EF11941001A4E2D /* {{args.Prefix}}QRCodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}QRCodeScanViewController.h"; sourceTree = "<group>"; };
+		D248D2181EF11941001A4E2D /* {{args.Prefix}}QRCodeScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}QRCodeScanViewController.m"; sourceTree = "<group>"; };
+		D248D21B1EF11941001A4E2D /* {{args.Prefix}}RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}RegisterController.h"; sourceTree = "<group>"; };
+		D248D21C1EF11941001A4E2D /* {{args.Prefix}}RegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}RegisterController.m"; sourceTree = "<group>"; };
+		D248D21D1EF11941001A4E2D /* {{args.Prefix}}RegisterResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}RegisterResultController.h"; sourceTree = "<group>"; };
+		D248D21E1EF11941001A4E2D /* {{args.Prefix}}RegisterResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}RegisterResultController.m"; sourceTree = "<group>"; };
+		D248D2211EF11941001A4E2D /* {{args.Prefix}}SettingCommonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}SettingCommonCell.h"; sourceTree = "<group>"; };
+		D248D2221EF11941001A4E2D /* {{args.Prefix}}SettingCommonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}SettingCommonCell.m"; sourceTree = "<group>"; };
+		D248D2231EF11941001A4E2D /* {{args.Prefix}}SettingSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}SettingSwitchCell.h"; sourceTree = "<group>"; };
+		D248D2241EF11941001A4E2D /* {{args.Prefix}}SettingSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}SettingSwitchCell.m"; sourceTree = "<group>"; };
+		D248D2261EF11941001A4E2D /* {{args.Prefix}}SettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}SettingController.h"; sourceTree = "<group>"; };
+		D248D2271EF11941001A4E2D /* {{args.Prefix}}SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}SettingController.m"; sourceTree = "<group>"; };
+		D248D2291EF11941001A4E2D /* {{args.Prefix}}SettingCellDescribeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}SettingCellDescribeData.h"; sourceTree = "<group>"; };
+		D248D22A1EF11941001A4E2D /* {{args.Prefix}}SettingCellDescribeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}SettingCellDescribeData.m"; sourceTree = "<group>"; };
+		D248D22D1EF11941001A4E2D /* {{args.Prefix}}ShareKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ShareKitViewController.h"; sourceTree = "<group>"; };
+		D248D22E1EF11941001A4E2D /* {{args.Prefix}}ShareKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ShareKitViewController.m"; sourceTree = "<group>"; };
+		D248D2301EF11941001A4E2D /* {{args.Prefix}}ShareContentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ShareContentData.h"; sourceTree = "<group>"; };
+		D248D2311EF11941001A4E2D /* {{args.Prefix}}ShareContentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ShareContentData.m"; sourceTree = "<group>"; };
+		D248D2331EF11941001A4E2D /* {{args.Prefix}}PopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}PopView.h"; sourceTree = "<group>"; };
+		D248D2341EF11941001A4E2D /* {{args.Prefix}}PopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}PopView.m"; sourceTree = "<group>"; };
+		D248D2351EF11941001A4E2D /* {{args.Prefix}}ShareCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ShareCollectionViewCell.h"; sourceTree = "<group>"; };
+		D248D2361EF11941001A4E2D /* {{args.Prefix}}ShareCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ShareCollectionViewCell.m"; sourceTree = "<group>"; };
+		D248D2371EF11941001A4E2D /* {{args.Prefix}}SharePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}SharePopView.h"; sourceTree = "<group>"; };
+		D248D2381EF11941001A4E2D /* {{args.Prefix}}SharePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}SharePopView.m"; sourceTree = "<group>"; };
+		D248D23B1EF11941001A4E2D /* {{args.Prefix}}DemoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}DemoTableViewCell.h"; sourceTree = "<group>"; };
+		D248D23C1EF11941001A4E2D /* {{args.Prefix}}DemoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}DemoTableViewCell.m"; sourceTree = "<group>"; };
+		D248D23D1EF11941001A4E2D /* {{args.Prefix}}PagingListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}PagingListCell.h"; sourceTree = "<group>"; };
+		D248D23E1EF11941001A4E2D /* {{args.Prefix}}PagingListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}PagingListCell.m"; sourceTree = "<group>"; };
+		D248D2401EF11941001A4E2D /* {{args.Prefix}}DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}DemoViewController.h"; sourceTree = "<group>"; };
+		D248D2411EF11941001A4E2D /* {{args.Prefix}}DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}DemoViewController.m"; sourceTree = "<group>"; };
+		D248D2421EF11941001A4E2D /* {{args.Prefix}}PagingListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}PagingListController.h"; sourceTree = "<group>"; };
+		D248D2431EF11941001A4E2D /* {{args.Prefix}}PagingListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}PagingListController.m"; sourceTree = "<group>"; };
+		D248D2461EF11941001A4E2D /* {{args.Prefix}}SplashScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}SplashScreenController.h"; sourceTree = "<group>"; };
+		D248D2471EF11941001A4E2D /* {{args.Prefix}}SplashScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}SplashScreenController.m"; sourceTree = "<group>"; };
+		D248D2491EF11941001A4E2D /* {{args.Prefix}}WebLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}WebLoadingView.h"; sourceTree = "<group>"; };
+		D248D24A1EF11941001A4E2D /* {{args.Prefix}}WebLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}WebLoadingView.m"; sourceTree = "<group>"; };
+		D248D24B1EF11941001A4E2D /* {{args.Prefix}}WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}WebViewController.h"; sourceTree = "<group>"; };
+		D248D24C1EF11941001A4E2D /* {{args.Prefix}}WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}WebViewController.m"; sourceTree = "<group>"; };
+		D248D2501EF11941001A4E2D /* {{args.Prefix}}ContentAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ContentAlertViewController.h"; sourceTree = "<group>"; };
+		D248D2511EF11941001A4E2D /* {{args.Prefix}}ContentAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ContentAlertViewController.m"; sourceTree = "<group>"; };
+		D248D2521EF11941001A4E2D /* {{args.Prefix}}CustomAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}CustomAlertViewController.h"; sourceTree = "<group>"; };
+		D248D2531EF11941001A4E2D /* {{args.Prefix}}CustomAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}CustomAlertViewController.m"; sourceTree = "<group>"; };
+		D248D2541EF11941001A4E2D /* {{args.Prefix}}WarningAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}WarningAlertViewController.h"; sourceTree = "<group>"; };
+		D248D2551EF11941001A4E2D /* {{args.Prefix}}WarningAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}WarningAlertViewController.m"; sourceTree = "<group>"; };
+		D248D2571EF11941001A4E2D /* {{args.Prefix}}AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}AlertView.h"; sourceTree = "<group>"; };
+		D248D2581EF11941001A4E2D /* {{args.Prefix}}AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}AlertView.m"; sourceTree = "<group>"; };
+		D248D2591EF11941001A4E2D /* {{args.Prefix}}InputAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}InputAlertViewController.h"; sourceTree = "<group>"; };
+		D248D25A1EF11941001A4E2D /* {{args.Prefix}}InputAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}InputAlertViewController.m"; sourceTree = "<group>"; };
+		D248D25D1EF11941001A4E2D /* {{args.Prefix}}ButtonCornerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ButtonCornerViewController.h"; sourceTree = "<group>"; };
+		D248D25E1EF11941001A4E2D /* {{args.Prefix}}ButtonCornerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ButtonCornerViewController.m"; sourceTree = "<group>"; };
+		D248D25F1EF11941001A4E2D /* {{args.Prefix}}IconButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}IconButtonViewController.h"; sourceTree = "<group>"; };
+		D248D2601EF11941001A4E2D /* {{args.Prefix}}IconButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}IconButtonViewController.m"; sourceTree = "<group>"; };
+		D248D2611EF11941001A4E2D /* {{args.Prefix}}LeftPanButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}LeftPanButtonViewController.h"; sourceTree = "<group>"; };
+		D248D2621EF11941001A4E2D /* {{args.Prefix}}LeftPanButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}LeftPanButtonViewController.m"; sourceTree = "<group>"; };
+		D248D2641EF11941001A4E2D /* {{args.Prefix}}ButtonCornerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ButtonCornerModel.h"; sourceTree = "<group>"; };
+		D248D2651EF11941001A4E2D /* {{args.Prefix}}ButtonCornerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ButtonCornerModel.m"; sourceTree = "<group>"; };
+		D248D2671EF11941001A4E2D /* {{args.Prefix}}ButtonCornerSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ButtonCornerSectionView.h"; sourceTree = "<group>"; };
+		D248D2681EF11941001A4E2D /* {{args.Prefix}}ButtonCornerSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ButtonCornerSectionView.m"; sourceTree = "<group>"; };
+		D248D2691EF11941001A4E2D /* {{args.Prefix}}IconTextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}IconTextButton.h"; sourceTree = "<group>"; };
+		D248D26A1EF11941001A4E2D /* {{args.Prefix}}IconTextButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}IconTextButton.m"; sourceTree = "<group>"; };
+		D248D26B1EF11941001A4E2D /* {{args.Prefix}}LeftPanButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}LeftPanButtonCell.h"; sourceTree = "<group>"; };
+		D248D26C1EF11941001A4E2D /* {{args.Prefix}}LeftPanButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}LeftPanButtonCell.m"; sourceTree = "<group>"; };
+		D248D26F1EF11941001A4E2D /* {{args.Prefix}}ActionSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ActionSheetViewController.h"; sourceTree = "<group>"; };
+		D248D2701EF11941001A4E2D /* {{args.Prefix}}ActionSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ActionSheetViewController.m"; sourceTree = "<group>"; };
+		D248D2711EF11941001A4E2D /* {{args.Prefix}}DrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}DrawerViewController.h"; sourceTree = "<group>"; };
+		D248D2721EF11941001A4E2D /* {{args.Prefix}}DrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}DrawerViewController.m"; sourceTree = "<group>"; };
+		D248D2731EF11941001A4E2D /* {{args.Prefix}}RefreshViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}RefreshViewController.h"; sourceTree = "<group>"; };
+		D248D2741EF11941001A4E2D /* {{args.Prefix}}RefreshViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}RefreshViewController.m"; sourceTree = "<group>"; };
+		D248D2751EF11941001A4E2D /* {{args.Prefix}}StepperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}StepperViewController.h"; sourceTree = "<group>"; };
+		D248D2761EF11941001A4E2D /* {{args.Prefix}}StepperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}StepperViewController.m"; sourceTree = "<group>"; };
+		D248D2771EF11941001A4E2D /* {{args.Prefix}}SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}SwitchViewController.h"; sourceTree = "<group>"; };
+		D248D2781EF11941001A4E2D /* {{args.Prefix}}SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}SwitchViewController.m"; sourceTree = "<group>"; };
+		D248D27A1EF11941001A4E2D /* {{args.Prefix}}SwitchCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}SwitchCellModel.h"; sourceTree = "<group>"; };
+		D248D27B1EF11941001A4E2D /* {{args.Prefix}}SwitchCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}SwitchCellModel.m"; sourceTree = "<group>"; };
+		D248D27D1EF11941001A4E2D /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
+		D248D27E1EF11941001A4E2D /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
+		D248D27F1EF11941001A4E2D /* {{args.Prefix}}ActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ActionSheet.h"; sourceTree = "<group>"; };
+		D248D2801EF11941001A4E2D /* {{args.Prefix}}ActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ActionSheet.m"; sourceTree = "<group>"; };
+		D248D2811EF11941001A4E2D /* {{args.Prefix}}DrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}DrawerView.h"; sourceTree = "<group>"; };
+		D248D2821EF11941001A4E2D /* {{args.Prefix}}DrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}DrawerView.m"; sourceTree = "<group>"; };
+		D248D2831EF11941001A4E2D /* {{args.Prefix}}Slider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}Slider.h"; sourceTree = "<group>"; };
+		D248D2841EF11941001A4E2D /* {{args.Prefix}}Slider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}Slider.m"; sourceTree = "<group>"; };
+		D248D2851EF11941001A4E2D /* {{args.Prefix}}Stepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}Stepper.h"; sourceTree = "<group>"; };
+		D248D2861EF11941001A4E2D /* {{args.Prefix}}Stepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}Stepper.m"; sourceTree = "<group>"; };
+		D248D2871EF11941001A4E2D /* {{args.Prefix}}SwithCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}SwithCell.h"; sourceTree = "<group>"; };
+		D248D2881EF11941001A4E2D /* {{args.Prefix}}SwithCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}SwithCell.m"; sourceTree = "<group>"; };
+		D248D28B1EF11941001A4E2D /* {{args.Prefix}}CheckboxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}CheckboxTableViewController.h"; sourceTree = "<group>"; };
+		D248D28C1EF11941001A4E2D /* {{args.Prefix}}CheckboxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}CheckboxTableViewController.m"; sourceTree = "<group>"; };
+		D248D28D1EF11941001A4E2D /* {{args.Prefix}}TextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}TextFieldViewController.h"; sourceTree = "<group>"; };
+		D248D28E1EF11941001A4E2D /* {{args.Prefix}}TextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}TextFieldViewController.m"; sourceTree = "<group>"; };
+		D248D2901EF11941001A4E2D /* {{args.Prefix}}TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}TextField.h"; sourceTree = "<group>"; };
+		D248D2911EF11941001A4E2D /* {{args.Prefix}}TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}TextField.m"; sourceTree = "<group>"; };
+		D248D2941EF11941001A4E2D /* {{args.Prefix}}IconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}IconViewController.h"; sourceTree = "<group>"; };
+		D248D2951EF11941001A4E2D /* {{args.Prefix}}IconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}IconViewController.m"; sourceTree = "<group>"; };
+		D248D2971EF11941001A4E2D /* {{args.Prefix}}IconCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}IconCellModel.h"; sourceTree = "<group>"; };
+		D248D2981EF11941001A4E2D /* {{args.Prefix}}IconCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}IconCellModel.m"; sourceTree = "<group>"; };
+		D248D29A1EF11941001A4E2D /* {{args.Prefix}}IconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}IconCell.h"; sourceTree = "<group>"; };
+		D248D29B1EF11941001A4E2D /* {{args.Prefix}}IconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}IconCell.m"; sourceTree = "<group>"; };
+		D248D29E1EF11941001A4E2D /* {{args.Prefix}}ScrollNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ScrollNotificationViewController.h"; sourceTree = "<group>"; };
+		D248D29F1EF11941001A4E2D /* {{args.Prefix}}ScrollNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ScrollNotificationViewController.m"; sourceTree = "<group>"; };
+		D248D2A01EF11941001A4E2D /* {{args.Prefix}}ToastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ToastViewController.h"; sourceTree = "<group>"; };
+		D248D2A11EF11941001A4E2D /* {{args.Prefix}}ToastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ToastViewController.m"; sourceTree = "<group>"; };
+		D248D2A41EF11941001A4E2D /* {{args.Prefix}}DemoPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}DemoPageViewController.h"; sourceTree = "<group>"; };
+		D248D2A51EF11941001A4E2D /* {{args.Prefix}}DemoPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}DemoPageViewController.m"; sourceTree = "<group>"; };
+		D248D2A61EF11941001A4E2D /* {{args.Prefix}}NaviSegmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}NaviSegmentsViewController.h"; sourceTree = "<group>"; };
+		D248D2A71EF11941001A4E2D /* {{args.Prefix}}NaviSegmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}NaviSegmentsViewController.m"; sourceTree = "<group>"; };
+		D248D2A81EF11941001A4E2D /* {{args.Prefix}}PageControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}PageControllerViewController.h"; sourceTree = "<group>"; };
+		D248D2A91EF11941001A4E2D /* {{args.Prefix}}PageControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}PageControllerViewController.m"; sourceTree = "<group>"; };
+		D248D2AC1EF11941001A4E2D /* {{args.Prefix}}PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}PickerViewController.h"; sourceTree = "<group>"; };
+		D248D2AD1EF11941001A4E2D /* {{args.Prefix}}PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}PickerViewController.m"; sourceTree = "<group>"; };
+		D248D2AF1EF11941001A4E2D /* location.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = location.json; sourceTree = "<group>"; };
+		D248D2B01EF11941001A4E2D /* {{args.Prefix}}PickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}PickerModel.h"; sourceTree = "<group>"; };
+		D248D2B11EF11941001A4E2D /* {{args.Prefix}}PickerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}PickerModel.m"; sourceTree = "<group>"; };
+		D248D2B31EF11941001A4E2D /* {{args.Prefix}}PickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}PickerView.h"; sourceTree = "<group>"; };
+		D248D2B41EF11941001A4E2D /* {{args.Prefix}}PickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}PickerView.m"; sourceTree = "<group>"; };
+		D248D2B71EF11941001A4E2D /* {{args.Prefix}}ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ProgressViewController.h"; sourceTree = "<group>"; };
+		D248D2B81EF11941001A4E2D /* {{args.Prefix}}ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ProgressViewController.m"; sourceTree = "<group>"; };
+		D248D2B91EF11941001A4E2D /* {{args.Prefix}}WebProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}WebProgressViewController.h"; sourceTree = "<group>"; };
+		D248D2BA1EF11941001A4E2D /* {{args.Prefix}}WebProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}WebProgressViewController.m"; sourceTree = "<group>"; };
+		D248D2BC1EF11941001A4E2D /* {{args.Prefix}}ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ProgressView.h"; sourceTree = "<group>"; };
+		D248D2BD1EF11941001A4E2D /* {{args.Prefix}}ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ProgressView.m"; sourceTree = "<group>"; };
+		D248D2C01EF11941001A4E2D /* {{args.Prefix}}SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}SearchViewController.h"; sourceTree = "<group>"; };
+		D248D2C11EF11941001A4E2D /* {{args.Prefix}}SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}SearchViewController.m"; sourceTree = "<group>"; };
+		D248D2C41EF11941001A4E2D /* {{args.Prefix}}BadgeTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}BadgeTabbarViewController.h"; sourceTree = "<group>"; };
+		D248D2C51EF11941001A4E2D /* {{args.Prefix}}BadgeTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}BadgeTabbarViewController.m"; sourceTree = "<group>"; };
+		D248D2C61EF11941001A4E2D /* {{args.Prefix}}DemoTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}DemoTabbarViewController.h"; sourceTree = "<group>"; };
+		D248D2C71EF11941001A4E2D /* {{args.Prefix}}DemoTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}DemoTabbarViewController.m"; sourceTree = "<group>"; };
+		D248D2C81EF11941001A4E2D /* {{args.Prefix}}ToolBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ToolBarViewController.h"; sourceTree = "<group>"; };
+		D248D2C91EF11941001A4E2D /* {{args.Prefix}}ToolBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ToolBarViewController.m"; sourceTree = "<group>"; };
+		D248D2CB1EF11941001A4E2D /* {{args.Prefix}}ToolBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ToolBarItem.h"; sourceTree = "<group>"; };
+		D248D2CC1EF11941001A4E2D /* {{args.Prefix}}ToolBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ToolBarItem.m"; sourceTree = "<group>"; };
+		D248D2CF1EF11941001A4E2D /* {{args.Prefix}}iOSTextStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}iOSTextStyleViewController.h"; sourceTree = "<group>"; };
+		D248D2D01EF11941001A4E2D /* {{args.Prefix}}iOSTextStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}iOSTextStyleViewController.m"; sourceTree = "<group>"; };
+		D248D2D11EF11941001A4E2D /* {{args.Prefix}}TextColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}TextColorViewController.h"; sourceTree = "<group>"; };
+		D248D2D21EF11941001A4E2D /* {{args.Prefix}}TextColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}TextColorViewController.m"; sourceTree = "<group>"; };
+		D248D2D31EF11941001A4E2D /* {{args.Prefix}}TextSizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}TextSizeViewController.h"; sourceTree = "<group>"; };
+		D248D2D41EF11941001A4E2D /* {{args.Prefix}}TextSizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}TextSizeViewController.m"; sourceTree = "<group>"; };
+		D248D2D61EF11941001A4E2D /* {{args.Prefix}}TextColorViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}TextColorViewModel.h"; sourceTree = "<group>"; };
+		D248D2D71EF11941001A4E2D /* {{args.Prefix}}TextColorViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}TextColorViewModel.m"; sourceTree = "<group>"; };
+		D248D2D81EF11941001A4E2D /* {{args.Prefix}}TextSizeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}TextSizeViewModel.h"; sourceTree = "<group>"; };
+		D248D2D91EF11941001A4E2D /* {{args.Prefix}}TextSizeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}TextSizeViewModel.m"; sourceTree = "<group>"; };
+		D248D2DB1EF11941001A4E2D /* {{args.Prefix}}TextColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}TextColorView.h"; sourceTree = "<group>"; };
+		D248D2DC1EF11941001A4E2D /* {{args.Prefix}}TextColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}TextColorView.m"; sourceTree = "<group>"; };
+		D248D2DD1EF11941001A4E2D /* {{args.Prefix}}TextSizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}TextSizeView.h"; sourceTree = "<group>"; };
+		D248D2DE1EF11941001A4E2D /* {{args.Prefix}}TextSizeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}TextSizeView.m"; sourceTree = "<group>"; };
+		D248D2E11EF11941001A4E2D /* {{args.Prefix}}PagingListCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}PagingListCellModel.h"; sourceTree = "<group>"; };
+		D248D2E21EF11941001A4E2D /* {{args.Prefix}}PagingListCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}PagingListCellModel.m"; sourceTree = "<group>"; };
+		D248D2E31EF11941001A4E2D /* {{args.Prefix}}Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}Product.h"; sourceTree = "<group>"; };
+		D248D2E41EF11941001A4E2D /* {{args.Prefix}}Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}Product.m"; sourceTree = "<group>"; };
+		D248D2E51EF11941001A4E2D /* {{args.Prefix}}Productlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}Productlist.h"; sourceTree = "<group>"; };
+		D248D2E61EF11941001A4E2D /* {{args.Prefix}}Productlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "{{args.Prefix}}Productlist.json"; sourceTree = "<group>"; };
+		D248D2E71EF11941001A4E2D /* {{args.Prefix}}Productlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}Productlist.m"; sourceTree = "<group>"; };
+		D248D2E81EF11941001A4E2D /* {{args.Prefix}}ProductlistRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ProductlistRequest.h"; sourceTree = "<group>"; };
+		D248D2E91EF11941001A4E2D /* {{args.Prefix}}ProductlistRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ProductlistRequest.m"; sourceTree = "<group>"; };
+		D248D2EB1EF11941001A4E2D /* CopyMockFiles.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = CopyMockFiles.sh; sourceTree = "<group>"; };
+		D248D2EC1EF11941001A4E2D /* NSObject+{{args.Prefix}}BaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+{{args.Prefix}}BaseRequest.h"; sourceTree = "<group>"; };
+		D248D2ED1EF11941001A4E2D /* NSObject+{{args.Prefix}}BaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+{{args.Prefix}}BaseRequest.m"; sourceTree = "<group>"; };
+		D248D2EE1EF11941001A4E2D /* RKMappingResult+{{args.Prefix}}NetworkResultMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RKMappingResult+{{args.Prefix}}NetworkResultMapping.h"; sourceTree = "<group>"; };
+		D248D2EF1EF11941001A4E2D /* RKMappingResult+{{args.Prefix}}NetworkResultMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RKMappingResult+{{args.Prefix}}NetworkResultMapping.m"; sourceTree = "<group>"; };
+		D248D2F01EF11941001A4E2D /* {{args.Prefix}}NetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}NetworkConfig.h"; sourceTree = "<group>"; };
+		D248D2F11EF11941001A4E2D /* {{args.Prefix}}NetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}NetworkConfig.m"; sourceTree = "<group>"; };
+		D248D2F21EF11941001A4E2D /* {{args.Prefix}}NetworkStatusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}NetworkStatusModel.h"; sourceTree = "<group>"; };
+		D248D2F31EF11941001A4E2D /* {{args.Prefix}}NetworkStatusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}NetworkStatusModel.m"; sourceTree = "<group>"; };
+		D248D2F41EF11941001A4E2D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D248D2F61EF11941001A4E2D /* NELoginSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NELoginSDK.bundle; sourceTree = "<group>"; };
+		D248D2F71EF11941001A4E2D /* NELoginSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NELoginSDK.framework; sourceTree = "<group>"; };
+		D248D2F81EF11941001A4E2D /* {{args.Prefix}}.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "{{args.Prefix}}.entitlements"; sourceTree = "<group>"; };
+		D248D2FA1EF11941001A4E2D /* CALayer+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Animation.h"; sourceTree = "<group>"; };
+		D248D2FB1EF11941001A4E2D /* CALayer+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Animation.m"; sourceTree = "<group>"; };
+		D248D2FC1EF11941001A4E2D /* {{args.Prefix}}UniversalRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}UniversalRouter.h"; sourceTree = "<group>"; };
+		D248D2FD1EF11941001A4E2D /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		D248D2FE1EF11941001A4E2D /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		D248D2FF1EF11941001A4E2D /* UIView+{{args.Prefix}}Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+{{args.Prefix}}Line.h"; sourceTree = "<group>"; };
+		D248D3001EF11941001A4E2D /* UIView+{{args.Prefix}}Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+{{args.Prefix}}Line.m"; sourceTree = "<group>"; };
+		D248D3011EF11941001A4E2D /* UIView+{{args.Prefix}}Loading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+{{args.Prefix}}Loading.h"; sourceTree = "<group>"; };
+		D248D3021EF11941001A4E2D /* UIView+{{args.Prefix}}Loading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+{{args.Prefix}}Loading.m"; sourceTree = "<group>"; };
+		D248D3031EF11941001A4E2D /* UIView+{{args.Prefix}}Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+{{args.Prefix}}Toast.h"; sourceTree = "<group>"; };
+		D248D3041EF11941001A4E2D /* UIView+{{args.Prefix}}Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+{{args.Prefix}}Toast.m"; sourceTree = "<group>"; };
+		D248D3051EF11941001A4E2D /* {{args.Prefix}}AppConfigurations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}AppConfigurations.h"; sourceTree = "<group>"; };
+		D248D3061EF11941001A4E2D /* {{args.Prefix}}AppConfigurations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}AppConfigurations.m"; sourceTree = "<group>"; };
+		D248D3071EF11941001A4E2D /* {{args.Prefix}}BaseViewController+{{args.Prefix}}CustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}BaseViewController+{{args.Prefix}}CustomNavigationBar.h"; sourceTree = "<group>"; };
+		D248D3081EF11941001A4E2D /* {{args.Prefix}}BaseViewController+{{args.Prefix}}CustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}BaseViewController+{{args.Prefix}}CustomNavigationBar.m"; sourceTree = "<group>"; };
+		D248D3091EF11941001A4E2D /* {{args.Prefix}}GlobalEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}GlobalEnums.h"; sourceTree = "<group>"; };
+		D248D30A1EF11941001A4E2D /* {{args.Prefix}}KeyboardSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}KeyboardSequence.h"; sourceTree = "<group>"; };
+		D248D30B1EF11941001A4E2D /* {{args.Prefix}}KeyboardSequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}KeyboardSequence.m"; sourceTree = "<group>"; };
+		D248D30C1EF11941001A4E2D /* {{args.Prefix}}Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}Macros.h"; sourceTree = "<group>"; };
+		D248D30D1EF11941001A4E2D /* {{args.Prefix}}NotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}NotificationCenter.h"; sourceTree = "<group>"; };
+		D248D30E1EF11941001A4E2D /* {{args.Prefix}}NotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}NotificationCenter.m"; sourceTree = "<group>"; };
+		D248D3101EF11941001A4E2D /* {{args.Prefix}}CommonColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}CommonColors.h"; sourceTree = "<group>"; };
+		D248D3111EF11941001A4E2D /* {{args.Prefix}}CommonColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}CommonColors.m"; sourceTree = "<group>"; };
+		D248D3121EF11941001A4E2D /* {{args.Prefix}}CommonSizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}CommonSizes.h"; sourceTree = "<group>"; };
+		D248D3131EF11941001A4E2D /* {{args.Prefix}}CommonSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}CommonSizes.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF401EAB1DF5462C00CE31E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A3B4B541EE16559009D789D /* libc++.tbd in Frameworks */,
+				1A3B4B521EE1654A009D789D /* libz.tbd in Frameworks */,
+				1A3B4B501EE1653C009D789D /* Security.framework in Frameworks */,
+				D248D3A31EF11942001A4E2D /* NELoginSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30C583323469945EDDF06741 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A3B4B531EE16559009D789D /* libc++.tbd */,
+				1A3B4B511EE1654A009D789D /* libz.tbd */,
+				1A3B4B4F1EE1653C009D789D /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF401EA51DF5462C00CE31E0 = {
+			isa = PBXGroup;
+			children = (
+				D248D17B1EF11941001A4E2D /* {{args.ProductName}} */,
+				BF401EAF1DF5462C00CE31E0 /* Products */,
+				30C583323469945EDDF06741 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BF401EAF1DF5462C00CE31E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF401EAE1DF5462C00CE31E0 /* {{args.ProductName}}.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D248D17B1EF11941001A4E2D /* {{args.ProductName}} */ = {
+			isa = PBXGroup;
+			children = (
+				D248D17C1EF11941001A4E2D /* AppDelegate */,
+				D248D1821EF11941001A4E2D /* CommonView */,
+				D248D19A1EF11941001A4E2D /* Modules */,
+				D248D2DF1EF11941001A4E2D /* Network */,
+				D248D2F51EF11941001A4E2D /* ThirdParty */,
+				D248D2F91EF11941001A4E2D /* Utils */,
+				D248D30F1EF11941001A4E2D /* Values */,
+				D248D1971EF11941001A4E2D /* Info.plist */,
+				D248D1811EF11941001A4E2D /* Assets.xcassets */,
+				D248D1991EF11941001A4E2D /* main.m */,
+				D248D2F41EF11941001A4E2D /* PrefixHeader.pch */,
+				D248D2F81EF11941001A4E2D /* {{args.Prefix}}.entitlements */,
+			);
+			path = "{{args.ProductName}}";
+			sourceTree = "<group>";
+		};
+		D248D17C1EF11941001A4E2D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D248D17D1EF11941001A4E2D /* AppDelegate+Notifications.h */,
+				D248D17E1EF11941001A4E2D /* AppDelegate+Notifications.m */,
+				D248D17F1EF11941001A4E2D /* AppDelegate.h */,
+				D248D1801EF11941001A4E2D /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		D248D1821EF11941001A4E2D /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1831EF11941001A4E2D /* {{args.Prefix}}ActivityIndicator.h */,
+				D248D1841EF11941001A4E2D /* {{args.Prefix}}ActivityIndicator.m */,
+				D248D1851EF11941001A4E2D /* {{args.Prefix}}CommonStyleViews.h */,
+				D248D1861EF11941001A4E2D /* {{args.Prefix}}CommonStyleViews.m */,
+				D248D1871EF11941001A4E2D /* {{args.Prefix}}ImageTextButton.h */,
+				D248D1881EF11941001A4E2D /* {{args.Prefix}}ImageTextButton.m */,
+				D248D1891EF11941001A4E2D /* {{args.Prefix}}LoadingEmptyView.h */,
+				D248D18A1EF11941001A4E2D /* {{args.Prefix}}LoadingEmptyView.m */,
+				D248D18B1EF11941001A4E2D /* {{args.Prefix}}LoadingErrorView.h */,
+				D248D18C1EF11941001A4E2D /* {{args.Prefix}}LoadingErrorView.m */,
+				D248D18D1EF11941001A4E2D /* {{args.Prefix}}LoadingView.h */,
+				D248D18E1EF11941001A4E2D /* {{args.Prefix}}LoadingView.m */,
+				D248D18F1EF11941001A4E2D /* {{args.Prefix}}LoadmoreView.h */,
+				D248D1901EF11941001A4E2D /* {{args.Prefix}}LoadmoreView.m */,
+				D248D1911EF11941001A4E2D /* {{args.Prefix}}NoMoreDataFooterView.h */,
+				D248D1921EF11941001A4E2D /* {{args.Prefix}}NoMoreDataFooterView.m */,
+				D248D1931EF11941001A4E2D /* {{args.Prefix}}RefreshView.h */,
+				D248D1941EF11941001A4E2D /* {{args.Prefix}}RefreshView.m */,
+				D248D1951EF11941001A4E2D /* {{args.Prefix}}TableViewGapCell.h */,
+				D248D1961EF11941001A4E2D /* {{args.Prefix}}TableViewGapCell.m */,
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
+		D248D19A1EF11941001A4E2D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D248D19B1EF11941001A4E2D /* Base */,
+				D248D1A11EF11941001A4E2D /* MainPage */,
+				D248D1B21EF11941001A4E2D /* MainTab */,
+				D248D1B71EF11941001A4E2D /* PageLayout */,
+				D248D2391EF11941001A4E2D /* PagingList */,
+				D248D2441EF11941001A4E2D /* Splash */,
+				D248D2481EF11941001A4E2D /* WebView */,
+				D248D24D1EF11941001A4E2D /* Widgets */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D248D19B1EF11941001A4E2D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D248D19C1EF11941001A4E2D /* Controllers */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D248D19C1EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D19D1EF11941001A4E2D /* {{args.Prefix}}BaseTableViewController.h */,
+				D248D19E1EF11941001A4E2D /* {{args.Prefix}}BaseTableViewController.m */,
+				D248D19F1EF11941001A4E2D /* {{args.Prefix}}BaseViewController.h */,
+				D248D1A01EF11941001A4E2D /* {{args.Prefix}}BaseViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D1A11EF11941001A4E2D /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1A21EF11941001A4E2D /* Cells */,
+				D248D1A31EF11941001A4E2D /* Controllers */,
+				D248D1A61EF11941001A4E2D /* Models */,
+				D248D1A91EF11941001A4E2D /* Views */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		D248D1A21EF11941001A4E2D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D248D1A31EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1A41EF11941001A4E2D /* {{args.Prefix}}MainPageViewController.h */,
+				D248D1A51EF11941001A4E2D /* {{args.Prefix}}MainPageViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D1A61EF11941001A4E2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1A71EF11941001A4E2D /* {{args.Prefix}}MainPageModel.h */,
+				D248D1A81EF11941001A4E2D /* {{args.Prefix}}MainPageModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D248D1A91EF11941001A4E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1AA1EF11941001A4E2D /* {{args.Prefix}}MainPageBottomView.h */,
+				D248D1AB1EF11941001A4E2D /* {{args.Prefix}}MainPageBottomView.m */,
+				D248D1AC1EF11941001A4E2D /* {{args.Prefix}}MainPageCellButton.h */,
+				D248D1AD1EF11941001A4E2D /* {{args.Prefix}}MainPageCellButton.m */,
+				D248D1AE1EF11941001A4E2D /* {{args.Prefix}}MainPageHeaderView.h */,
+				D248D1AF1EF11941001A4E2D /* {{args.Prefix}}MainPageHeaderView.m */,
+				D248D1B01EF11941001A4E2D /* {{args.Prefix}}MainPageSectionView.h */,
+				D248D1B11EF11941001A4E2D /* {{args.Prefix}}MainPageSectionView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D248D1B21EF11941001A4E2D /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1B31EF11941001A4E2D /* {{args.Prefix}}TabBarController.h */,
+				D248D1B41EF11941001A4E2D /* {{args.Prefix}}TabBarController.m */,
+				D248D1B51EF11941001A4E2D /* {{args.Prefix}}TabBarItem.h */,
+				D248D1B61EF11941001A4E2D /* {{args.Prefix}}TabBarItem.m */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		D248D1B71EF11941001A4E2D /* PageLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1B81EF11941001A4E2D /* Camera */,
+				D248D1BC1EF11941001A4E2D /* EmptyPage */,
+				D248D1C01EF11941001A4E2D /* GesturePassword */,
+				D248D1D31EF11941001A4E2D /* GuidePage */,
+				D248D1DF1EF11941001A4E2D /* ListLayout */,
+				D248D1EB1EF11941001A4E2D /* Login */,
+				D248D1F51EF11941001A4E2D /* Mine */,
+				D248D2051EF11941001A4E2D /* PhotoChoose */,
+				D248D2151EF11941001A4E2D /* QRCodeScan */,
+				D248D2191EF11941001A4E2D /* Register */,
+				D248D21F1EF11941001A4E2D /* Settings */,
+				D248D22B1EF11941001A4E2D /* ShareKit */,
+			);
+			path = PageLayout;
+			sourceTree = "<group>";
+		};
+		D248D1B81EF11941001A4E2D /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1B91EF11941001A4E2D /* Controllers */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		D248D1B91EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1BA1EF11941001A4E2D /* {{args.Prefix}}CameraViewController.h */,
+				D248D1BB1EF11941001A4E2D /* {{args.Prefix}}CameraViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D1BC1EF11941001A4E2D /* EmptyPage */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1BD1EF11941001A4E2D /* Controllers */,
+			);
+			path = EmptyPage;
+			sourceTree = "<group>";
+		};
+		D248D1BD1EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1BE1EF11941001A4E2D /* {{args.Prefix}}EmptyPageViewController.h */,
+				D248D1BF1EF11941001A4E2D /* {{args.Prefix}}EmptyPageViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D1C01EF11941001A4E2D /* GesturePassword */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1C11EF11941001A4E2D /* Controllers */,
+				D248D1C81EF11941001A4E2D /* Views */,
+				D248D1D11EF11941001A4E2D /* {{args.Prefix}}CircleViewConst.h */,
+				D248D1D21EF11941001A4E2D /* {{args.Prefix}}CircleViewConst.m */,
+			);
+			path = GesturePassword;
+			sourceTree = "<group>";
+		};
+		D248D1C11EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1C21EF11941001A4E2D /* {{args.Prefix}}GesturePasswordDemoViewController.h */,
+				D248D1C31EF11941001A4E2D /* {{args.Prefix}}GesturePasswordDemoViewController.m */,
+				D248D1C41EF11941001A4E2D /* {{args.Prefix}}SetGesturePasswordViewController.h */,
+				D248D1C51EF11941001A4E2D /* {{args.Prefix}}SetGesturePasswordViewController.m */,
+				D248D1C61EF11941001A4E2D /* {{args.Prefix}}VerifyGusturePasswordViewController.h */,
+				D248D1C71EF11941001A4E2D /* {{args.Prefix}}VerifyGusturePasswordViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D1C81EF11941001A4E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1C91EF11941001A4E2D /* {{args.Prefix}}Circle.h */,
+				D248D1CA1EF11941001A4E2D /* {{args.Prefix}}Circle.m */,
+				D248D1CB1EF11941001A4E2D /* {{args.Prefix}}CircleInfoView.h */,
+				D248D1CC1EF11941001A4E2D /* {{args.Prefix}}CircleInfoView.m */,
+				D248D1CD1EF11941001A4E2D /* {{args.Prefix}}CircleView.h */,
+				D248D1CE1EF11941001A4E2D /* {{args.Prefix}}CircleView.m */,
+				D248D1CF1EF11941001A4E2D /* {{args.Prefix}}LockLabel.h */,
+				D248D1D01EF11941001A4E2D /* {{args.Prefix}}LockLabel.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D248D1D31EF11941001A4E2D /* GuidePage */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1D41EF11941001A4E2D /* Controllers */,
+				D248D1D71EF11941001A4E2D /* Models */,
+				D248D1DA1EF11941001A4E2D /* Views */,
+			);
+			path = GuidePage;
+			sourceTree = "<group>";
+		};
+		D248D1D41EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1D51EF11941001A4E2D /* {{args.Prefix}}GuidePageViewController.h */,
+				D248D1D61EF11941001A4E2D /* {{args.Prefix}}GuidePageViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D1D71EF11941001A4E2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1D81EF11941001A4E2D /* {{args.Prefix}}GuidePageModel.h */,
+				D248D1D91EF11941001A4E2D /* {{args.Prefix}}GuidePageModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D248D1DA1EF11941001A4E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1DB1EF11941001A4E2D /* {{args.Prefix}}GuidePageItem.h */,
+				D248D1DC1EF11941001A4E2D /* {{args.Prefix}}GuidePageItem.m */,
+				D248D1DD1EF11941001A4E2D /* {{args.Prefix}}GuidePageView.h */,
+				D248D1DE1EF11941001A4E2D /* {{args.Prefix}}GuidePageView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D248D1DF1EF11941001A4E2D /* ListLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1E01EF11941001A4E2D /* Cells */,
+				D248D1E51EF11941001A4E2D /* Controllers */,
+				D248D1E81EF11941001A4E2D /* Models */,
+			);
+			path = ListLayout;
+			sourceTree = "<group>";
+		};
+		D248D1E01EF11941001A4E2D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1E11EF11941001A4E2D /* {{args.Prefix}}ListLayoutCommonCell.h */,
+				D248D1E21EF11941001A4E2D /* {{args.Prefix}}ListLayoutCommonCell.m */,
+				D248D1E31EF11941001A4E2D /* {{args.Prefix}}ListLayoutHeaderCell.h */,
+				D248D1E41EF11941001A4E2D /* {{args.Prefix}}ListLayoutHeaderCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D248D1E51EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1E61EF11941001A4E2D /* {{args.Prefix}}ListLayoutController.h */,
+				D248D1E71EF11941001A4E2D /* {{args.Prefix}}ListLayoutController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D1E81EF11941001A4E2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1E91EF11941001A4E2D /* {{args.Prefix}}ListLayoutCellDescribeData.h */,
+				D248D1EA1EF11941001A4E2D /* {{args.Prefix}}ListLayoutCellDescribeData.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D248D1EB1EF11941001A4E2D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1EC1EF11941001A4E2D /* Controllers */,
+				D248D1EF1EF11941001A4E2D /* Managers */,
+				D248D1F21EF11941001A4E2D /* Views */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D248D1EC1EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1ED1EF11941001A4E2D /* {{args.Prefix}}LoginController.h */,
+				D248D1EE1EF11941001A4E2D /* {{args.Prefix}}LoginController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D1EF1EF11941001A4E2D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1F01EF11941001A4E2D /* {{args.Prefix}}UserDataManager.h */,
+				D248D1F11EF11941001A4E2D /* {{args.Prefix}}UserDataManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D248D1F21EF11941001A4E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1F31EF11941001A4E2D /* {{args.Prefix}}LoginInputView.h */,
+				D248D1F41EF11941001A4E2D /* {{args.Prefix}}LoginInputView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D248D1F51EF11941001A4E2D /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1F61EF11941001A4E2D /* Cells */,
+				D248D1FF1EF11941001A4E2D /* Controllers */,
+				D248D2021EF11941001A4E2D /* Models */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		D248D1F61EF11941001A4E2D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D248D1F71EF11941001A4E2D /* {{args.Prefix}}MineHeaderInfoCell.h */,
+				D248D1F81EF11941001A4E2D /* {{args.Prefix}}MineHeaderInfoCell.m */,
+				D248D1F91EF11941001A4E2D /* {{args.Prefix}}MineOperationCell.h */,
+				D248D1FA1EF11941001A4E2D /* {{args.Prefix}}MineOperationCell.m */,
+				D248D1FB1EF11941001A4E2D /* {{args.Prefix}}MineSegmentCell.h */,
+				D248D1FC1EF11941001A4E2D /* {{args.Prefix}}MineSegmentCell.m */,
+				D248D1FD1EF11941001A4E2D /* {{args.Prefix}}MineSegmentItem.h */,
+				D248D1FE1EF11941001A4E2D /* {{args.Prefix}}MineSegmentItem.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D248D1FF1EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2001EF11941001A4E2D /* {{args.Prefix}}MineController.h */,
+				D248D2011EF11941001A4E2D /* {{args.Prefix}}MineController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2021EF11941001A4E2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2031EF11941001A4E2D /* {{args.Prefix}}MineCellDescribeData.h */,
+				D248D2041EF11941001A4E2D /* {{args.Prefix}}MineCellDescribeData.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D248D2051EF11941001A4E2D /* PhotoChoose */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2061EF11941001A4E2D /* Controllers */,
+				D248D20F1EF11941001A4E2D /* Managers */,
+				D248D2121EF11941001A4E2D /* Views */,
+			);
+			path = PhotoChoose;
+			sourceTree = "<group>";
+		};
+		D248D2061EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2071EF11941001A4E2D /* {{args.Prefix}}AlbumChooseTableViewController.h */,
+				D248D2081EF11941001A4E2D /* {{args.Prefix}}AlbumChooseTableViewController.m */,
+				D248D2091EF11941001A4E2D /* {{args.Prefix}}CustomAlbumChooseViewController.h */,
+				D248D20A1EF11941001A4E2D /* {{args.Prefix}}CustomAlbumChooseViewController.m */,
+				D248D20B1EF11941001A4E2D /* {{args.Prefix}}ImagePickerViewController.h */,
+				D248D20C1EF11941001A4E2D /* {{args.Prefix}}ImagePickerViewController.m */,
+				D248D20D1EF11941001A4E2D /* {{args.Prefix}}PhotoChooseViewController.h */,
+				D248D20E1EF11941001A4E2D /* {{args.Prefix}}PhotoChooseViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D20F1EF11941001A4E2D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2101EF11941001A4E2D /* {{args.Prefix}}ImagePickerViewManager.h */,
+				D248D2111EF11941001A4E2D /* {{args.Prefix}}ImagePickerViewManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D248D2121EF11941001A4E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2131EF11941001A4E2D /* {{args.Prefix}}AssetPickerUnorderCell.h */,
+				D248D2141EF11941001A4E2D /* {{args.Prefix}}AssetPickerUnorderCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D248D2151EF11941001A4E2D /* QRCodeScan */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2161EF11941001A4E2D /* Controllers */,
+			);
+			path = QRCodeScan;
+			sourceTree = "<group>";
+		};
+		D248D2161EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2171EF11941001A4E2D /* {{args.Prefix}}QRCodeScanViewController.h */,
+				D248D2181EF11941001A4E2D /* {{args.Prefix}}QRCodeScanViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2191EF11941001A4E2D /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D248D21A1EF11941001A4E2D /* Controllers */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		D248D21A1EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D21B1EF11941001A4E2D /* {{args.Prefix}}RegisterController.h */,
+				D248D21C1EF11941001A4E2D /* {{args.Prefix}}RegisterController.m */,
+				D248D21D1EF11941001A4E2D /* {{args.Prefix}}RegisterResultController.h */,
+				D248D21E1EF11941001A4E2D /* {{args.Prefix}}RegisterResultController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D21F1EF11941001A4E2D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2201EF11941001A4E2D /* Cells */,
+				D248D2251EF11941001A4E2D /* Controllers */,
+				D248D2281EF11941001A4E2D /* Models */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D248D2201EF11941001A4E2D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2211EF11941001A4E2D /* {{args.Prefix}}SettingCommonCell.h */,
+				D248D2221EF11941001A4E2D /* {{args.Prefix}}SettingCommonCell.m */,
+				D248D2231EF11941001A4E2D /* {{args.Prefix}}SettingSwitchCell.h */,
+				D248D2241EF11941001A4E2D /* {{args.Prefix}}SettingSwitchCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D248D2251EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2261EF11941001A4E2D /* {{args.Prefix}}SettingController.h */,
+				D248D2271EF11941001A4E2D /* {{args.Prefix}}SettingController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2281EF11941001A4E2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2291EF11941001A4E2D /* {{args.Prefix}}SettingCellDescribeData.h */,
+				D248D22A1EF11941001A4E2D /* {{args.Prefix}}SettingCellDescribeData.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D248D22B1EF11941001A4E2D /* ShareKit */ = {
+			isa = PBXGroup;
+			children = (
+				D248D22C1EF11941001A4E2D /* Controllers */,
+				D248D22F1EF11941001A4E2D /* Models */,
+				D248D2321EF11941001A4E2D /* VIews */,
+			);
+			path = ShareKit;
+			sourceTree = "<group>";
+		};
+		D248D22C1EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D22D1EF11941001A4E2D /* {{args.Prefix}}ShareKitViewController.h */,
+				D248D22E1EF11941001A4E2D /* {{args.Prefix}}ShareKitViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D22F1EF11941001A4E2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2301EF11941001A4E2D /* {{args.Prefix}}ShareContentData.h */,
+				D248D2311EF11941001A4E2D /* {{args.Prefix}}ShareContentData.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D248D2321EF11941001A4E2D /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2331EF11941001A4E2D /* {{args.Prefix}}PopView.h */,
+				D248D2341EF11941001A4E2D /* {{args.Prefix}}PopView.m */,
+				D248D2351EF11941001A4E2D /* {{args.Prefix}}ShareCollectionViewCell.h */,
+				D248D2361EF11941001A4E2D /* {{args.Prefix}}ShareCollectionViewCell.m */,
+				D248D2371EF11941001A4E2D /* {{args.Prefix}}SharePopView.h */,
+				D248D2381EF11941001A4E2D /* {{args.Prefix}}SharePopView.m */,
+			);
+			path = VIews;
+			sourceTree = "<group>";
+		};
+		D248D2391EF11941001A4E2D /* PagingList */ = {
+			isa = PBXGroup;
+			children = (
+				D248D23A1EF11941001A4E2D /* Cells */,
+				D248D23F1EF11941001A4E2D /* Controllers */,
+			);
+			path = PagingList;
+			sourceTree = "<group>";
+		};
+		D248D23A1EF11941001A4E2D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D248D23B1EF11941001A4E2D /* {{args.Prefix}}DemoTableViewCell.h */,
+				D248D23C1EF11941001A4E2D /* {{args.Prefix}}DemoTableViewCell.m */,
+				D248D23D1EF11941001A4E2D /* {{args.Prefix}}PagingListCell.h */,
+				D248D23E1EF11941001A4E2D /* {{args.Prefix}}PagingListCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D248D23F1EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2401EF11941001A4E2D /* {{args.Prefix}}DemoViewController.h */,
+				D248D2411EF11941001A4E2D /* {{args.Prefix}}DemoViewController.m */,
+				D248D2421EF11941001A4E2D /* {{args.Prefix}}PagingListController.h */,
+				D248D2431EF11941001A4E2D /* {{args.Prefix}}PagingListController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2441EF11941001A4E2D /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2451EF11941001A4E2D /* Controllers */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		D248D2451EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2461EF11941001A4E2D /* {{args.Prefix}}SplashScreenController.h */,
+				D248D2471EF11941001A4E2D /* {{args.Prefix}}SplashScreenController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2481EF11941001A4E2D /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2491EF11941001A4E2D /* {{args.Prefix}}WebLoadingView.h */,
+				D248D24A1EF11941001A4E2D /* {{args.Prefix}}WebLoadingView.m */,
+				D248D24B1EF11941001A4E2D /* {{args.Prefix}}WebViewController.h */,
+				D248D24C1EF11941001A4E2D /* {{args.Prefix}}WebViewController.m */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		D248D24D1EF11941001A4E2D /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				D248D24E1EF11941001A4E2D /* AlertView */,
+				D248D25B1EF11941001A4E2D /* ButtonStyle */,
+				D248D26D1EF11941001A4E2D /* ControlStyle */,
+				D248D2891EF11941001A4E2D /* FormStyle */,
+				D248D2921EF11941001A4E2D /* IconStyle */,
+				D248D29C1EF11941001A4E2D /* Notifications */,
+				D248D2A21EF11941001A4E2D /* PageController */,
+				D248D2AA1EF11941001A4E2D /* PickerStyle */,
+				D248D2B51EF11941001A4E2D /* ProgressStyle */,
+				D248D2BE1EF11941001A4E2D /* Search */,
+				D248D2C21EF11941001A4E2D /* Tabbar */,
+				D248D2CD1EF11941001A4E2D /* Textstyle */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		D248D24E1EF11941001A4E2D /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				D248D24F1EF11941001A4E2D /* Controllers */,
+				D248D2561EF11941001A4E2D /* Views */,
+				D248D2591EF11941001A4E2D /* {{args.Prefix}}InputAlertViewController.h */,
+				D248D25A1EF11941001A4E2D /* {{args.Prefix}}InputAlertViewController.m */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		D248D24F1EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2501EF11941001A4E2D /* {{args.Prefix}}ContentAlertViewController.h */,
+				D248D2511EF11941001A4E2D /* {{args.Prefix}}ContentAlertViewController.m */,
+				D248D2521EF11941001A4E2D /* {{args.Prefix}}CustomAlertViewController.h */,
+				D248D2531EF11941001A4E2D /* {{args.Prefix}}CustomAlertViewController.m */,
+				D248D2541EF11941001A4E2D /* {{args.Prefix}}WarningAlertViewController.h */,
+				D248D2551EF11941001A4E2D /* {{args.Prefix}}WarningAlertViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2561EF11941001A4E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2571EF11941001A4E2D /* {{args.Prefix}}AlertView.h */,
+				D248D2581EF11941001A4E2D /* {{args.Prefix}}AlertView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D248D25B1EF11941001A4E2D /* ButtonStyle */ = {
+			isa = PBXGroup;
+			children = (
+				D248D25C1EF11941001A4E2D /* Controllers */,
+				D248D2631EF11941001A4E2D /* Models */,
+				D248D2661EF11941001A4E2D /* Views */,
+			);
+			path = ButtonStyle;
+			sourceTree = "<group>";
+		};
+		D248D25C1EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D25D1EF11941001A4E2D /* {{args.Prefix}}ButtonCornerViewController.h */,
+				D248D25E1EF11941001A4E2D /* {{args.Prefix}}ButtonCornerViewController.m */,
+				D248D25F1EF11941001A4E2D /* {{args.Prefix}}IconButtonViewController.h */,
+				D248D2601EF11941001A4E2D /* {{args.Prefix}}IconButtonViewController.m */,
+				D248D2611EF11941001A4E2D /* {{args.Prefix}}LeftPanButtonViewController.h */,
+				D248D2621EF11941001A4E2D /* {{args.Prefix}}LeftPanButtonViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2631EF11941001A4E2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2641EF11941001A4E2D /* {{args.Prefix}}ButtonCornerModel.h */,
+				D248D2651EF11941001A4E2D /* {{args.Prefix}}ButtonCornerModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D248D2661EF11941001A4E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2671EF11941001A4E2D /* {{args.Prefix}}ButtonCornerSectionView.h */,
+				D248D2681EF11941001A4E2D /* {{args.Prefix}}ButtonCornerSectionView.m */,
+				D248D2691EF11941001A4E2D /* {{args.Prefix}}IconTextButton.h */,
+				D248D26A1EF11941001A4E2D /* {{args.Prefix}}IconTextButton.m */,
+				D248D26B1EF11941001A4E2D /* {{args.Prefix}}LeftPanButtonCell.h */,
+				D248D26C1EF11941001A4E2D /* {{args.Prefix}}LeftPanButtonCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D248D26D1EF11941001A4E2D /* ControlStyle */ = {
+			isa = PBXGroup;
+			children = (
+				D248D26E1EF11941001A4E2D /* Controllers */,
+				D248D2791EF11941001A4E2D /* Models */,
+				D248D27C1EF11941001A4E2D /* Views */,
+			);
+			path = ControlStyle;
+			sourceTree = "<group>";
+		};
+		D248D26E1EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D26F1EF11941001A4E2D /* {{args.Prefix}}ActionSheetViewController.h */,
+				D248D2701EF11941001A4E2D /* {{args.Prefix}}ActionSheetViewController.m */,
+				D248D2711EF11941001A4E2D /* {{args.Prefix}}DrawerViewController.h */,
+				D248D2721EF11941001A4E2D /* {{args.Prefix}}DrawerViewController.m */,
+				D248D2731EF11941001A4E2D /* {{args.Prefix}}RefreshViewController.h */,
+				D248D2741EF11941001A4E2D /* {{args.Prefix}}RefreshViewController.m */,
+				D248D2751EF11941001A4E2D /* {{args.Prefix}}StepperViewController.h */,
+				D248D2761EF11941001A4E2D /* {{args.Prefix}}StepperViewController.m */,
+				D248D2771EF11941001A4E2D /* {{args.Prefix}}SwitchViewController.h */,
+				D248D2781EF11941001A4E2D /* {{args.Prefix}}SwitchViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2791EF11941001A4E2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D248D27A1EF11941001A4E2D /* {{args.Prefix}}SwitchCellModel.h */,
+				D248D27B1EF11941001A4E2D /* {{args.Prefix}}SwitchCellModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D248D27C1EF11941001A4E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D248D27D1EF11941001A4E2D /* DLRadioButton.h */,
+				D248D27E1EF11941001A4E2D /* DLRadioButton.m */,
+				D248D27F1EF11941001A4E2D /* {{args.Prefix}}ActionSheet.h */,
+				D248D2801EF11941001A4E2D /* {{args.Prefix}}ActionSheet.m */,
+				D248D2811EF11941001A4E2D /* {{args.Prefix}}DrawerView.h */,
+				D248D2821EF11941001A4E2D /* {{args.Prefix}}DrawerView.m */,
+				D248D2831EF11941001A4E2D /* {{args.Prefix}}Slider.h */,
+				D248D2841EF11941001A4E2D /* {{args.Prefix}}Slider.m */,
+				D248D2851EF11941001A4E2D /* {{args.Prefix}}Stepper.h */,
+				D248D2861EF11941001A4E2D /* {{args.Prefix}}Stepper.m */,
+				D248D2871EF11941001A4E2D /* {{args.Prefix}}SwithCell.h */,
+				D248D2881EF11941001A4E2D /* {{args.Prefix}}SwithCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D248D2891EF11941001A4E2D /* FormStyle */ = {
+			isa = PBXGroup;
+			children = (
+				D248D28A1EF11941001A4E2D /* Controllers */,
+				D248D28F1EF11941001A4E2D /* Views */,
+			);
+			path = FormStyle;
+			sourceTree = "<group>";
+		};
+		D248D28A1EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D28B1EF11941001A4E2D /* {{args.Prefix}}CheckboxTableViewController.h */,
+				D248D28C1EF11941001A4E2D /* {{args.Prefix}}CheckboxTableViewController.m */,
+				D248D28D1EF11941001A4E2D /* {{args.Prefix}}TextFieldViewController.h */,
+				D248D28E1EF11941001A4E2D /* {{args.Prefix}}TextFieldViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D28F1EF11941001A4E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2901EF11941001A4E2D /* {{args.Prefix}}TextField.h */,
+				D248D2911EF11941001A4E2D /* {{args.Prefix}}TextField.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D248D2921EF11941001A4E2D /* IconStyle */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2931EF11941001A4E2D /* Controllers */,
+				D248D2961EF11941001A4E2D /* Models */,
+				D248D2991EF11941001A4E2D /* Views */,
+			);
+			path = IconStyle;
+			sourceTree = "<group>";
+		};
+		D248D2931EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2941EF11941001A4E2D /* {{args.Prefix}}IconViewController.h */,
+				D248D2951EF11941001A4E2D /* {{args.Prefix}}IconViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2961EF11941001A4E2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2971EF11941001A4E2D /* {{args.Prefix}}IconCellModel.h */,
+				D248D2981EF11941001A4E2D /* {{args.Prefix}}IconCellModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D248D2991EF11941001A4E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D248D29A1EF11941001A4E2D /* {{args.Prefix}}IconCell.h */,
+				D248D29B1EF11941001A4E2D /* {{args.Prefix}}IconCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D248D29C1EF11941001A4E2D /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				D248D29D1EF11941001A4E2D /* Controllers */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		D248D29D1EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D29E1EF11941001A4E2D /* {{args.Prefix}}ScrollNotificationViewController.h */,
+				D248D29F1EF11941001A4E2D /* {{args.Prefix}}ScrollNotificationViewController.m */,
+				D248D2A01EF11941001A4E2D /* {{args.Prefix}}ToastViewController.h */,
+				D248D2A11EF11941001A4E2D /* {{args.Prefix}}ToastViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2A21EF11941001A4E2D /* PageController */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2A31EF11941001A4E2D /* Controllers */,
+			);
+			path = PageController;
+			sourceTree = "<group>";
+		};
+		D248D2A31EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2A41EF11941001A4E2D /* {{args.Prefix}}DemoPageViewController.h */,
+				D248D2A51EF11941001A4E2D /* {{args.Prefix}}DemoPageViewController.m */,
+				D248D2A61EF11941001A4E2D /* {{args.Prefix}}NaviSegmentsViewController.h */,
+				D248D2A71EF11941001A4E2D /* {{args.Prefix}}NaviSegmentsViewController.m */,
+				D248D2A81EF11941001A4E2D /* {{args.Prefix}}PageControllerViewController.h */,
+				D248D2A91EF11941001A4E2D /* {{args.Prefix}}PageControllerViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2AA1EF11941001A4E2D /* PickerStyle */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2AB1EF11941001A4E2D /* Controllers */,
+				D248D2AE1EF11941001A4E2D /* Models */,
+				D248D2B21EF11941001A4E2D /* Views */,
+			);
+			path = PickerStyle;
+			sourceTree = "<group>";
+		};
+		D248D2AB1EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2AC1EF11941001A4E2D /* {{args.Prefix}}PickerViewController.h */,
+				D248D2AD1EF11941001A4E2D /* {{args.Prefix}}PickerViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2AE1EF11941001A4E2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2AF1EF11941001A4E2D /* location.json */,
+				D248D2B01EF11941001A4E2D /* {{args.Prefix}}PickerModel.h */,
+				D248D2B11EF11941001A4E2D /* {{args.Prefix}}PickerModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D248D2B21EF11941001A4E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2B31EF11941001A4E2D /* {{args.Prefix}}PickerView.h */,
+				D248D2B41EF11941001A4E2D /* {{args.Prefix}}PickerView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D248D2B51EF11941001A4E2D /* ProgressStyle */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2B61EF11941001A4E2D /* Controllers */,
+				D248D2BB1EF11941001A4E2D /* Views */,
+			);
+			path = ProgressStyle;
+			sourceTree = "<group>";
+		};
+		D248D2B61EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2B71EF11941001A4E2D /* {{args.Prefix}}ProgressViewController.h */,
+				D248D2B81EF11941001A4E2D /* {{args.Prefix}}ProgressViewController.m */,
+				D248D2B91EF11941001A4E2D /* {{args.Prefix}}WebProgressViewController.h */,
+				D248D2BA1EF11941001A4E2D /* {{args.Prefix}}WebProgressViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2BB1EF11941001A4E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2BC1EF11941001A4E2D /* {{args.Prefix}}ProgressView.h */,
+				D248D2BD1EF11941001A4E2D /* {{args.Prefix}}ProgressView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D248D2BE1EF11941001A4E2D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2BF1EF11941001A4E2D /* Controllers */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		D248D2BF1EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2C01EF11941001A4E2D /* {{args.Prefix}}SearchViewController.h */,
+				D248D2C11EF11941001A4E2D /* {{args.Prefix}}SearchViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2C21EF11941001A4E2D /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2C31EF11941001A4E2D /* Controllers */,
+				D248D2CA1EF11941001A4E2D /* Views */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		D248D2C31EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2C41EF11941001A4E2D /* {{args.Prefix}}BadgeTabbarViewController.h */,
+				D248D2C51EF11941001A4E2D /* {{args.Prefix}}BadgeTabbarViewController.m */,
+				D248D2C61EF11941001A4E2D /* {{args.Prefix}}DemoTabbarViewController.h */,
+				D248D2C71EF11941001A4E2D /* {{args.Prefix}}DemoTabbarViewController.m */,
+				D248D2C81EF11941001A4E2D /* {{args.Prefix}}ToolBarViewController.h */,
+				D248D2C91EF11941001A4E2D /* {{args.Prefix}}ToolBarViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2CA1EF11941001A4E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2CB1EF11941001A4E2D /* {{args.Prefix}}ToolBarItem.h */,
+				D248D2CC1EF11941001A4E2D /* {{args.Prefix}}ToolBarItem.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D248D2CD1EF11941001A4E2D /* Textstyle */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2CE1EF11941001A4E2D /* Controllers */,
+				D248D2D51EF11941001A4E2D /* Models */,
+				D248D2DA1EF11941001A4E2D /* Views */,
+			);
+			path = Textstyle;
+			sourceTree = "<group>";
+		};
+		D248D2CE1EF11941001A4E2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2CF1EF11941001A4E2D /* {{args.Prefix}}iOSTextStyleViewController.h */,
+				D248D2D01EF11941001A4E2D /* {{args.Prefix}}iOSTextStyleViewController.m */,
+				D248D2D11EF11941001A4E2D /* {{args.Prefix}}TextColorViewController.h */,
+				D248D2D21EF11941001A4E2D /* {{args.Prefix}}TextColorViewController.m */,
+				D248D2D31EF11941001A4E2D /* {{args.Prefix}}TextSizeViewController.h */,
+				D248D2D41EF11941001A4E2D /* {{args.Prefix}}TextSizeViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D248D2D51EF11941001A4E2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2D61EF11941001A4E2D /* {{args.Prefix}}TextColorViewModel.h */,
+				D248D2D71EF11941001A4E2D /* {{args.Prefix}}TextColorViewModel.m */,
+				D248D2D81EF11941001A4E2D /* {{args.Prefix}}TextSizeViewModel.h */,
+				D248D2D91EF11941001A4E2D /* {{args.Prefix}}TextSizeViewModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D248D2DA1EF11941001A4E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2DB1EF11941001A4E2D /* {{args.Prefix}}TextColorView.h */,
+				D248D2DC1EF11941001A4E2D /* {{args.Prefix}}TextColorView.m */,
+				D248D2DD1EF11941001A4E2D /* {{args.Prefix}}TextSizeView.h */,
+				D248D2DE1EF11941001A4E2D /* {{args.Prefix}}TextSizeView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D248D2DF1EF11941001A4E2D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2E01EF11941001A4E2D /* demo */,
+				D248D2EA1EF11941001A4E2D /* Mock */,
+				D248D2EC1EF11941001A4E2D /* NSObject+{{args.Prefix}}BaseRequest.h */,
+				D248D2ED1EF11941001A4E2D /* NSObject+{{args.Prefix}}BaseRequest.m */,
+				D248D2EE1EF11941001A4E2D /* RKMappingResult+{{args.Prefix}}NetworkResultMapping.h */,
+				D248D2EF1EF11941001A4E2D /* RKMappingResult+{{args.Prefix}}NetworkResultMapping.m */,
+				D248D2F01EF11941001A4E2D /* {{args.Prefix}}NetworkConfig.h */,
+				D248D2F11EF11941001A4E2D /* {{args.Prefix}}NetworkConfig.m */,
+				D248D2F21EF11941001A4E2D /* {{args.Prefix}}NetworkStatusModel.h */,
+				D248D2F31EF11941001A4E2D /* {{args.Prefix}}NetworkStatusModel.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D248D2E01EF11941001A4E2D /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2E11EF11941001A4E2D /* {{args.Prefix}}PagingListCellModel.h */,
+				D248D2E21EF11941001A4E2D /* {{args.Prefix}}PagingListCellModel.m */,
+				D248D2E31EF11941001A4E2D /* {{args.Prefix}}Product.h */,
+				D248D2E41EF11941001A4E2D /* {{args.Prefix}}Product.m */,
+				D248D2E51EF11941001A4E2D /* {{args.Prefix}}Productlist.h */,
+				D248D2E61EF11941001A4E2D /* {{args.Prefix}}Productlist.json */,
+				D248D2E71EF11941001A4E2D /* {{args.Prefix}}Productlist.m */,
+				D248D2E81EF11941001A4E2D /* {{args.Prefix}}ProductlistRequest.h */,
+				D248D2E91EF11941001A4E2D /* {{args.Prefix}}ProductlistRequest.m */,
+			);
+			path = demo;
+			sourceTree = "<group>";
+		};
+		D248D2EA1EF11941001A4E2D /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2EB1EF11941001A4E2D /* CopyMockFiles.sh */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		D248D2F51EF11941001A4E2D /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2F61EF11941001A4E2D /* NELoginSDK.bundle */,
+				D248D2F71EF11941001A4E2D /* NELoginSDK.framework */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		D248D2F91EF11941001A4E2D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D248D2FA1EF11941001A4E2D /* CALayer+Animation.h */,
+				D248D2FB1EF11941001A4E2D /* CALayer+Animation.m */,
+				D248D2FC1EF11941001A4E2D /* {{args.Prefix}}UniversalRouter.h */,
+				D248D2FD1EF11941001A4E2D /* UIImage+Alpha.h */,
+				D248D2FE1EF11941001A4E2D /* UIImage+Alpha.m */,
+				D248D2FF1EF11941001A4E2D /* UIView+{{args.Prefix}}Line.h */,
+				D248D3001EF11941001A4E2D /* UIView+{{args.Prefix}}Line.m */,
+				D248D3011EF11941001A4E2D /* UIView+{{args.Prefix}}Loading.h */,
+				D248D3021EF11941001A4E2D /* UIView+{{args.Prefix}}Loading.m */,
+				D248D3031EF11941001A4E2D /* UIView+{{args.Prefix}}Toast.h */,
+				D248D3041EF11941001A4E2D /* UIView+{{args.Prefix}}Toast.m */,
+				D248D3051EF11941001A4E2D /* {{args.Prefix}}AppConfigurations.h */,
+				D248D3061EF11941001A4E2D /* {{args.Prefix}}AppConfigurations.m */,
+				D248D3071EF11941001A4E2D /* {{args.Prefix}}BaseViewController+{{args.Prefix}}CustomNavigationBar.h */,
+				D248D3081EF11941001A4E2D /* {{args.Prefix}}BaseViewController+{{args.Prefix}}CustomNavigationBar.m */,
+				D248D3091EF11941001A4E2D /* {{args.Prefix}}GlobalEnums.h */,
+				D248D30A1EF11941001A4E2D /* {{args.Prefix}}KeyboardSequence.h */,
+				D248D30B1EF11941001A4E2D /* {{args.Prefix}}KeyboardSequence.m */,
+				D248D30C1EF11941001A4E2D /* {{args.Prefix}}Macros.h */,
+				D248D30D1EF11941001A4E2D /* {{args.Prefix}}NotificationCenter.h */,
+				D248D30E1EF11941001A4E2D /* {{args.Prefix}}NotificationCenter.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D248D30F1EF11941001A4E2D /* Values */ = {
+			isa = PBXGroup;
+			children = (
+				D248D3101EF11941001A4E2D /* {{args.Prefix}}CommonColors.h */,
+				D248D3111EF11941001A4E2D /* {{args.Prefix}}CommonColors.m */,
+				D248D3121EF11941001A4E2D /* {{args.Prefix}}CommonSizes.h */,
+				D248D3131EF11941001A4E2D /* {{args.Prefix}}CommonSizes.m */,
+			);
+			path = Values;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF401EAD1DF5462C00CE31E0 /* {{args.ProductName}} */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF401EC51DF5462C00CE31E0 /* Build configuration list for PBXNativeTarget "{{args.ProductName}}" */;
+			buildPhases = (
+				1D09048ECCCE1A199ED72772 /* [CP] Check Pods Manifest.lock */,
+				BF401EAA1DF5462C00CE31E0 /* Sources */,
+				BF401EAB1DF5462C00CE31E0 /* Frameworks */,
+				BF401EAC1DF5462C00CE31E0 /* Resources */,
+				D2B6D1481E49D14B00D5583A /* Copy Mock Files */,
+				E81632D33432C4D385977554 /* [CP] Embed Pods Frameworks */,
+				2E23F10B4E33B595AD850759 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "{{args.ProductName}}";
+			productName = "{{args.ProductName}}";
+			productReference = BF401EAE1DF5462C00CE31E0 /* {{args.ProductName}}.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF401EA61DF5462C00CE31E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Netease;
+				TargetAttributes = {
+					BF401EAD1DF5462C00CE31E0 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = BF401EA91DF5462C00CE31E0 /* Build configuration list for PBXProject "{{args.ProductName}}" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF401EA51DF5462C00CE31E0;
+			productRefGroup = BF401EAF1DF5462C00CE31E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF401EAD1DF5462C00CE31E0 /* {{args.ProductName}} */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF401EAC1DF5462C00CE31E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D248D3211EF11941001A4E2D /* Info.plist in Resources */,
+				D248D39D1EF11942001A4E2D /* CopyMockFiles.sh in Resources */,
+				D248D39A1EF11942001A4E2D /* {{args.Prefix}}Productlist.json in Resources */,
+				D248D3861EF11941001A4E2D /* location.json in Resources */,
+				D248D3A21EF11942001A4E2D /* NELoginSDK.bundle in Resources */,
+				D248D3161EF11941001A4E2D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D09048ECCCE1A199ED72772 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2E23F10B4E33B595AD850759 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UEDC/Pods-UEDC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2B6D1481E49D14B00D5583A /* Copy Mock Files */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Mock Files";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/{{args.ProductName}}/Network/Mock/CopyMockFiles.sh\"";
+		};
+		E81632D33432C4D385977554 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UEDC/Pods-UEDC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF401EAA1DF5462C00CE31E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D248D35B1EF11941001A4E2D /* {{args.Prefix}}DemoTableViewCell.m in Sources */,
+				D248D3921EF11941001A4E2D /* {{args.Prefix}}TextColorViewController.m in Sources */,
+				D248D32B1EF11941001A4E2D /* {{args.Prefix}}MainPageSectionView.m in Sources */,
+				D248D3511EF11941001A4E2D /* {{args.Prefix}}RegisterResultController.m in Sources */,
+				D248D32E1EF11941001A4E2D /* {{args.Prefix}}CameraViewController.m in Sources */,
+				D248D38F1EF11941001A4E2D /* {{args.Prefix}}ToolBarViewController.m in Sources */,
+				D248D3231EF11941001A4E2D /* main.m in Sources */,
+				D248D3291EF11941001A4E2D /* {{args.Prefix}}MainPageCellButton.m in Sources */,
+				D248D31B1EF11941001A4E2D /* {{args.Prefix}}LoadingErrorView.m in Sources */,
+				D248D3991EF11941001A4E2D /* {{args.Prefix}}Product.m in Sources */,
+				D248D3471EF11941001A4E2D /* {{args.Prefix}}MineController.m in Sources */,
+				D248D39E1EF11942001A4E2D /* NSObject+{{args.Prefix}}BaseRequest.m in Sources */,
+				D248D3A41EF11942001A4E2D /* CALayer+Animation.m in Sources */,
+				D248D3951EF11941001A4E2D /* {{args.Prefix}}TextSizeViewModel.m in Sources */,
+				D248D3AC1EF11942001A4E2D /* {{args.Prefix}}NotificationCenter.m in Sources */,
+				D248D3A81EF11942001A4E2D /* UIView+{{args.Prefix}}Toast.m in Sources */,
+				D248D3801EF11941001A4E2D /* {{args.Prefix}}ScrollNotificationViewController.m in Sources */,
+				D248D36A1EF11941001A4E2D /* {{args.Prefix}}ButtonCornerModel.m in Sources */,
+				D248D39F1EF11942001A4E2D /* RKMappingResult+{{args.Prefix}}NetworkResultMapping.m in Sources */,
+				D248D3671EF11941001A4E2D /* {{args.Prefix}}ButtonCornerViewController.m in Sources */,
+				D248D3491EF11941001A4E2D /* {{args.Prefix}}AlbumChooseTableViewController.m in Sources */,
+				D248D3581EF11941001A4E2D /* {{args.Prefix}}PopView.m in Sources */,
+				D248D37E1EF11941001A4E2D /* {{args.Prefix}}IconCellModel.m in Sources */,
+				D248D3A91EF11942001A4E2D /* {{args.Prefix}}AppConfigurations.m in Sources */,
+				D248D31D1EF11941001A4E2D /* {{args.Prefix}}LoadmoreView.m in Sources */,
+				D248D35A1EF11941001A4E2D /* {{args.Prefix}}SharePopView.m in Sources */,
+				D248D34E1EF11941001A4E2D /* {{args.Prefix}}AssetPickerUnorderCell.m in Sources */,
+				D248D38A1EF11941001A4E2D /* {{args.Prefix}}WebProgressViewController.m in Sources */,
+				D248D35D1EF11941001A4E2D /* {{args.Prefix}}DemoViewController.m in Sources */,
+				D248D3731EF11941001A4E2D /* {{args.Prefix}}SwitchCellModel.m in Sources */,
+				D248D3AB1EF11942001A4E2D /* {{args.Prefix}}KeyboardSequence.m in Sources */,
+				D248D31C1EF11941001A4E2D /* {{args.Prefix}}LoadingView.m in Sources */,
+				D248D3411EF11941001A4E2D /* {{args.Prefix}}UserDataManager.m in Sources */,
+				D248D3191EF11941001A4E2D /* {{args.Prefix}}ImageTextButton.m in Sources */,
+				D248D3201EF11941001A4E2D /* {{args.Prefix}}TableViewGapCell.m in Sources */,
+				D248D3A11EF11942001A4E2D /* {{args.Prefix}}NetworkStatusModel.m in Sources */,
+				D248D3311EF11941001A4E2D /* {{args.Prefix}}SetGesturePasswordViewController.m in Sources */,
+				D248D3431EF11941001A4E2D /* {{args.Prefix}}MineHeaderInfoCell.m in Sources */,
+				D248D3911EF11941001A4E2D /* {{args.Prefix}}iOSTextStyleViewController.m in Sources */,
+				D248D3791EF11941001A4E2D /* {{args.Prefix}}SwithCell.m in Sources */,
+				D248D3341EF11941001A4E2D /* {{args.Prefix}}CircleInfoView.m in Sources */,
+				D248D3391EF11941001A4E2D /* {{args.Prefix}}GuidePageModel.m in Sources */,
+				D248D3441EF11941001A4E2D /* {{args.Prefix}}MineOperationCell.m in Sources */,
+				D248D3251EF11941001A4E2D /* {{args.Prefix}}BaseViewController.m in Sources */,
+				D248D3941EF11941001A4E2D /* {{args.Prefix}}TextColorViewModel.m in Sources */,
+				D248D3721EF11941001A4E2D /* {{args.Prefix}}SwitchViewController.m in Sources */,
+				D248D3571EF11941001A4E2D /* {{args.Prefix}}ShareContentData.m in Sources */,
+				D248D31A1EF11941001A4E2D /* {{args.Prefix}}LoadingEmptyView.m in Sources */,
+				D248D35C1EF11941001A4E2D /* {{args.Prefix}}PagingListCell.m in Sources */,
+				D248D3561EF11941001A4E2D /* {{args.Prefix}}ShareKitViewController.m in Sources */,
+				D248D3591EF11941001A4E2D /* {{args.Prefix}}ShareCollectionViewCell.m in Sources */,
+				D248D32A1EF11941001A4E2D /* {{args.Prefix}}MainPageHeaderView.m in Sources */,
+				D248D34B1EF11941001A4E2D /* {{args.Prefix}}ImagePickerViewController.m in Sources */,
+				D248D3331EF11941001A4E2D /* {{args.Prefix}}Circle.m in Sources */,
+				D248D3631EF11941001A4E2D /* {{args.Prefix}}CustomAlertViewController.m in Sources */,
+				D248D32C1EF11941001A4E2D /* {{args.Prefix}}TabBarController.m in Sources */,
+				D248D3321EF11941001A4E2D /* {{args.Prefix}}VerifyGusturePasswordViewController.m in Sources */,
+				D248D3651EF11941001A4E2D /* {{args.Prefix}}AlertView.m in Sources */,
+				D248D3541EF11941001A4E2D /* {{args.Prefix}}SettingController.m in Sources */,
+				D248D36C1EF11941001A4E2D /* {{args.Prefix}}IconTextButton.m in Sources */,
+				D248D3421EF11941001A4E2D /* {{args.Prefix}}LoginInputView.m in Sources */,
+				D248D3371EF11941001A4E2D /* {{args.Prefix}}CircleViewConst.m in Sources */,
+				D248D3701EF11941001A4E2D /* {{args.Prefix}}RefreshViewController.m in Sources */,
+				D248D3271EF11941001A4E2D /* {{args.Prefix}}MainPageModel.m in Sources */,
+				D248D3711EF11941001A4E2D /* {{args.Prefix}}StepperViewController.m in Sources */,
+				D248D3761EF11941001A4E2D /* {{args.Prefix}}DrawerView.m in Sources */,
+				D248D33A1EF11941001A4E2D /* {{args.Prefix}}GuidePageItem.m in Sources */,
+				D248D3821EF11941001A4E2D /* {{args.Prefix}}DemoPageViewController.m in Sources */,
+				D248D35E1EF11941001A4E2D /* {{args.Prefix}}PagingListController.m in Sources */,
+				D248D3151EF11941001A4E2D /* AppDelegate.m in Sources */,
+				D248D3241EF11941001A4E2D /* {{args.Prefix}}BaseTableViewController.m in Sources */,
+				D248D37D1EF11941001A4E2D /* {{args.Prefix}}IconViewController.m in Sources */,
+				D248D3451EF11941001A4E2D /* {{args.Prefix}}MineSegmentCell.m in Sources */,
+				D248D32D1EF11941001A4E2D /* {{args.Prefix}}TabBarItem.m in Sources */,
+				D248D37C1EF11941001A4E2D /* {{args.Prefix}}TextField.m in Sources */,
+				D248D33C1EF11941001A4E2D /* {{args.Prefix}}ListLayoutCommonCell.m in Sources */,
+				D248D3481EF11941001A4E2D /* {{args.Prefix}}MineCellDescribeData.m in Sources */,
+				D248D36F1EF11941001A4E2D /* {{args.Prefix}}DrawerViewController.m in Sources */,
+				D248D3A61EF11942001A4E2D /* UIView+{{args.Prefix}}Line.m in Sources */,
+				D248D3811EF11941001A4E2D /* {{args.Prefix}}ToastViewController.m in Sources */,
+				D248D38B1EF11941001A4E2D /* {{args.Prefix}}ProgressView.m in Sources */,
+				D248D3751EF11941001A4E2D /* {{args.Prefix}}ActionSheet.m in Sources */,
+				D248D39C1EF11942001A4E2D /* {{args.Prefix}}ProductlistRequest.m in Sources */,
+				D248D34C1EF11941001A4E2D /* {{args.Prefix}}PhotoChooseViewController.m in Sources */,
+				D248D3501EF11941001A4E2D /* {{args.Prefix}}RegisterController.m in Sources */,
+				D248D3141EF11941001A4E2D /* AppDelegate+Notifications.m in Sources */,
+				D248D3551EF11941001A4E2D /* {{args.Prefix}}SettingCellDescribeData.m in Sources */,
+				D248D3971EF11941001A4E2D /* {{args.Prefix}}TextSizeView.m in Sources */,
+				D248D3AE1EF11942001A4E2D /* {{args.Prefix}}CommonSizes.m in Sources */,
+				D248D3891EF11941001A4E2D /* {{args.Prefix}}ProgressViewController.m in Sources */,
+				D248D3531EF11941001A4E2D /* {{args.Prefix}}SettingSwitchCell.m in Sources */,
+				D248D35F1EF11941001A4E2D /* {{args.Prefix}}SplashScreenController.m in Sources */,
+				D248D3901EF11941001A4E2D /* {{args.Prefix}}ToolBarItem.m in Sources */,
+				D248D3851EF11941001A4E2D /* {{args.Prefix}}PickerViewController.m in Sources */,
+				D248D3611EF11941001A4E2D /* {{args.Prefix}}WebViewController.m in Sources */,
+				D248D3621EF11941001A4E2D /* {{args.Prefix}}ContentAlertViewController.m in Sources */,
+				D248D3171EF11941001A4E2D /* {{args.Prefix}}ActivityIndicator.m in Sources */,
+				D248D3381EF11941001A4E2D /* {{args.Prefix}}GuidePageViewController.m in Sources */,
+				D248D34A1EF11941001A4E2D /* {{args.Prefix}}CustomAlbumChooseViewController.m in Sources */,
+				D248D3961EF11941001A4E2D /* {{args.Prefix}}TextColorView.m in Sources */,
+				D248D38C1EF11941001A4E2D /* {{args.Prefix}}SearchViewController.m in Sources */,
+				D248D37A1EF11941001A4E2D /* {{args.Prefix}}CheckboxTableViewController.m in Sources */,
+				D248D3931EF11941001A4E2D /* {{args.Prefix}}TextSizeViewController.m in Sources */,
+				D248D34F1EF11941001A4E2D /* {{args.Prefix}}QRCodeScanViewController.m in Sources */,
+				D248D3871EF11941001A4E2D /* {{args.Prefix}}PickerModel.m in Sources */,
+				D248D3361EF11941001A4E2D /* {{args.Prefix}}LockLabel.m in Sources */,
+				D248D3781EF11941001A4E2D /* {{args.Prefix}}Stepper.m in Sources */,
+				D248D3771EF11941001A4E2D /* {{args.Prefix}}Slider.m in Sources */,
+				D248D38E1EF11941001A4E2D /* {{args.Prefix}}DemoTabbarViewController.m in Sources */,
+				D248D3A01EF11942001A4E2D /* {{args.Prefix}}NetworkConfig.m in Sources */,
+				D248D3261EF11941001A4E2D /* {{args.Prefix}}MainPageViewController.m in Sources */,
+				D248D3691EF11941001A4E2D /* {{args.Prefix}}LeftPanButtonViewController.m in Sources */,
+				D248D39B1EF11942001A4E2D /* {{args.Prefix}}Productlist.m in Sources */,
+				D248D3521EF11941001A4E2D /* {{args.Prefix}}SettingCommonCell.m in Sources */,
+				D248D38D1EF11941001A4E2D /* {{args.Prefix}}BadgeTabbarViewController.m in Sources */,
+				D248D3401EF11941001A4E2D /* {{args.Prefix}}LoginController.m in Sources */,
+				D248D3301EF11941001A4E2D /* {{args.Prefix}}GesturePasswordDemoViewController.m in Sources */,
+				D248D3AD1EF11942001A4E2D /* {{args.Prefix}}CommonColors.m in Sources */,
+				D248D33E1EF11941001A4E2D /* {{args.Prefix}}ListLayoutController.m in Sources */,
+				D248D32F1EF11941001A4E2D /* {{args.Prefix}}EmptyPageViewController.m in Sources */,
+				D248D33F1EF11941001A4E2D /* {{args.Prefix}}ListLayoutCellDescribeData.m in Sources */,
+				D248D37B1EF11941001A4E2D /* {{args.Prefix}}TextFieldViewController.m in Sources */,
+				D248D3681EF11941001A4E2D /* {{args.Prefix}}IconButtonViewController.m in Sources */,
+				D248D3661EF11941001A4E2D /* {{args.Prefix}}InputAlertViewController.m in Sources */,
+				D248D3881EF11941001A4E2D /* {{args.Prefix}}PickerView.m in Sources */,
+				D248D31F1EF11941001A4E2D /* {{args.Prefix}}RefreshView.m in Sources */,
+				D248D3281EF11941001A4E2D /* {{args.Prefix}}MainPageBottomView.m in Sources */,
+				D248D36E1EF11941001A4E2D /* {{args.Prefix}}ActionSheetViewController.m in Sources */,
+				D248D36B1EF11941001A4E2D /* {{args.Prefix}}ButtonCornerSectionView.m in Sources */,
+				D248D36D1EF11941001A4E2D /* {{args.Prefix}}LeftPanButtonCell.m in Sources */,
+				D248D3601EF11941001A4E2D /* {{args.Prefix}}WebLoadingView.m in Sources */,
+				D248D3AA1EF11942001A4E2D /* {{args.Prefix}}BaseViewController+{{args.Prefix}}CustomNavigationBar.m in Sources */,
+				D248D3A71EF11942001A4E2D /* UIView+{{args.Prefix}}Loading.m in Sources */,
+				D248D3641EF11941001A4E2D /* {{args.Prefix}}WarningAlertViewController.m in Sources */,
+				D248D3831EF11941001A4E2D /* {{args.Prefix}}NaviSegmentsViewController.m in Sources */,
+				D248D33D1EF11941001A4E2D /* {{args.Prefix}}ListLayoutHeaderCell.m in Sources */,
+				D248D33B1EF11941001A4E2D /* {{args.Prefix}}GuidePageView.m in Sources */,
+				D248D3181EF11941001A4E2D /* {{args.Prefix}}CommonStyleViews.m in Sources */,
+				D248D3981EF11941001A4E2D /* {{args.Prefix}}PagingListCellModel.m in Sources */,
+				D248D3741EF11941001A4E2D /* DLRadioButton.m in Sources */,
+				D248D34D1EF11941001A4E2D /* {{args.Prefix}}ImagePickerViewManager.m in Sources */,
+				D248D37F1EF11941001A4E2D /* {{args.Prefix}}IconCell.m in Sources */,
+				D248D31E1EF11941001A4E2D /* {{args.Prefix}}NoMoreDataFooterView.m in Sources */,
+				D248D3A51EF11942001A4E2D /* UIImage+Alpha.m in Sources */,
+				D248D3461EF11941001A4E2D /* {{args.Prefix}}MineSegmentItem.m in Sources */,
+				D248D3351EF11941001A4E2D /* {{args.Prefix}}CircleView.m in Sources */,
+				D248D3841EF11941001A4E2D /* {{args.Prefix}}PageControllerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BF401EC31DF5462C00CE31E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: zhongkai song (YB9TPKN6VZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: zhongkai song (YB9TPKN6VZ)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = KVKPYLN94A;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "8360a40e-232d-461c-8fab-471e75dfd39a";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BF401EC41DF5462C00CE31E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: zhongkai song (YB9TPKN6VZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: zhongkai song (YB9TPKN6VZ)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = KVKPYLN94A;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "8360a40e-232d-461c-8fab-471e75dfd39a";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF401EC61DF5462C00CE31E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = NO;
+				CODE_SIGN_ENTITLEMENTS = "{{args.ProductName}}/{{args.Prefix}}.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: zhongkai song (YB9TPKN6VZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/{{args.ProductName}}",
+					"$(PROJECT_DIR)/{{args.ProductName}}/ThirdParty/URS",
+					"$(PROJECT_DIR)/{{args.ProductName}}/ThirdParty",
+					"$(PROJECT_DIR)/{{args.ProductName}}/ThirdParty",
+				);
+				GCC_PREFIX_HEADER = "{{args.ProductName}}/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/{{args.ProductName}}/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"BlocksKit\"",
+					"-l\"CocoaLumberjack\"",
+					"-l\"FMDB\"",
+					"-l\"HTAssetsPicker\"",
+					"-l\"HTBadgeTextView\"",
+					"-l\"HTCommonUtility\"",
+					"-l\"HTImageView\"",
+					"-l\"HTMultiCellTypeTableViewObjc\"",
+					"-l\"HTNetworking\"",
+					"-l\"HTPageControllerView\"",
+					"-l\"HTR3\"",
+					"-l\"HTRefreshView\"",
+					"-l\"HTSegmentsView\"",
+					"-l\"HTSplashADView\"",
+					"-l\"HTTableViewDataSourceDelegate\"",
+					"-l\"HTToast\"",
+					"-l\"HTWebView\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"ISO8601DateFormatterValueTransformer\"",
+					"-l\"LBXScan\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MGSwipeTableCell\"",
+					"-l\"Masonry\"",
+					"-l\"RKValueTransformers\"",
+					"-l\"ReactiveCocoa\"",
+					"-l\"SDWebImage\"",
+					"-l\"TransitionKit\"",
+					"-l\"UITableView+FDTemplateLayoutCell\"",
+					"-l\"UniversalRouter\"",
+					"-l\"c++\"",
+					"-l\"libwebp\"",
+					"-l\"pop\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netease.{{args.ProductName}}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		BF401EC71DF5462C00CE31E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "{{args.ProductName}}/{{args.Prefix}}.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: zhongkai song (YB9TPKN6VZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/{{args.ProductName}}",
+					"$(PROJECT_DIR)/{{args.ProductName}}/ThirdParty/URS",
+					"$(PROJECT_DIR)/{{args.ProductName}}/ThirdParty",
+					"$(PROJECT_DIR)/{{args.ProductName}}/ThirdParty",
+				);
+				GCC_PREFIX_HEADER = "{{args.ProductName}}/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/{{args.ProductName}}/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"BlocksKit\"",
+					"-l\"CocoaLumberjack\"",
+					"-l\"FMDB\"",
+					"-l\"HTAssetsPicker\"",
+					"-l\"HTBadgeTextView\"",
+					"-l\"HTCommonUtility\"",
+					"-l\"HTImageView\"",
+					"-l\"HTMultiCellTypeTableViewObjc\"",
+					"-l\"HTNetworking\"",
+					"-l\"HTPageControllerView\"",
+					"-l\"HTR3\"",
+					"-l\"HTRefreshView\"",
+					"-l\"HTSegmentsView\"",
+					"-l\"HTSplashADView\"",
+					"-l\"HTTableViewDataSourceDelegate\"",
+					"-l\"HTToast\"",
+					"-l\"HTWebView\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"ISO8601DateFormatterValueTransformer\"",
+					"-l\"LBXScan\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MGSwipeTableCell\"",
+					"-l\"Masonry\"",
+					"-l\"RKValueTransformers\"",
+					"-l\"ReactiveCocoa\"",
+					"-l\"SDWebImage\"",
+					"-l\"TransitionKit\"",
+					"-l\"UITableView+FDTemplateLayoutCell\"",
+					"-l\"UniversalRouter\"",
+					"-l\"c++\"",
+					"-l\"libwebp\"",
+					"-l\"pop\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netease.{{args.ProductName}}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF401EA91DF5462C00CE31E0 /* Build configuration list for PBXProject "{{args.ProductName}}" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF401EC31DF5462C00CE31E0 /* Debug */,
+				BF401EC41DF5462C00CE31E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF401EC51DF5462C00CE31E0 /* Build configuration list for PBXNativeTarget "{{args.ProductName}}" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF401EC61DF5462C00CE31E0 /* Debug */,
+				BF401EC71DF5462C00CE31E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF401EA61DF5462C00CE31E0 /* Project object */;
+}

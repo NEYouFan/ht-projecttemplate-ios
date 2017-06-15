@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  {{args.Prefix}}
+//
+//  Created by {{args.Author}} on 05/12/2016.
+//  Copyright © 2016 Netease. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "{{args.Prefix}}CommonColors.h"
+#import "{{args.Prefix}}CommonSizes.h"
+#import "{{args.Prefix}}GlobalEnums.h"
+#import "{{args.Prefix}}Macros.h"
+#import "ColorUtils.h"
+#import "AppDelegate.h"
+
+#endif /* PrefixHeader_pch */

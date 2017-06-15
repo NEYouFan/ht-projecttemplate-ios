@@ -1,0 +1,6 @@
+framework module NELoginSDK {
+  umbrella header "NELoginSDK.h"
+
+  export *
+  module * { export * }
+}

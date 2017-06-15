@@ -1,0 +1,69 @@
+{
+    "data": {
+        "hasMore": true,
+        "productlist": [
+                        {
+                        "productId": 1012005,
+                        "name": "暖冬磨毛纯色AB面四件套",
+                        "price": 319,
+                        "pic": "http://yanxuan.nosdn.127.net/93813c70eea2230652f15ab5033dab79.jpg"
+                        },
+                        {
+                        "productId": 1006002,
+                        "name": "轻奢纯棉刺绣水洗四件套",
+                        "price": 899,
+                        "pic": "http://yanxuan.nosdn.127.net/9ee1fa3a12b42e020180d6bc4dd2d555.jpg"
+                        },
+                        {
+                        "productId": 1015007,
+                        "name": "典雅美式全棉刺绣靠枕",
+                        "price": 59, 
+                        "pic": "http://yanxuan.nosdn.127.net/dd08b535f5e508f6241d8cbc28dc5798.jpg"
+                        },
+                        {
+                        "productId": 1012005,
+                        "name": "暖冬磨毛纯色AB面四件套",
+                        "price": 319,
+                        "pic": "http://yanxuan.nosdn.127.net/93813c70eea2230652f15ab5033dab79.jpg"
+                        },
+                        {
+                        "productId": 1006002,
+                        "name": "轻奢纯棉刺绣水洗四件套",
+                        "price": 899,
+                        "pic": "http://yanxuan.nosdn.127.net/9ee1fa3a12b42e020180d6bc4dd2d555.jpg"
+                        },
+                        {
+                        "productId": 1015007,
+                        "name": "典雅美式全棉刺绣靠枕",
+                        "price": 59,
+                        "pic": "http://yanxuan.nosdn.127.net/dd08b535f5e508f6241d8cbc28dc5798.jpg"
+                        },
+                        {
+                        "productId": 1012005,
+                        "name": "暖冬磨毛纯色AB面四件套",
+                        "price": 319,
+                        "pic": "http://yanxuan.nosdn.127.net/93813c70eea2230652f15ab5033dab79.jpg"
+                        },
+                        {
+                        "productId": 1006002,
+                        "name": "轻奢纯棉刺绣水洗四件套",
+                        "price": 899,
+                        "pic": "http://yanxuan.nosdn.127.net/9ee1fa3a12b42e020180d6bc4dd2d555.jpg"
+                        },
+                        {
+                        "productId": 1015007,
+                        "name": "典雅美式全棉刺绣靠枕",
+                        "price": 59,
+                        "pic": "http://yanxuan.nosdn.127.net/dd08b535f5e508f6241d8cbc28dc5798.jpg"
+                        },
+                        {
+                        "productId": 1012005,
+                        "name": "暖冬磨毛纯色AB面四件套",
+                        "price": 319,
+                        "pic": "http://yanxuan.nosdn.127.net/93813c70eea2230652f15ab5033dab79.jpg"
+                        }
+        ]
+    },
+    "code": 200,
+    "message": "success"
+}
