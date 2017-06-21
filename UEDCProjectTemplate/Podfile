@@ -15,7 +15,7 @@ target :{{args.ProductName}} do
   pod 'HTMultiCellTypeTableViewObjc'
   pod 'HTSegmentsView'
   pod 'HTRefreshView'
-  pod 'HTCommonUtility'
+  pod 'HTCommonUtility','0.0.3'
   pod 'HTNetworking'
   pod 'HTAssetsPicker'
   pod 'HTTableViewDataSourceDelegate'
