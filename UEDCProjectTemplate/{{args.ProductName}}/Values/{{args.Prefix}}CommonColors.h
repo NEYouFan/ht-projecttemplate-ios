@@ -50,6 +50,8 @@ extern const int kFisrtClassTitleTextColor;
 extern const int kSecondClassTitleTextColor;
 /// 正文字体颜色
 extern const int kContentTextColor;
+/// button字体颜色
+extern const int kButtonTextColor;
 /// 注释字体颜色
 extern const int kCommitTextColor;
 /// 链接字体颜色

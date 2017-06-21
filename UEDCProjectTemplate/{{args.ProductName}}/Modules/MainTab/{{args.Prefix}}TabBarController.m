@@ -71,15 +71,19 @@
 
 - (void)loadTabBar {
     // 用户在此自定义产品对应的 tab。
-    _titles = [NSMutableArray arrayWithArray:@[@"文字",
-                                               @"控件",
-                                               @"图标",
-                                               @"页面布局"
+    _titles = [NSMutableArray arrayWithArray:@[@"字体篇",
+                                               @"控件篇",
+                                               @"图标篇",
+                                               @"页面布局篇"
                                                ]];
-    _icons = [NSMutableArray arrayWithArray:@[@"widget_default_m",
-                                              @"widget_default_m",
-                                              @"widget_default_m",
-                                              @"widget_default_m"]];
+    _icons = [NSMutableArray arrayWithArray:@[@"tabbar_textstyle",
+                                              @"tabbar_widgets",
+                                              @"tabbar_icons",
+                                              @"tabbar_pagelayout"]];
+    _selectedIcons =  [NSMutableArray arrayWithArray:@[@"tabbar_textstyle_hl",
+                                                       @"tabbar_widgets_hl",
+                                                       @"tabbar_icons_hl",
+                                                       @"tabbar_pagelayout_hl"]];
     // Load tabbar item.
     [self loadSegmentsView];
 }
@@ -93,6 +97,10 @@
     _segmentsTabbar.segmentsDataSource = self;
     _segmentsTabbar.segmentsDelegate = self;
     _segmentsTabbar.backgroundColor = [UIColor colorWithRGBValue:kTabBarbackgroundColor];
+    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0.5)];
+    line.backgroundColor = [UIColor colorWithRGBValue:0xcccccc];
+    [_segmentsTabbar addSubview:line];
+
     [self.tabBar addSubview:_segmentsTabbar];
 }
 

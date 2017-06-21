@@ -74,7 +74,7 @@
     _inputTextField.width = self.width - kLeftMargin;
     _inputTextField.height = self.height;
     _inputTextField.x = kLeftMargin;
-    _inputTextField.middleY = self.height / 2;
+    _inputTextField.middleY = self.height / 2 + 1;
 }
 
 

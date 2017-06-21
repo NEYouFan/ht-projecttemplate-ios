@@ -330,8 +330,8 @@
 		D248D2551EF11941001A4E2D /* {{args.Prefix}}WarningAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}WarningAlertViewController.m"; sourceTree = "<group>"; };
 		D248D2571EF11941001A4E2D /* {{args.Prefix}}AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}AlertView.h"; sourceTree = "<group>"; };
 		D248D2581EF11941001A4E2D /* {{args.Prefix}}AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}AlertView.m"; sourceTree = "<group>"; };
-		D248D2591EF11941001A4E2D /* {{args.Prefix}}InputAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}InputAlertViewController.h"; sourceTree = "<group>"; };
-		D248D25A1EF11941001A4E2D /* {{args.Prefix}}InputAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}InputAlertViewController.m"; sourceTree = "<group>"; };
+		D248D2591EF11941001A4E2D /* {{args.Prefix}}InputAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "{{args.Prefix}}InputAlertViewController.h"; path = "../{{args.Prefix}}InputAlertViewController.h"; sourceTree = "<group>"; };
+		D248D25A1EF11941001A4E2D /* {{args.Prefix}}InputAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "{{args.Prefix}}InputAlertViewController.m"; path = "../{{args.Prefix}}InputAlertViewController.m"; sourceTree = "<group>"; };
 		D248D25D1EF11941001A4E2D /* {{args.Prefix}}ButtonCornerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}ButtonCornerViewController.h"; sourceTree = "<group>"; };
 		D248D25E1EF11941001A4E2D /* {{args.Prefix}}ButtonCornerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "{{args.Prefix}}ButtonCornerViewController.m"; sourceTree = "<group>"; };
 		D248D25F1EF11941001A4E2D /* {{args.Prefix}}IconButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "{{args.Prefix}}IconButtonViewController.h"; sourceTree = "<group>"; };
@@ -1165,8 +1165,6 @@
 			children = (
 				D248D24F1EF11941001A4E2D /* Controllers */,
 				D248D2561EF11941001A4E2D /* Views */,
-				D248D2591EF11941001A4E2D /* {{args.Prefix}}InputAlertViewController.h */,
-				D248D25A1EF11941001A4E2D /* {{args.Prefix}}InputAlertViewController.m */,
 			);
 			path = AlertView;
 			sourceTree = "<group>";
@@ -1180,6 +1178,8 @@
 				D248D2531EF11941001A4E2D /* {{args.Prefix}}CustomAlertViewController.m */,
 				D248D2541EF11941001A4E2D /* {{args.Prefix}}WarningAlertViewController.h */,
 				D248D2551EF11941001A4E2D /* {{args.Prefix}}WarningAlertViewController.m */,
+				D248D2591EF11941001A4E2D /* {{args.Prefix}}InputAlertViewController.h */,
+				D248D25A1EF11941001A4E2D /* {{args.Prefix}}InputAlertViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

@@ -14,7 +14,6 @@
 #import "{{args.Prefix}}TabBarItem.h"
 #import "UIImage+ImageWithColor.h"
 
-
 @interface {{args.Prefix}}BadgeTabbarViewController () <HTSegmentsViewDelegate,
                                                 HTSegmentsViewDatasource,
                                                 HTRouteTargetProtocol,
@@ -97,6 +96,10 @@
     _segmentsTabbar.segmentsDataSource = self;
     _segmentsTabbar.segmentsDelegate = self;
     _segmentsTabbar.backgroundColor = [UIColor colorWithRGBValue:kTabBarbackgroundColor];
+    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0.5)];
+    line.backgroundColor = [UIColor colorWithRGBValue:0xcccccc];
+    [_segmentsTabbar addSubview:line];
+
     [self.tabBar addSubview:_segmentsTabbar];
 }
 

@@ -62,27 +62,29 @@
     
     UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
     button1.width = SCREEN_WIDTH - 60;
-    button1.height = 60;
+    button1.height = 42;
     button1.center = CGPointMake(SCREEN_WIDTH/2., (SCREEN_HEIGHT - kNavigationHeight)/2 - 100);
     button1.backgroundColor = [UIColor whiteColor];
-    button1.layer.borderWidth = 2.f;
+    button1.layer.borderWidth = 0.5f;
     button1.layer.borderColor = [UIColor colorWithRGBValue:kTextBorderColor].CGColor;
     [button1 addTarget:self action:@selector(setPassword) forControlEvents:UIControlEventTouchUpInside];
     [button1 setTitle:@"设置手势密码" forState:UIControlStateNormal];
-    [button1 setTitleColor:[UIColor colorWithRGBValue:kDefaultButtonColor] forState:UIControlStateNormal];
+    [button1 setTitleColor:[UIColor colorWithRGBValue:kButtonTextColor] forState:UIControlStateNormal];
+    button1.titleLabel.font = [UIFont systemFontOfSize:kDefaultTitleFontSize];
     [self.view addSubview:button1];
-
+    
     
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
     button2.width = SCREEN_WIDTH - 60;
-    button2.height = 60;
+    button2.height = 42;
     button2.center = CGPointMake(SCREEN_WIDTH/2., (SCREEN_HEIGHT - kNavigationHeight)/2 + 100);
     button2.backgroundColor = [UIColor whiteColor];
-    button2.layer.borderWidth = 2.f;
+    button2.layer.borderWidth = 0.5f;
     button2.layer.borderColor = [UIColor colorWithRGBValue:kTextBorderColor].CGColor;
     [button2 addTarget:self action:@selector(verifyPassword) forControlEvents:UIControlEventTouchUpInside];
     [button2 setTitle:@"验证手势密码" forState:UIControlStateNormal];
-    [button2 setTitleColor:[UIColor colorWithRGBValue:kDefaultButtonColor] forState:UIControlStateNormal];
+    [button2 setTitleColor:[UIColor colorWithRGBValue:kButtonTextColor] forState:UIControlStateNormal];
+    button2.titleLabel.font = [UIFont systemFontOfSize:kDefaultTitleFontSize];
     [self.view addSubview:button2];
 }
 

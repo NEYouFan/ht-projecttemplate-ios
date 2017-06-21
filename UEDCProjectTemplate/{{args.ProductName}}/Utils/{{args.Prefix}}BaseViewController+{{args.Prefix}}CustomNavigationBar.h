@@ -72,6 +72,17 @@
 - (UIButton *){{args.CategoryPrefix}}_addNavigationRightSettingItem;
 
 /**
+ 添加导航栏右侧联系我们按钮，只定制了样式，没有添加行为
+ 
+ @return 添加的 button，可以在此返回的 button 上定制样式和添加事件
+ 
+ @note 需要根据视觉要求，自定义本方法实现中的样式定制
+ */
+- (UIButton *){{args.CategoryPrefix}}_addNavigationRightContactItem;
+
+/**
+
+/**
  添加导航栏右侧设置按钮，只定制了样式，没有添加行为
  
  @prama title  右侧button内部text文字

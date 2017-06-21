@@ -75,7 +75,7 @@ static const CGFloat kLeftIconTitleGap = 15;
     if (_subTitleLabel.hidden) {
         _titleLabel.middleY = self.contentView.height / 2;
     } else {
-        _titleLabel.y = 11;
+        _titleLabel.y = 12.5;
     }
     
     [_subTitleLabel sizeToFit];

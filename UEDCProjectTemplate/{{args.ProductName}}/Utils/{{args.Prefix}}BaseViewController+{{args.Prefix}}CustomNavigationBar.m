@@ -119,11 +119,27 @@
     rightButton.layer.borderWidth = 1;
     rightButton.layer.borderColor = [UIColor colorWithRGBValue:kNaviForegroundColor].CGColor;
     rightButton.layer.cornerRadius = 2;
-    rightButton.width = 52;
-    rightButton.height = 29;
+    rightButton.width = 48;
+    rightButton.height = 27;
     
     return rightButton;
 }
+
+- (UIButton *){{args.CategoryPrefix}}_addNavigationRightContactItem {
+    UIButton *settingButton = [self {{args.CategoryPrefix}}_addNavigationRightItem];
+    
+    // 导航栏右侧按钮背景图片(根据视觉需求自定义)
+    UIImage *settingImage = [UIImage imageNamed:@"navi_contact"];
+    // 导航栏右侧按钮高亮时的背景图片(根据视觉需求自定义)
+    UIImage *settingHighlightImage = [UIImage imageNamed:@"navi_contact_hl"];
+    
+    [settingButton setBackgroundImage:settingImage forState:UIControlStateNormal];
+    [settingButton setBackgroundImage:settingHighlightImage forState:UIControlStateHighlighted];
+    [settingButton sizeToFit];
+    
+    return settingButton;
+}
+
 
 - (UIButton *){{args.CategoryPrefix}}_addNavigationRightItem {
     // 新建导航栏右侧按钮，并设置背景图(可根据需要修改 button 样式)

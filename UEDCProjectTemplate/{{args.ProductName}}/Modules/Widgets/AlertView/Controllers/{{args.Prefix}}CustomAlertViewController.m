@@ -62,16 +62,16 @@
 - (void)loadSubviews{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.width = SCREEN_WIDTH - 60;
-    button.height = 46;
+    button.height = 42;
     button.center = CGPointMake(SCREEN_WIDTH/2., (SCREEN_HEIGHT - kNavigationHeight)/2.);
-    button.layer.cornerRadius = 2.f;
     button.layer.masksToBounds = YES;
     button.backgroundColor = [UIColor whiteColor];
-    button.layer.borderWidth = 1.f;
+    button.layer.borderWidth = 0.5f;
     button.layer.borderColor = [UIColor colorWithRGBValue:kTextBorderColor].CGColor;
     [button addTarget:self action:@selector(clickButton) forControlEvents:UIControlEventTouchUpInside];
-    [button setTitle:@"弹出alertView" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor colorWithRGBValue:kContentTextColor] forState:UIControlStateNormal];
+    [button setTitle:@"选择型弹窗" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor colorWithRGBValue:kButtonTextColor] forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont systemFontOfSize:kDefaultTitleFontSize];
     [self.view addSubview:button];
 }
 

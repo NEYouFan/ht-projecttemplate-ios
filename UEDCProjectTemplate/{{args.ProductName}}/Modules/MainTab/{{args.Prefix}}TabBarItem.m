@@ -116,7 +116,7 @@
 
 - (void)selectedChanged {
     if ([self isSelected]) {
-        _titleLabel.textColor = [UIColor colorWithRGBValue:kDefaultTextColor];
+        _titleLabel.textColor = [UIColor colorWithRGBValue:kContentTextColor];
         _iconImageView.image = _iconSelectedImage;
     } else {
         _titleLabel.textColor = [UIColor colorWithRGBValue:kLightTextColor];

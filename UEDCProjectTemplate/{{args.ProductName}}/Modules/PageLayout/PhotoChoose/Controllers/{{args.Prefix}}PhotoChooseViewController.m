@@ -61,14 +61,16 @@
 - (void)loadSubviews{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.width = SCREEN_WIDTH - 60;
-    button.height = 60;
+    button.height = 42;
     button.center = CGPointMake(SCREEN_WIDTH/2., (SCREEN_HEIGHT - kNavigationHeight)/2.);
+    button.layer.masksToBounds = YES;
     button.backgroundColor = [UIColor whiteColor];
-    button.layer.borderWidth = 2.f;
+    button.layer.borderWidth = 0.5f;
     button.layer.borderColor = [UIColor colorWithRGBValue:kTextBorderColor].CGColor;
     [button addTarget:self action:@selector(clickButton) forControlEvents:UIControlEventTouchUpInside];
-    [button setTitle:@"照片选择" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor colorWithRGBValue:kDefaultButtonColor] forState:UIControlStateNormal];
+    [button setTitle:@"照片选择页面布局" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor colorWithRGBValue:kButtonTextColor] forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont systemFontOfSize:kDefaultTitleFontSize];
     [self.view addSubview:button];
 
 }

@@ -28,6 +28,7 @@ const int kWhitheTextColor = 0xffffff;
 const int kFisrtClassTitleTextColor = 0x333333;
 const int kSecondClassTitleTextColor = 0x666666;
 const int kContentTextColor = 0x333333;
+const int kButtonTextColor = 0x222222;
 const int kCommitTextColor = 0xb2b2b2;
 const int kLinkTextColor = 0x3377aa;
 const int kWarningTextColor = 0xee0000;

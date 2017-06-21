@@ -77,7 +77,7 @@ static const int kRightTitleIconGap = 12.5;
     if (_subTitleLabel.hidden) {
         _titleLabel.middleY = self.contentView.height / 2;
     } else {
-        _titleLabel.y = 10;
+        _titleLabel.y = 12;
     }
     
     [_subTitleLabel sizeToFit];
