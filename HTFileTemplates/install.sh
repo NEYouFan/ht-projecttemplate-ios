@@ -25,4 +25,4 @@ then
 fi
 	
 # Copy all of the xctemplate folders into the install directory.
-cp -r ./HTTempplate/HTFileTemplates/*.xctemplate "$installDirectory"
+cp -r ./HTTempplate/HTFileTemplates/UEDC/*.xctemplate "$installDirectory"
