@@ -130,7 +130,8 @@
                                  @"手势密码设置",
                                  @"照片选择页布局",
                                  @"拍照页面布局",
-                                 @"列表页面布局"],
+                                 @"静态列表页面布局",
+                                 @"动态列表页面布局"],
                                ];
     
     model.sectionCellUrls = @[@[@"{{args.Prefix}}://register",
@@ -144,7 +145,8 @@
                                 @"{{args.Prefix}}://gesturePassword",
                                 @"{{args.Prefix}}://photoChoose",
                                 @"{{args.Prefix}}://camera",
-                                @"{{args.Prefix}}://listLayout"],
+                                @"{{args.Prefix}}://listLayout",
+                                @"{{args.Prefix}}://demoproductlist"],
                               ];
     return model;
 }

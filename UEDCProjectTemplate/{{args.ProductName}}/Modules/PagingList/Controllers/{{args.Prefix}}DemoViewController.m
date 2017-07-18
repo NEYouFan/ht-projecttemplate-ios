@@ -8,13 +8,39 @@
 
 #import "{{args.Prefix}}DemoViewController.h"
 #import "HTControllerRouter.h"
+#import "HTNavigationPanProtocol.h"
 #import "{{args.Prefix}}DemoTableViewCell.h"
 #import "UITableView+FDTemplateLayoutCell.h"
 #import "{{args.Prefix}}ProductlistRequest.h"
 #import "{{args.Prefix}}Product.h"
 #import "{{args.Prefix}}Productlist.h"
 
+@interface {{args.Prefix}}DemoViewController () <HTRouteTargetProtocol,
+                                            HTContainerViewControllerProtocol,
+                                            HTNavigationBackPanGestureProtocol>
+
+@end
+
 @implementation {{args.Prefix}}DemoViewController
+
+@synthesize containerController;
+
+
+#pragma mark - Router
+
++ (HTControllerRouterConfig*)configureRouter {
+    HT_EXPORT();
+    HTControllerRouterConfig *config = [[HTControllerRouterConfig alloc] initWithUrlPath:[self urlPath]];
+    return config;
+}
+
++ (NSString*)urlPath {
+    return @"{{args.Prefix}}://demoproductlist";
+}
+
+- (void)receiveRoute:(HTControllerRouteParam*)param {
+}
+
 
 #pragma mark --- Life Cycle ---
 
@@ -71,7 +97,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     // HTUniversalRouter 的使用，这里只是给出一个示例，并没有真正实现下一级页面。关于 HTUniversalRouter 的详细使用请参考模板说明文档
     HTControllerRouteParam *param = [[HTControllerRouteParam alloc] init];
-    param.url = @"Hello://pagingList/detail";
+    param.url = @"{{args.Prefix}}://pagingList/detail";
     param.launchMode = HTControllerLaunchModePushNavigation;
     param.fromViewController = [APPDELEGATE() rootNavigationController];
     param.delegate = self;
